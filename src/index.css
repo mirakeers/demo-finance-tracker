@@ -1,1 +1,26 @@
 @import "tailwindcss";
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2");
+  font-weight: 300 500 800;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: "Open Sans", "sans-serif";
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  --color-interaction: var(--color-violet-400);
+  --color-b-card: var(--color-slate-900);
+  --color-b-page: var(--color-black);
+  --color-t-base: var(--color-slate-200);
+  --color-t-light: var(--color-violet-400);
+}
+
+h1 {
+  @apply text-5xl font-extrabold;
+}
+h2 {
+  @apply text-2xl font-extrabold;
+}
