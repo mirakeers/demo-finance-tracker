@@ -15,3 +15,7 @@ install needed dependencies
 ### `npm run dev`
 
 run app in dev mode
+
+### `npm run storybook`
+
+Run the storybook that contains the component documentation.
