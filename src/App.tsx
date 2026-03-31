@@ -1,4 +1,25 @@
 import { Card } from "./components/Card/Card";
+import DataGrid from "./components/DataGrid";
+import type { Transaction } from "./types";
+
+const transactions: Transaction[] = [
+  {
+    id: "1",
+    date: "2026-03-28",
+    amount: -24.5,
+    description: "Billa",
+    category: "groceries",
+    source: "imported",
+  },
+  {
+    id: "2",
+    date: "2026-03-27",
+    amount: -8.9,
+    description: "ÖBB Ticket",
+    category: "transport",
+    source: "manual",
+  },
+];
 
 function App() {
   return (
@@ -11,7 +32,7 @@ function App() {
           <h2 className="sr-only">Timeline</h2>
           <Card>Timeline component</Card>
           <h2>My transactions</h2>
-          <Card>DataGrid component</Card>
+          <DataGrid transactions={transactions} />
         </main>
       </div>
     </>
