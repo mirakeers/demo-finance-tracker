@@ -1,4 +1,4 @@
-import { Card } from "./components/Card/Card";
+import { Card } from "./components/ui/Card";
 import DataGrid from "./components/DataGrid";
 import type { Transaction } from "./types";
 

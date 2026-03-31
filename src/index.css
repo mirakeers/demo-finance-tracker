@@ -28,11 +28,6 @@ h2 {
 th {
   @apply px-4 py-2 font-semibold text-left text-sm uppercase tracking-wide text-t-light;
 }
-
-tr {
-  @apply pb-1;
-}
-
 td {
-  @apply bg-b-card px-4 py-2 text-slate-300 border-b-2 border-b-page;
+  @apply bg-b-card px-4 py-1 text-slate-300 border-b-4 border-b-page;
 }

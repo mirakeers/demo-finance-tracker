@@ -1,3 +1,22 @@
 {
-  "example": "Translation"
+  "category": {
+    "groceries": "Groceries",
+    "food_drink": "Food & Drink",
+    "dining": "Dining",
+    "transport": "Transport",
+    "shopping": "Shopping",
+    "entertainment": "Entertainment",
+    "bills_utilities": "Bills & Utilities",
+    "rent": "Rent",
+    "healthcare": "Healthcare",
+    "travel": "Travel",
+    "education": "Education",
+    "personal_care": "Personal Care",
+    "insurance": "Insurance",
+    "taxes": "Taxes",
+    "savings": "Savings",
+    "investments": "Investments",
+    "gifts_donations": "Gifts & Donations",
+    "misc": "Miscellaneous"
+  }
 }

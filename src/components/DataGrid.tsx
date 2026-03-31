@@ -1,5 +1,8 @@
+import { t } from "i18next";
 import type { Transaction } from "../types";
 import { formatCurrency } from "../utils/formatCurrency";
+import { getCategoryBadgeCss } from "../utils/getCategoryColor";
+import { Badge } from "./ui/Badge";
 
 type DataGridProps = {
   transactions: Transaction[];
@@ -11,24 +14,29 @@ export default function DataGrid({ transactions }: DataGridProps) {
         <thead>
           <tr>
             <th>Date</th>
-            <th>Description</th>
+            <th>Amount</th>
+            <th className="w-full">Description</th>
             <th>Category</th>
             <th>Source</th>
-            <th>Amount</th>
           </tr>
         </thead>
 
         <tbody>
-          {transactions.map((transaction) => (
-            <tr key={transaction.id}>
-              <td>{transaction.date}</td>
-              <td>{transaction.description}</td>
-              <td>{transaction.category}</td>
-              <td>{transaction.source}</td>
-
-              <td>{formatCurrency(transaction.amount)}</td>
-            </tr>
-          ))}
+          {transactions.map(
+            ({ id, date, description, category, source, amount }) => (
+              <tr key={id}>
+                <td className="text-nowrap">{date}</td>
+                <td>{formatCurrency(amount)}</td>
+                <td>{description}</td>
+                <td>
+                  <Badge className={getCategoryBadgeCss(category)}>
+                    {t(`category.${category}`)}
+                  </Badge>
+                </td>
+                <td>{source}</td>
+              </tr>
+            ),
+          )}
         </tbody>
       </table>
     </section>
