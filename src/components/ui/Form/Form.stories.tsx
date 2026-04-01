@@ -96,7 +96,7 @@ const FormStoryContent = () => {
 };
 
 const meta = {
-  title: "UI/Form",
+  title: "UI/Forms/Form",
   render: () => <FormStoryContent />,
 } satisfies Meta;
 
