@@ -1,3 +1,6 @@
+import type { Transaction } from "../types";
+import { mapImportedTransaction } from "./mapImportedTransactions";
+
 type ImportedCsvRow = Record<string, string>;
 
 export const parseCsv = (csv: string): ImportedCsvRow[] => {
@@ -13,13 +16,12 @@ export const parseCsv = (csv: string): ImportedCsvRow[] => {
   });
 }
 
-export const loadImportedTransactions = async () => {
+export const loadImportedTransactions = async (): Promise<Transaction[]> => {
   const res = await fetch("/api/transactions");
   if (!res.ok) {
     throw new Error("Failed to fetch transactions");
   }
   const csv = await res.text();
   const rows = parseCsv(csv);
-  console.log("succesfully got transactions", rows)
-  //return rows.map(mapImportedTransaction);
+  return rows.map(mapImportedTransaction);
 }

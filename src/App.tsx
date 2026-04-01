@@ -1,9 +1,9 @@
 import { Card } from "./components/ui/Card";
 import DataGrid from "./components/DataGrid";
-import type { Transaction } from "./types";
+//import type { Transaction } from "./types";
 import { useTransactions } from "./hooks/useTransactions";
 
-const transactions: Transaction[] = [
+/* const transactions: Transaction[] = [
   {
     id: "1",
     date: "2026-03-28",
@@ -20,7 +20,7 @@ const transactions: Transaction[] = [
     category: "transport",
     source: "manual",
   },
-];
+]; */
 
 function App() {
   const { data, loading, error } = useTransactions();
@@ -36,7 +36,7 @@ function App() {
           <h2 className="sr-only">Timeline</h2>
           <Card>Timeline component</Card>
           <h2>My transactions</h2>
-          <DataGrid transactions={transactions} />
+          <DataGrid transactions={data} />
         </main>
       </div>
     </>
