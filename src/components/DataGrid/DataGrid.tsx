@@ -1,6 +1,6 @@
 import { t } from "i18next";
 import { getCategoryColor } from "../../utils/getCategoryColor";
-import { Badge } from "../ui/Badge";
+import { Badge } from "../ui/Badge/Badge";
 import { Table, type TableColumn } from "../ui/Table/Table";
 import type { Transaction } from "../../types";
 import { formatCurrency } from "../../utils/formatCurrency";
