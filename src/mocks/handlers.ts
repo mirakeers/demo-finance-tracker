@@ -1,10 +1,11 @@
 import { delay, http, HttpResponse } from "msw";
 
-export const handlers = [
-  http.get("./api/transactions", async () => {
-    await delay(1200);
 
-    const response = await fetch("/data/Personal_Finance_Dataset.csv");
+export const handlers = [
+  http.get(`${import.meta.env.BASE_URL}api/transactions`, async () => {
+    await delay(1200);
+    const CSV_URL = `${import.meta.env.BASE_URL}data/Personal_Finance_Dataset.csv`;
+    const response = await fetch(CSV_URL);
 
     if (!response.ok) {
       return HttpResponse.json(

@@ -17,7 +17,7 @@ export const parseCsv = (csv: string): ImportedCsvRow[] => {
 }
 
 export const loadImportedTransactions = async (): Promise<Transaction[]> => {
-  const res = await fetch("./api/transactions");
+  const res = await fetch(`${import.meta.env.BASE_URL}api/transactions`);
   if (!res.ok) {
     throw new Error("Failed to fetch transactions");
   }
