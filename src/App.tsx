@@ -1,6 +1,7 @@
 import { Card } from "./components/ui/Card";
 import DataGrid from "./components/DataGrid";
 import type { Transaction } from "./types";
+import { useTransactions } from "./hooks/useTransactions";
 
 const transactions: Transaction[] = [
   {
@@ -22,6 +23,9 @@ const transactions: Transaction[] = [
 ];
 
 function App() {
+  const { data, loading, error } = useTransactions();
+  console.log(data, loading, error);
+
   return (
     <>
       <div className="flex flex-col px-8 md:px-32 max-w-7xl gap-12 mx-auto py-8 ">
