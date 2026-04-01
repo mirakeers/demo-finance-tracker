@@ -1,10 +1,14 @@
 import type { ComponentProps } from "react";
-type BadgeProps = ComponentProps<"span">;
+import { getBadgeColorClasses } from "../../utils/getCategoryColor";
+import type { ColorClass } from "../../types";
+type BadgeProps = ComponentProps<"span"> & {
+  color?: ColorClass;
+};
 
-export const Badge = ({ className, ...props }: BadgeProps) => {
+export const Badge = ({ color, className, ...props }: BadgeProps) => {
   return (
     <span
-      className={`inline-flex px-3 py-1 rounded-sm ${className}`}
+      className={`inline-flex px-3 py-1 rounded-sm ${color && getBadgeColorClasses(color)} ${className}`}
       {...props}
     />
   );

@@ -14,7 +14,7 @@
   --color-interaction: var(--color-violet-400);
   --color-b-card: var(--color-slate-900);
   --color-b-page: var(--color-black);
-  --color-t-base: var(--color-slate-200);
+  --color-t-base: var(--color-slate-100);
   --color-t-light: var(--color-slate-400);
 }
 
@@ -23,11 +23,4 @@ h1 {
 }
 h2 {
   @apply text-2xl font-extrabold;
-}
-
-th {
-  @apply px-4 py-2 font-semibold text-left text-sm uppercase tracking-wide text-t-light;
-}
-td {
-  @apply bg-b-card px-4 py-1 text-slate-300 border-b-4 border-b-page;
 }

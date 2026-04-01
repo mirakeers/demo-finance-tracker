@@ -1,7 +1,7 @@
-import type { Category } from "../types";
+import type { Category, ColorClass } from "../types";
 
 //needs to be defined like this so that tailwind registers the color classes
-const colorClasses = {
+const badgeColorClasses = {
   lime: "bg-lime-950 text-lime-200",
   cyan: "bg-cyan-950 text-cyan-200",
   violet: "bg-violet-950 text-violet-200",
@@ -12,7 +12,7 @@ const colorClasses = {
   emerald: "bg-emerald-950 text-emerald-200",
 };
 
-const categoryColorMap: Record<Category, keyof typeof colorClasses> = {
+const categoryColorMap: Record<Category, keyof typeof badgeColorClasses> = {
   groceries: "lime",
   food_drink: "lime",
   dining: "lime",
@@ -32,9 +32,9 @@ const categoryColorMap: Record<Category, keyof typeof colorClasses> = {
   savings: "emerald",
   investments: "emerald",
 };
-export const getCategoryColor = (category: Category): string => {
+export const getCategoryColor = (category: Category): ColorClass => {
   return categoryColorMap[category];
 }
-export const getCategoryBadgeCss = (category: Category): string => {
-  return colorClasses[categoryColorMap[category]];
+export const getBadgeColorClasses = (color: ColorClass): string => {
+  return badgeColorClasses[color];
 }
