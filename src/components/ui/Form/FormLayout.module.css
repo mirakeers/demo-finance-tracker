@@ -1,0 +1,52 @@
+@reference "tailwindcss";
+@reference "../../../index.css";
+
+.form {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4;
+}
+.formActions {
+  @apply md:col-span-2 flex flex-wrap gap-x-8 gap-y-4;
+}
+
+.field {
+  @apply flex flex-col gap-2;
+}
+
+.label {
+  @apply text-xs font-semibold uppercase tracking-wider;
+}
+
+.icon {
+  @apply size-4 text-t-light;
+}
+
+.baseInputGroup {
+  @apply relative w-full flex items-center h-10 gap-3 px-3 rounded-md bg-b-card text-t-base placeholder:text-t-light;
+}
+
+.combobox {
+  @apply relative;
+}
+
+.textInput {
+  @apply inline-block grow h-full outline-none;
+}
+.optionGroup {
+  @apply absolute top-full left-0 right-0 z-20 rounded-md bg-b-card shadow-lg overflow-auto max-h-40;
+}
+
+.optionLabel {
+  @apply grow inline-flex items-center gap-2 cursor-pointer;
+}
+
+.listboxOption {
+  @apply cursor-pointer rounded px-3 py-2 text-sm text-t-base data-[focus]:bg-slate-800;
+}
+
+.daypicker {
+  @apply absolute top-full left-0 z-20 rounded-md bg-b-card p-3 mt-2 shadow-lg;
+}
+.daypicker :global(.rdp-root) {
+  --rdp-accent-color: var(--color-interaction);
+  --rdp-accent-background-color: var(--color-b-card);
+}

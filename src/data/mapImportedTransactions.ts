@@ -1,4 +1,5 @@
-import type { Category, Transaction } from "../types";
+import type { Transaction } from "../types";
+import type { Category } from "./categories";
 
 function normalize(value: string) {
   return value.trim().toLowerCase();

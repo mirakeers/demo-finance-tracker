@@ -1,4 +1,5 @@
-import type { Category, ColorClass } from "../types";
+import type { Category } from "../data/categories";
+import type { ColorClass } from "../types";
 
 //needs to be defined like this so that tailwind registers the color classes
 const badgeColorClasses = {

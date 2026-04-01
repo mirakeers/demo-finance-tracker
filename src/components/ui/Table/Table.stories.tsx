@@ -4,9 +4,8 @@ import { useTranslation } from "react-i18next";
 import "../../../i18n/i18n";
 import type { Transaction } from "../../../types";
 import { formatCurrency } from "../../../utils/formatCurrency";
-import { getCategoryColor } from "../../../utils/getCategoryColor";
-import { Badge } from "../Badge/Badge";
 import { Table, type TableColumn } from "./Table";
+import { CategoryBadge } from "../../CategoryBadge/CategoryBadge";
 
 const categories: Transaction["category"][] = [
   "groceries",
@@ -62,11 +61,7 @@ const TableStoryContent = ({ isEmpty = false }: TableStoryContentProps) => {
       {
         id: "category",
         header: t("transactions.category"),
-        wrapper: ({ category }) => (
-          <Badge color={getCategoryColor(category)}>
-            {t(`category.${category}`)}
-          </Badge>
-        ),
+        wrapper: ({ category }) => <CategoryBadge category={category} />,
       },
       {
         id: "source",

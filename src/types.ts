@@ -1,24 +1,6 @@
-export type TransactionSource = "imported" | "modified" | "manual";
+import type { Category } from "./data/categories";
 
-export type Category =
-  | "groceries"
-  | "food_drink"
-  | "dining"
-  | "transport"
-  | "shopping"
-  | "entertainment"
-  | "bills_utilities"
-  | "rent"
-  | "healthcare"
-  | "travel"
-  | "education"
-  | "personal_care"
-  | "insurance"
-  | "taxes"
-  | "savings"
-  | "investments"
-  | "gifts_donations"
-  | "misc";
+export type TransactionSource = "imported" | "modified" | "manual";
 
 export type ColorClass = "amber" | "lime" | "emerald" | "cyan" | "blue" | "violet" | "fuchsia" | "rose";
 
