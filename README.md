@@ -19,3 +19,7 @@ run app in dev mode
 ### `npm run storybook`
 
 Run the storybook that contains the component documentation.
+
+## Attributions
+
+Personal_Finance_Dataset.csv is sourced from [Kaggle](https://www.kaggle.com/datasets/ramyapintchy/personal-finance-data)
