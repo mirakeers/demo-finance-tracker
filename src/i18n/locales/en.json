@@ -1,4 +1,12 @@
 {
+  "transactions": {
+    "date": "Date",
+    "amount": "Amount",
+    "description": "Description",
+    "category": "Category",
+    "source": "Source",
+    "empty": "No transactions found"
+  },
   "category": {
     "groceries": "Groceries",
     "food_drink": "Food & Drink",

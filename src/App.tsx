@@ -1,5 +1,5 @@
 import { Card } from "./components/ui/Card";
-import DataGrid from "./components/DataGrid";
+import DataGrid from "./components/DataGrid/DataGrid";
 //import type { Transaction } from "./types";
 import { useTransactions } from "./hooks/useTransactions";
 

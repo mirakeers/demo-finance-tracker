@@ -46,25 +46,23 @@ const TableStoryContent = ({ isEmpty = false }: TableStoryContentProps) => {
         id: "date",
         header: t("transactions.date"),
         headerClassName: "min-w-30",
-        cell: ({ date }) => date,
       },
       {
         id: "amount",
         header: t("transactions.amount"),
-        cell: ({ amount }) => formatCurrency(amount),
+        wrapper: ({ amount }) => formatCurrency(amount),
         alignment: "right",
         cellClassName: "text-t-base",
       },
       {
         id: "description",
         header: t("transactions.description"),
-        cell: ({ description }) => description,
         headerClassName: "w-full",
       },
       {
         id: "category",
         header: t("transactions.category"),
-        cell: ({ category }) => (
+        wrapper: ({ category }) => (
           <Badge color={getCategoryColor(category)}>
             {t(`category.${category}`)}
           </Badge>
@@ -73,7 +71,6 @@ const TableStoryContent = ({ isEmpty = false }: TableStoryContentProps) => {
       {
         id: "source",
         header: t("transactions.source"),
-        cell: ({ source }) => source,
       },
     ],
     [t],
