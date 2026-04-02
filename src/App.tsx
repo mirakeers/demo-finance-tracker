@@ -22,6 +22,7 @@ function App() {
   const {
     currentDay,
     filters,
+    resetFilters,
     handleFilterChange,
     handleUseCurrentDayChange,
     handleCurrentDayChange,
@@ -56,11 +57,13 @@ function App() {
   const handleSubmitTransaction = (formData: TransactionFormSubmitData) => {
     if (editingTransaction) {
       updateTransaction(editingTransaction, formData);
+      resetFilters();
       closeTransactionForm();
       return;
     }
 
     addManualTransaction(formData);
+    resetFilters();
     closeTransactionForm();
   };
 

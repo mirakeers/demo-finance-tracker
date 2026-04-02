@@ -73,9 +73,16 @@ export const useTransactionViewState = (initialDay: Date) => {
     });
   }, []);
 
+  const resetFilters = useCallback(() => {
+    setFilters({
+      ...INITIAL_TRANSACTION_FILTERS,
+    });
+  }, []);
+
   return {
     currentDay,
     filters,
+    resetFilters,
     handleFilterChange,
     handleUseCurrentDayChange,
     handleCurrentDayChange,
