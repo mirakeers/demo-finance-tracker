@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import { parse, parseISO } from "date-fns";
 import { useTranslation } from "react-i18next";
 import { Table, type TableColumn } from "../ui/Table/Table";
-import { TableFilters } from "../ui/Table/TableFilters";
+import { TableFilters } from "../ui/Table/TableFilters.tsx";
 import { TablePagination } from "../ui/Table/TablePagination";
 import type { Transaction } from "../../types";
 import { categories, type Category } from "../../data/categories";
