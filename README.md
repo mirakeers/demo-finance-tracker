@@ -30,8 +30,7 @@ Run Storybook with component examples
 
 ### DataGrid
 
-- Pagination
-- Client-side sorting and filtering
+- Client-side pagination, sorting and filtering
 - Column-based configuration (label, accessor, visibility)
 - Supports loading and empty states
 - Designed as a presentational component (no data fetching)
