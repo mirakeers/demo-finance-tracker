@@ -1,14 +1,20 @@
 import { useCallback, useState } from "react";
 import { formatDate } from "../utils/formatDate";
-import { INITIAL_TRANSACTION_FILTERS, type TransactionFilters } from "../types";
+import {
+  INITIAL_TRANSACTION_FILTERS,
+  type TransactionFilters,
+} from "../types";
 
 export const useTransactionViewState = (initialDay: Date) => {
   const [currentDay, setCurrentDay] = useState(initialDay);
-  const [filters, setFilters] = useState<TransactionFilters>({
-    ...INITIAL_TRANSACTION_FILTERS,
-    useCurrentDay: true,
-    dateMin: formatDate(initialDay, { machine: true }),
-    dateMax: formatDate(initialDay, { machine: true }),
+  const [filters, setFilters] = useState<TransactionFilters>(() => {
+    const today = formatDate(initialDay, { machine: true });
+
+    return {
+      ...INITIAL_TRANSACTION_FILTERS,
+      dateMin: INITIAL_TRANSACTION_FILTERS.useCurrentDay ? today : "",
+      dateMax: INITIAL_TRANSACTION_FILTERS.useCurrentDay ? today : "",
+    };
   });
 
   const handleFilterChange = useCallback(
@@ -26,24 +32,25 @@ export const useTransactionViewState = (initialDay: Date) => {
 
   const handleUseCurrentDayChange = useCallback(
     (checked: boolean) => {
-      if (checked) {
+      setFilters((current) => {
+        if (!checked) {
+          return {
+            ...current,
+            useCurrentDay: false,
+            dateMin: "",
+            dateMax: "",
+          };
+        }
+
         const nextDate = formatDate(currentDay, { machine: true });
 
-        setFilters((current) => ({
+        return {
           ...current,
           useCurrentDay: true,
           dateMin: nextDate,
           dateMax: nextDate,
-        }));
-        return;
-      }
-
-      setFilters((current) => ({
-        ...current,
-        useCurrentDay: false,
-        dateMin: "",
-        dateMax: "",
-      }));
+        };
+      });
     },
     [currentDay],
   );

@@ -18,6 +18,7 @@ import { CategoryBadge } from "../CategoryBadge/CategoryBadge";
 import { useTableSort } from "../../hooks/useTableSort";
 import { useTablePagination } from "../../hooks/useTablePagination";
 import styles from "../ui/Form/FormLayout.module.css";
+import { formatDate } from "../../utils/formatDate";
 
 type DataGridProps = {
   transactions: Transaction[];
@@ -45,7 +46,7 @@ export default function DataGrid({
         id: "date",
         header: t(($) => $.transaction.date.label),
         wrapper: ({ date }) => (
-          <span className="text-nowrap">{date.toLocaleDateString()}</span>
+          <span className="text-nowrap">{formatDate(date)}</span>
         ),
         filter: {
           type: "range",

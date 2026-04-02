@@ -25,7 +25,7 @@ export type TransactionFilters = {
 };
 
 export const INITIAL_TRANSACTION_FILTERS: TransactionFilters = {
-  useCurrentDay: true,
+  useCurrentDay: false,
   dateMin: "",
   dateMax: "",
   amountMin: "",

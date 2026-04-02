@@ -38,6 +38,15 @@ export const RangeFilterField = <TFilters extends Record<string, string>>({
   const setMax = (value: string) =>
     onChange(maxKey, value as TFilters[typeof maxKey]);
 
+  const disableCurrentDayIfChanged = (
+    currentValue: string,
+    nextValue: string,
+  ) => {
+    if (useCurrentDay && currentValue !== nextValue) {
+      onUseCurrentDayChange?.(false);
+    }
+  };
+
   const normalizeRange = (changedSide: "min" | "max", nextValue: string) => {
     const nextMinValue = changedSide === "min" ? nextValue : minValue;
     const nextMaxValue = changedSide === "max" ? nextValue : maxValue;
@@ -67,9 +76,18 @@ export const RangeFilterField = <TFilters extends Record<string, string>>({
           value={minValue}
           placeholder={filter.minPlaceholder}
           slot={filter.slot}
-          onChange={setMin}
-          onClear={() => setMin("")}
-          onCommit={(nextValue) => normalizeRange("min", nextValue)}
+          onChange={(nextValue) => {
+            disableCurrentDayIfChanged(minValue, nextValue);
+            setMin(nextValue);
+          }}
+          onClear={() => {
+            disableCurrentDayIfChanged(minValue, "");
+            setMin("");
+          }}
+          onCommit={(nextValue) => {
+            disableCurrentDayIfChanged(minValue, nextValue);
+            normalizeRange("min", nextValue);
+          }}
         />
 
         <span className="text-t-light">-</span>
@@ -78,9 +96,18 @@ export const RangeFilterField = <TFilters extends Record<string, string>>({
           value={maxValue}
           placeholder={filter.maxPlaceholder}
           slot={filter.slot}
-          onChange={setMax}
-          onClear={() => setMax("")}
-          onCommit={(nextValue) => normalizeRange("max", nextValue)}
+          onChange={(nextValue) => {
+            disableCurrentDayIfChanged(maxValue, nextValue);
+            setMax(nextValue);
+          }}
+          onClear={() => {
+            disableCurrentDayIfChanged(maxValue, "");
+            setMax("");
+          }}
+          onCommit={(nextValue) => {
+            disableCurrentDayIfChanged(maxValue, nextValue);
+            normalizeRange("max", nextValue);
+          }}
         />
       </div>
     );

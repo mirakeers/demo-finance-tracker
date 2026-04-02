@@ -78,7 +78,7 @@ export const DateInput = ({
     onCommit?.(nextValue);
   };
 
-  const handleFocus = () => {
+  const openPicker = () => {
     setDraftValue(getDisplayValue(value));
     setMonth(value ? parseISO(value) : new Date());
     setIsEditing(true);
@@ -152,7 +152,8 @@ export const DateInput = ({
         disabled={disabled}
         required={required}
         placeholder={placeholder}
-        onFocus={handleFocus}
+        onFocus={openPicker}
+        onClick={openPicker}
         onChange={(event) => handleInputChange(event.target.value)}
         onBlur={handleInputBlur}
       />
