@@ -21,12 +21,12 @@ export const TimelinePanel = ({
   groups,
   emptyText,
 }: TimelinePanelProps) => (
-  <section className="flex min-h-56 flex-col gap-6 bg-b-card p-6">
+  <section className="flex flex-col gap-6 bg-b-card p-4">
     <header className="flex items-center gap-4">
-      <span className="text-3xl font-semibold text-t-base">{sign}</span>
-      <span className="text-5xl font-semibold tracking-tight text-t-base">
-        {formatCurrency(Math.abs(total))}
-      </span>
+      <p className="text-3xl font-semibold text-t-base">
+        <span>{sign}</span>
+        <span>{formatCurrency(Math.abs(total))}</span>
+      </p>
     </header>
 
     {groups.length === 0 ? (
@@ -41,8 +41,8 @@ export const TimelinePanel = ({
             <CategoryBadge category={group.category} />
 
             <div className="flex items-center gap-3 text-lg text-t-base">
-              <span>{formatCurrency(Math.abs(group.total))}</span>
-              <span className="text-t-muted">({group.count})</span>
+              <span>{formatCurrency(group.total)}</span>
+              <span className="text-t-light">({group.count})</span>
             </div>
           </li>
         ))}
