@@ -59,7 +59,6 @@ export const TransactionForm = ({
 
   const [values, setValues] = useState(() => getInitialValues(initialValues));
   const [errors, setErrors] = useState<TransactionFormErrors>({});
-  const [successMessage, setSuccessMessage] = useState("");
 
   const dateFieldRef = useRef<HTMLDivElement | null>(null);
   const categoryFieldRef = useRef<HTMLDivElement | null>(null);
@@ -72,7 +71,6 @@ export const TransactionForm = ({
   ) => {
     setValues((current) => ({ ...current, [key]: value }));
     setErrors((current) => ({ ...current, [key]: undefined }));
-    setSuccessMessage("");
   };
 
   const validateValues = (): TransactionFormErrors => {
@@ -125,7 +123,6 @@ export const TransactionForm = ({
 
     if (Object.keys(nextErrors).length > 0) {
       setErrors(nextErrors);
-      setSuccessMessage("");
       focusFirstInvalidField(nextErrors);
       return;
     }
@@ -139,7 +136,6 @@ export const TransactionForm = ({
     });
 
     setErrors({});
-    setSuccessMessage(t(($) => $.transactionForm.success));
     setValues(EMPTY_VALUES);
   };
 
@@ -258,14 +254,6 @@ export const TransactionForm = ({
           </Button>
         </menu>
       </form>
-
-      <div
-        aria-live="polite"
-        role="status"
-        className="min-h-6 text-sm text-green-400"
-      >
-        {successMessage}
-      </div>
     </section>
   );
 };
