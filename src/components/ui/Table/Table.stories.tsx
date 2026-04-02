@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import "../../../i18n/i18n";
 import type { Transaction } from "../../../types";
@@ -36,8 +36,15 @@ type TableStoryContentProps = {
 
 const TableStoryContent = ({ isEmpty = false }: TableStoryContentProps) => {
   const { t } = useTranslation();
+  const [sortState, setSortState] = useState<{
+    column: string;
+    direction: "asc" | "desc";
+  }>({
+    column: "date",
+    direction: "desc",
+  });
 
-  const rows = useMemo(() => generateMockData(100), []);
+  const rows = useMemo(() => generateMockData(20), []);
 
   const columns = useMemo<TableColumn<Transaction>[]>(
     () => [
@@ -71,12 +78,24 @@ const TableStoryContent = ({ isEmpty = false }: TableStoryContentProps) => {
     [t],
   );
 
+  const handleSort = (columnId: string) => {
+    setSortState((current) => ({
+      column: columnId,
+      direction:
+        current.column === columnId && current.direction === "asc"
+          ? "desc"
+          : "asc",
+    }));
+  };
+
   return (
     <Table
       id="storybook-table"
       columns={columns}
       rows={isEmpty ? [] : rows}
       emptyState="No data available."
+      onSort={handleSort}
+      sortState={sortState}
     />
   );
 };

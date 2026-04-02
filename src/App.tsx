@@ -23,7 +23,7 @@ import { useTransactions } from "./hooks/useTransactions";
 ]; */
 
 function App() {
-  const { data, loading, error } = useTransactions();
+  const { data } = useTransactions();
 
   return (
     <>

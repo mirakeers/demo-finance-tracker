@@ -30,7 +30,7 @@ export const PrimaryWithIcon: Story = {
 
 export const Icon: Story = {
   args: {
-    variant: "icon",
+    variant: "ghost",
     "aria-label": "Edit transaction",
     children: <PencilIcon className="size-4" />,
   },
