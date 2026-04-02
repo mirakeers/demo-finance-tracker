@@ -23,5 +23,5 @@ export const loadImportedTransactions = async (): Promise<Transaction[]> => {
   }
   const csv = await res.text();
   const rows = parseCsv(csv);
-  return rows.map(mapImportedTransaction);
+  return rows.reverse().map(mapImportedTransaction);
 }

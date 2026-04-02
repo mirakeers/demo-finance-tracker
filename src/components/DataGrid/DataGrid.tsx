@@ -23,6 +23,7 @@ export default function DataGrid({ transactions }: DataGridProps) {
       header: t(($) => $.transactions.amount),
       wrapper: ({ amount }) => formatCurrency(amount),
       alignment: "right",
+      headerClassName: "min-w-28",
     },
     {
       id: "description",
@@ -32,6 +33,7 @@ export default function DataGrid({ transactions }: DataGridProps) {
     {
       id: "category",
       header: t(($) => $.transactions.category),
+      headerClassName: "min-w-44",
       wrapper: ({ category }) => <CategoryBadge category={category} />,
     },
     {
@@ -43,14 +45,41 @@ export default function DataGrid({ transactions }: DataGridProps) {
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(20);
 
-  const pageCount = Math.max(1, Math.ceil(transactions.length / pageSize));
+  type TypeSort = {
+    column: string;
+    direction: "asc" | "desc";
+  };
+  const INITIAL_SORT: TypeSort = { column: "date", direction: "desc" };
+  const [sort, setSort] = useState<TypeSort>(INITIAL_SORT);
+
+  const sortedRows = useMemo(() => {
+    if (!sort) return transactions;
+
+    const { column, direction } = sort;
+
+    return [...transactions].sort((a, b) => {
+      const aVal = a[column as keyof Transaction];
+      const bVal = b[column as keyof Transaction];
+
+      if (aVal === bVal) return 0;
+
+      const result =
+        typeof aVal === "number" && typeof bVal === "number"
+          ? aVal - bVal
+          : String(aVal).localeCompare(String(bVal));
+
+      return direction === "asc" ? result : -result;
+    });
+  }, [transactions, sort]);
+
+  const pageCount = Math.max(1, Math.ceil(sortedRows.length / pageSize));
 
   const visibleRows = useMemo(() => {
     const start = (page - 1) * pageSize;
     const end = start + pageSize;
 
-    return transactions.slice(start, end);
-  }, [transactions, pageSize, page]);
+    return sortedRows.slice(start, end);
+  }, [sortedRows, page, pageSize]);
 
   const handlePreviousPage = () => {
     setPage((currentPage) => Math.max(1, currentPage - 1));
@@ -65,9 +94,26 @@ export default function DataGrid({ transactions }: DataGridProps) {
     setPage(1);
   };
 
+  const handleSort = (column: string) => {
+    setSort((prev) => {
+      if (prev.direction === "asc") {
+        return { column, direction: "desc" };
+      } else {
+        return { column, direction: "asc" };
+      }
+      return INITIAL_SORT;
+    });
+  };
+
   return (
     <section className="flex flex-col gap-4">
-      <Table id="transactions" columns={columns} rows={visibleRows} />
+      <Table
+        id="transactions"
+        columns={columns}
+        rows={visibleRows}
+        onSort={handleSort}
+        sortState={sort}
+      />
       <TablePagination
         page={page}
         pageSize={pageSize}

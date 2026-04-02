@@ -1,3 +1,8 @@
+import {
+  ChevronDownIcon,
+  ChevronUpDownIcon,
+  ChevronUpIcon,
+} from "@heroicons/react/24/outline";
 import type { ReactNode } from "react";
 
 type Alignment = "left" | "right" | "center";
@@ -17,6 +22,11 @@ type TableProps<Row extends { id: string }> = {
   rows: Row[];
   emptyState?: ReactNode;
   className?: string;
+  onSort: (columnId: string) => void;
+  sortState: {
+    column: string;
+    direction: "asc" | "desc";
+  };
 };
 
 export const Table = <Row extends { id: string }>({
@@ -24,24 +34,36 @@ export const Table = <Row extends { id: string }>({
   columns,
   rows,
   emptyState = "No data available.",
+  onSort,
+  sortState,
   className = "",
 }: TableProps<Row>) => (
   <table id={id} className={`min-w-full text-t-light ${className}`}>
     <thead>
       <tr>
-        {columns.map(
-          ({ id, header, alignment = "left", headerClassName = "" }) => (
-            <th
-              key={id}
-              className={`px-4 py-2 text-sm font-semibol text-t-base 
-                text-${alignment} 
+        {columns.map(({ id, header, headerClassName = "" }) => (
+          <th
+            onClick={() => onSort?.(id)}
+            key={id}
+            className={`
+                px-4 py-2 text-sm font-semibold cursor-pointer transition-colors
+                ${sortState.column === id ? "text-t-base" : ""}
                 ${headerClassName}
                 `}
-            >
+          >
+            <span className="flex items-center justify-between gap-1 ">
               {header}
-            </th>
-          ),
-        )}
+
+              {sortState.column !== id ? (
+                <ChevronUpDownIcon className="size-2" />
+              ) : sortState.direction === "asc" ? (
+                <ChevronUpIcon className="size-2" />
+              ) : (
+                <ChevronDownIcon className="size-2" />
+              )}
+            </span>
+          </th>
+        ))}
       </tr>
     </thead>
 
