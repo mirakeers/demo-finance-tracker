@@ -6,7 +6,7 @@ export type ColorClass = "amber" | "lime" | "emerald" | "cyan" | "blue" | "viole
 
 export type Transaction = {
   id: string;
-  date: string; // ISO string
+  date: Date;
   amount: number;
   description: string;
   category: Category;

@@ -23,7 +23,7 @@
   @apply absolute left-1/2 -translate-x-1/2;
 }
 @utility popup-down {
-  @apply absolute-x-center shadow-2xl top-full mt-2 z-20 rounded-md bg-b-dark;
+  @apply absolute-x-center  top-full mt-2 z-20 rounded-md bg-b-dark border-2 border-slate-900;
 }
 
 h1 {

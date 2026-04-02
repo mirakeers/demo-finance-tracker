@@ -1,5 +1,4 @@
 import { DateInput } from "../../Form/DateInput/DateInput";
-import { DATE_FORMAT } from "../../../../constants/date";
 
 type DateFilterFieldProps = {
   value: string;
@@ -12,7 +11,7 @@ type DateFilterFieldProps = {
 
 export const DateFilterField = ({
   value,
-  placeholder = DATE_FORMAT,
+  placeholder,
   slot,
   onChange,
   onClear,
@@ -24,11 +23,11 @@ export const DateFilterField = ({
     <DateInput
       value={value}
       onChange={onChange}
+      onCommit={onCommit}
       placeholder={placeholder}
+      slot={slot}
       clearable={isActive}
       onClear={onClear}
-      onCommit={onCommit}
-      slot={slot}
     />
   );
 };

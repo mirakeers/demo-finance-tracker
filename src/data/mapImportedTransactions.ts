@@ -1,3 +1,4 @@
+import { parseISO } from "date-fns";
 import type { Transaction } from "../types";
 import type { Category } from "./categories";
 
@@ -55,9 +56,9 @@ export const mapImportedTransaction = (
   index: number,
 ): Transaction => ({
   id: `import-${(index + 1).toString().padStart(3, "0")}`,
-  date: row.Date,
+  date: parseISO(row.Date),
   description: row["Transaction Description"]?.trim() ?? "",
   category: mapCategory(row.Category),
-  amount: Number(row.Amount),
+  amount: row.Type === "Expense" ? -Number(row.Amount) : Number(row.Amount),
   source: "imported",
 });

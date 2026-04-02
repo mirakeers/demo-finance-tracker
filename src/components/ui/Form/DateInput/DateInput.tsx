@@ -1,11 +1,11 @@
 import { Input } from "@headlessui/react";
-import { format, isValid, parse } from "date-fns";
+import { isValid, parse, parseISO } from "date-fns";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/style.css";
 import styles from "./../FormLayout.module.css";
 import { FilterClearButton } from "../../Table/FilterClearButton";
-import { DATE_FORMAT } from "../../../../constants/date";
+import { DISPLAY_DATE_FORMAT, formatDate } from "../../../../utils/formatDate";
 
 type DateInputProps = {
   value: string;
@@ -22,17 +22,25 @@ type DateInputProps = {
   onCommit?: (value: string) => void;
 };
 
-const parseDate = (value: string) => {
-  const parsed = parse(value, DATE_FORMAT, new Date());
+const getDisplayValue = (value: string) =>
+  value ? formatDate(parseISO(value)) : "";
+
+const getSelectedDate = (value: string) => {
+  if (!value) return undefined;
+
+  const parsed = parse(value, DISPLAY_DATE_FORMAT, new Date());
   return isValid(parsed) ? parsed : undefined;
 };
 
-const getDisplayMonth = (value: string) => parseDate(value) ?? new Date();
+const toMachineValue = (value: string) => {
+  const parsed = parse(value, DISPLAY_DATE_FORMAT, new Date());
+  return isValid(parsed) ? formatDate(parsed, { machine: true }) : "";
+};
 
 export const DateInput = ({
   value,
   name,
-  placeholder = DATE_FORMAT,
+  placeholder = DISPLAY_DATE_FORMAT,
   disabled = false,
   required = false,
   className = "",
@@ -46,8 +54,8 @@ export const DateInput = ({
   const rootRef = useRef<HTMLDivElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
-  const [draftValue, setDraftValue] = useState(value);
-  const [month, setMonth] = useState(getDisplayMonth(value));
+  const [draftValue, setDraftValue] = useState(getDisplayValue(value));
+  const [month, setMonth] = useState(value ? parseISO(value) : new Date());
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -61,18 +69,18 @@ export const DateInput = ({
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const inputValue = isEditing ? draftValue : value;
-  const selectedDate = useMemo(() => parseDate(inputValue), [inputValue]);
+  const inputValue = isEditing ? draftValue : getDisplayValue(value);
+  const selectedDate = useMemo(() => getSelectedDate(inputValue), [inputValue]);
 
   const commitValue = (nextValue: string) => {
-    setDraftValue(nextValue);
+    setDraftValue(getDisplayValue(nextValue));
     onChange(nextValue);
     onCommit?.(nextValue);
   };
 
   const handleFocus = () => {
-    setDraftValue(value);
-    setMonth(getDisplayMonth(value));
+    setDraftValue(getDisplayValue(value));
+    setMonth(value ? parseISO(value) : new Date());
     setIsEditing(true);
     setIsOpen(true);
   };
@@ -80,7 +88,7 @@ export const DateInput = ({
   const handleInputChange = (nextValue: string) => {
     setDraftValue(nextValue);
 
-    const parsed = parseDate(nextValue);
+    const parsed = getSelectedDate(nextValue);
     if (parsed) {
       setMonth(parsed);
     }
@@ -89,22 +97,21 @@ export const DateInput = ({
   const handleInputBlur = () => {
     const trimmedValue = draftValue.trim();
 
-    if (trimmedValue === "") {
+    if (!trimmedValue) {
       commitValue("");
       setIsEditing(false);
       onBlur?.();
       return;
     }
 
-    const parsed = parseDate(trimmedValue);
+    const nextValue = toMachineValue(trimmedValue);
 
-    if (parsed) {
-      const formatted = format(parsed, DATE_FORMAT);
-      setMonth(parsed);
-      commitValue(formatted);
+    if (nextValue) {
+      setMonth(parseISO(nextValue));
+      commitValue(nextValue);
     } else {
-      setDraftValue(value);
-      setMonth(getDisplayMonth(value));
+      setDraftValue(getDisplayValue(value));
+      setMonth(value ? parseISO(value) : new Date());
     }
 
     setIsEditing(false);
@@ -114,9 +121,9 @@ export const DateInput = ({
   const handleDaySelect = (date?: Date) => {
     if (!date) return;
 
-    const formatted = format(date, DATE_FORMAT);
+    const nextValue = formatDate(date, { machine: true });
     setMonth(date);
-    commitValue(formatted);
+    commitValue(nextValue);
     setIsEditing(false);
     setIsOpen(false);
     onBlur?.();
@@ -136,6 +143,7 @@ export const DateInput = ({
   return (
     <div ref={rootRef} className={`${styles.baseInputGroup} ${className}`}>
       {slot}
+
       <Input
         type="text"
         className={styles.textInput}

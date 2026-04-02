@@ -5,6 +5,20 @@ export type TableSort<ColumnId extends string> = {
   direction: "asc" | "desc";
 };
 
+const compareValues = (aValue: unknown, bValue: unknown) => {
+  if (aValue === bValue) return 0;
+
+  if (typeof aValue === "number" && typeof bValue === "number") {
+    return aValue - bValue;
+  }
+
+  if (aValue instanceof Date && bValue instanceof Date) {
+    return aValue.getTime() - bValue.getTime();
+  }
+
+  return String(aValue).localeCompare(String(bValue));
+};
+
 export const useTableSort = <
   Row extends Record<string, unknown>,
   ColumnId extends keyof Row & string,
@@ -18,24 +32,15 @@ export const useTableSort = <
     const { column, direction } = sort;
 
     return [...rows].sort((a, b) => {
-      const aValue = a[column];
-      const bValue = b[column];
-
-      if (aValue === bValue) return 0;
-
-      const result =
-        typeof aValue === "number" && typeof bValue === "number"
-          ? aValue - bValue
-          : String(aValue).localeCompare(String(bValue));
-
+      const result = compareValues(a[column], b[column]);
       return direction === "asc" ? result : -result;
     });
   }, [rows, sort]);
 
-  const handleSort = (column: string) => {
+  const handleSort = (column: ColumnId) => {
     setSort((current) => {
       if (current.column !== column) {
-        return { column: column as ColumnId, direction: "asc" };
+        return { column, direction: "asc" };
       }
 
       return {

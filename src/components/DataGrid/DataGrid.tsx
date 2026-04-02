@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { parse, parseISO } from "date-fns";
+import { parseISO } from "date-fns";
 import { useTranslation } from "react-i18next";
 import {
   CalendarDaysIcon,
@@ -9,6 +9,7 @@ import {
   TagIcon,
 } from "@heroicons/react/24/outline";
 import { Table, type TableColumn } from "../ui/Table/Table";
+import { TableFilters } from "../ui/Table/TableFilters/TableFilters";
 import { TablePagination } from "../ui/Table/TablePagination";
 import type { Transaction, TransactionFilters } from "../../types";
 import { categories, type Category } from "../../data/categories";
@@ -17,8 +18,6 @@ import { CategoryBadge } from "../CategoryBadge/CategoryBadge";
 import { useTableSort } from "../../hooks/useTableSort";
 import { useTablePagination } from "../../hooks/useTablePagination";
 import styles from "../ui/Form/FormLayout.module.css";
-import { DATE_FORMAT } from "../../constants/date";
-import { TableFilters } from "../ui/Table/TableFilters/TableFilters";
 
 type DataGridProps = {
   transactions: Transaction[];
@@ -45,7 +44,9 @@ export default function DataGrid({
       {
         id: "date",
         header: t(($) => $.transaction.date.label),
-        wrapper: ({ date }) => <span className="text-nowrap">{date}</span>,
+        wrapper: ({ date }) => (
+          <span className="text-nowrap">{date.toLocaleDateString()}</span>
+        ),
         filter: {
           type: "range",
           input: "date",
@@ -132,12 +133,8 @@ export default function DataGrid({
   };
 
   const filteredRows = useMemo(() => {
-    const dateMin = filters.dateMin
-      ? parse(filters.dateMin, DATE_FORMAT, new Date())
-      : null;
-    const dateMax = filters.dateMax
-      ? parse(filters.dateMax, DATE_FORMAT, new Date())
-      : null;
+    const dateMin = filters.dateMin ? parseISO(filters.dateMin) : null;
+    const dateMax = filters.dateMax ? parseISO(filters.dateMax) : null;
     const amountMin = filters.amountMin ? Number(filters.amountMin) : null;
     const amountMax = filters.amountMax ? Number(filters.amountMax) : null;
     const descriptionFilter = filters.description.trim().toLowerCase();
@@ -145,7 +142,7 @@ export default function DataGrid({
     const sourceFilter = filters.source;
 
     return transactions.filter((transaction) => {
-      const transactionDate = parseISO(transaction.date);
+      const transactionDate = transaction.date;
 
       if (dateMin && transactionDate < dateMin) return false;
       if (dateMax && transactionDate > dateMax) return false;
@@ -171,11 +168,13 @@ export default function DataGrid({
     });
   }, [transactions, filters]);
 
-  const { sort, sortedRows, handleSort } = useTableSort(filteredRows, {
+  const { sort, sortedRows, handleSort } = useTableSort<
+    Transaction,
+    keyof Transaction & string
+  >(filteredRows, {
     column: "date",
     direction: "desc",
   });
-
   const {
     page,
     pageSize,
@@ -194,8 +193,7 @@ export default function DataGrid({
         useCurrentDay={filters.useCurrentDay}
         onUseCurrentDayChange={onUseCurrentDayChange}
       />
-
-      <Table
+      <Table<Transaction, keyof Transaction & string>
         id="transactions"
         columns={columns}
         rows={visibleRows}

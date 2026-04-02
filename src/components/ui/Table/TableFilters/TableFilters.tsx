@@ -1,7 +1,7 @@
 import type { ColumnFilter } from "../Table";
 import { ComboboxFilterField } from "./ComboboxFilterField";
 import { DateFilterField } from "./DateFilterField";
-import { RangeFilterField } from "./RangeFIlterField";
+import { RangeFilterField } from "./RangeFilterField";
 import { TextFilterField } from "./TextFilterField";
 
 type TableFiltersProps<Row, TFilters extends Record<string, string>> = {

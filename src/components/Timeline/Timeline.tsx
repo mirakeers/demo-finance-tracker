@@ -1,21 +1,26 @@
-import { addDays, format, isValid, parse, parseISO } from "date-fns";
+import { addDays } from "date-fns";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import type { Transaction } from "../../types";
 import { Button } from "../ui/Button/Button";
 import { DateInput } from "../ui/Form/DateInput/DateInput";
+import { formatDate } from "../../utils/formatDate";
 import { TimelinePanel, type TimelineCategoryGroup } from "./TimelinePanel";
-import { DATE_FORMAT } from "../../constants/date";
 
 type TimelineProps = {
   transactions: Transaction[];
-  selectedDate: string;
-  onDateChange: (nextDate: string) => void;
+  selectedDate: Date;
+  onDateChange: (nextDate: Date) => void;
 };
 
-const getDayTransactions = (
-  transactions: Transaction[],
-  selectedDate: string,
-) => transactions.filter((transaction) => transaction.date === selectedDate);
+const isSameDay = (a: Date, b: Date) =>
+  a.getFullYear() === b.getFullYear() &&
+  a.getMonth() === b.getMonth() &&
+  a.getDate() === b.getDate();
+
+const getDayTransactions = (transactions: Transaction[], selectedDate: Date) =>
+  transactions.filter((transaction) =>
+    isSameDay(transaction.date, selectedDate),
+  );
 
 const getPanelTransactions = (
   transactions: Transaction[],
@@ -54,17 +59,6 @@ const getCategoryGroups = (
   );
 };
 
-const getNextDate = (selectedDate: string, diff: number) =>
-  format(addDays(parseISO(selectedDate), diff), "yyyy-MM-dd");
-
-const formatTimelineInputDate = (selectedDate: string) =>
-  format(parseISO(selectedDate), DATE_FORMAT);
-
-const parseTimelineInputDate = (value: string) => {
-  const parsed = parse(value, DATE_FORMAT, new Date());
-  return isValid(parsed) ? format(parsed, "yyyy-MM-dd") : null;
-};
-
 export const Timeline = ({
   transactions,
   selectedDate,
@@ -81,34 +75,30 @@ export const Timeline = ({
   const expenseTotal = getTotal(expenseTransactions);
   const incomeTotal = getTotal(incomeTransactions);
 
-  const handleDateCommit = (nextValue: string) => {
-    const nextDate = parseTimelineInputDate(nextValue);
-
-    if (nextDate) {
-      onDateChange(nextDate);
-    }
-  };
-
   return (
     <section className="flex flex-col gap-4">
       <header className="flex items-center gap-4">
         <Button
           variant="primary"
           aria-label="Previous day"
-          onClick={() => onDateChange(getNextDate(selectedDate, -1))}
+          onClick={() => onDateChange(addDays(selectedDate, -1))}
         >
           <ChevronLeftIcon className="size-5" />
         </Button>
 
         <form
-          className="flex-1 bg-b-card px-4 py-2"
+          className="flex-1 px-4 py-2"
           aria-live="polite"
           onSubmit={(event) => event.preventDefault()}
         >
           <DateInput
-            value={formatTimelineInputDate(selectedDate)}
+            value={formatDate(selectedDate, { machine: true })}
             onChange={() => {}}
-            onCommit={handleDateCommit}
+            onCommit={(nextDate) => {
+              if (nextDate) {
+                onDateChange(new Date(nextDate));
+              }
+            }}
             className="justify-center text-center"
           />
         </form>
@@ -116,7 +106,7 @@ export const Timeline = ({
         <Button
           variant="primary"
           aria-label="Next day"
-          onClick={() => onDateChange(getNextDate(selectedDate, 1))}
+          onClick={() => onDateChange(addDays(selectedDate, 1))}
         >
           <ChevronRightIcon className="size-5" />
         </Button>

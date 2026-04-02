@@ -1,9 +1,8 @@
-import { isValid, parse } from "date-fns";
-import { DATE_FORMAT } from "../../../../constants/date";
 import type { ColumnFilter } from "../Table";
 import { DateFilterField } from "./DateFilterField";
 import { TextFilterField } from "./TextFilterField";
 import { CheckBoxField } from "./CheckboxField";
+import { useTranslation } from "react-i18next";
 
 type RangeFilterFieldProps<TFilters extends Record<string, string>> = {
   id: keyof TFilters & string;
@@ -15,7 +14,6 @@ type RangeFilterFieldProps<TFilters extends Record<string, string>> = {
   ) => void;
   useCurrentDay?: boolean;
   onUseCurrentDayChange?: (checked: boolean) => void;
-  useCurrentDayLabel?: string;
 };
 
 export const RangeFilterField = <TFilters extends Record<string, string>>({
@@ -25,8 +23,9 @@ export const RangeFilterField = <TFilters extends Record<string, string>>({
   onChange,
   useCurrentDay = false,
   onUseCurrentDayChange,
-  useCurrentDayLabel = "Use current day",
 }: RangeFilterFieldProps<TFilters>) => {
+  const { t } = useTranslation();
+
   const minKey = `${id}Min` as keyof TFilters & string;
   const maxKey = `${id}Max` as keyof TFilters & string;
 
@@ -43,8 +42,9 @@ export const RangeFilterField = <TFilters extends Record<string, string>>({
     const nextMinValue = changedSide === "min" ? nextValue : minValue;
     const nextMaxValue = changedSide === "max" ? nextValue : maxValue;
 
-    if (!nextMinValue || !nextMaxValue) return;
-    if (!isMinGreaterThanMax(filter.input, nextMinValue, nextMaxValue)) return;
+    if (!isMinGreaterThanMax(filter.input, nextMinValue, nextMaxValue)) {
+      return;
+    }
 
     if (changedSide === "min") {
       setMax(nextMinValue);
@@ -59,7 +59,7 @@ export const RangeFilterField = <TFilters extends Record<string, string>>({
       <div className="flex items-center gap-2">
         <CheckBoxField
           checked={useCurrentDay}
-          label={useCurrentDayLabel}
+          label={t(($) => $.transaction.date.useCurrentDay)}
           onChange={(checked) => onUseCurrentDayChange?.(checked)}
         />
 
@@ -71,7 +71,9 @@ export const RangeFilterField = <TFilters extends Record<string, string>>({
           onClear={() => setMin("")}
           onCommit={(nextValue) => normalizeRange("min", nextValue)}
         />
+
         <span className="text-t-light">-</span>
+
         <DateFilterField
           value={maxValue}
           placeholder={filter.maxPlaceholder}
@@ -94,7 +96,9 @@ export const RangeFilterField = <TFilters extends Record<string, string>>({
         onClear={() => setMin("")}
         onCommit={(nextValue) => normalizeRange("min", nextValue)}
       />
+
       <span className="text-t-light">-</span>
+
       <TextFilterField
         value={maxValue}
         placeholder={filter.maxPlaceholder}
@@ -112,6 +116,8 @@ const isMinGreaterThanMax = (
   minValue: string,
   maxValue: string,
 ) => {
+  if (!minValue || !maxValue) return false;
+
   if (inputType === "number") {
     const min = Number(minValue);
     const max = Number(maxValue);
@@ -120,9 +126,5 @@ const isMinGreaterThanMax = (
     return min > max;
   }
 
-  const min = parse(minValue, DATE_FORMAT, new Date());
-  const max = parse(maxValue, DATE_FORMAT, new Date());
-
-  if (!isValid(min) || !isValid(max)) return false;
-  return min > max;
+  return minValue > maxValue;
 };

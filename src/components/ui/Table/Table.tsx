@@ -32,8 +32,11 @@ export type ColumnFilter =
       slot?: React.ReactNode;
     };
 
-export type TableColumn<Row> = {
-  id: keyof Row & string;
+export type TableColumn<
+  Row,
+  ColumnId extends keyof Row & string = keyof Row & string,
+> = {
+  id: ColumnId;
   header: ReactNode;
   wrapper?: (row: Row) => ReactNode;
   alignment?: Alignment;
@@ -42,20 +45,34 @@ export type TableColumn<Row> = {
   filter?: ColumnFilter;
 };
 
-type TableProps<Row extends { id: string }> = {
+type TableSortState<ColumnId extends string> = {
+  column: ColumnId;
+  direction: "asc" | "desc";
+};
+
+type TableProps<
+  Row extends { id: string },
+  ColumnId extends keyof Row & string = keyof Row & string,
+> = {
   id?: string;
-  columns: TableColumn<Row>[];
+  columns: TableColumn<Row, ColumnId>[];
   rows: Row[];
   emptyState?: ReactNode;
   className?: string;
-  onSort: (columnId: string) => void;
-  sortState: {
-    column: string;
-    direction: "asc" | "desc";
-  };
+  onSort: (columnId: ColumnId) => void;
+  sortState: TableSortState<ColumnId>;
 };
 
-export const Table = <Row extends { id: string }>({
+const alignmentClassNames: Record<Alignment, string> = {
+  left: "text-left",
+  center: "text-center",
+  right: "text-right",
+};
+
+export const Table = <
+  Row extends { id: string },
+  ColumnId extends keyof Row & string = keyof Row & string,
+>({
   id,
   columns,
   rows,
@@ -63,21 +80,21 @@ export const Table = <Row extends { id: string }>({
   onSort,
   sortState,
   className = "",
-}: TableProps<Row>) => (
+}: TableProps<Row, ColumnId>) => (
   <table id={id} className={`min-w-full text-t-light ${className}`}>
     <thead>
       <tr>
         {columns.map(({ id, header, headerClassName = "" }) => (
           <th
-            onClick={() => onSort?.(id)}
             key={id}
+            onClick={() => onSort(id)}
             className={`
-                px-4 py-2 text-sm font-semibold cursor-pointer transition-colors
-                ${sortState.column === id ? "text-t-base" : ""}
-                ${headerClassName}
-                `}
+              cursor-pointer px-4 py-2 text-sm font-semibold transition-colors
+              ${sortState.column === id ? "text-t-base" : ""}
+              ${headerClassName}
+            `}
           >
-            <span className="flex items-center justify-between gap-1 ">
+            <span className="flex items-center justify-between gap-1">
               {header}
 
               {sortState.column !== id ? (
@@ -110,10 +127,11 @@ export const Table = <Row extends { id: string }>({
               ({ id, wrapper, alignment = "left", cellClassName = "" }) => (
                 <td
                   key={id}
-                  className={`border-b-4 border-b-page bg-b-card px-4 py-1 text-slate-300 
-                    text-${alignment} 
+                  className={`
+                    border-b-4 border-b-page bg-b-card px-4 py-1 text-slate-300
+                    ${alignmentClassNames[alignment]}
                     ${cellClassName}
-                    `}
+                  `}
                 >
                   {wrapper ? wrapper(row) : (row[id] as ReactNode)}
                 </td>
