@@ -18,6 +18,7 @@
   --color-b-page: var(--color-black);
   --color-t-base: var(--color-slate-100);
   --color-t-light: var(--color-slate-400);
+  --color-t-placeholder: var(--color-slate-600);
 }
 @utility absolute-x-center {
   @apply absolute left-1/2 -translate-x-1/2;

@@ -60,12 +60,42 @@ export default function DataGrid({
         filter: {
           type: "range",
           input: "date",
-          wrapperClass: "min-w-72",
+          wrapperClass: "order-0 w-130",
           minPlaceholder: t(($) => $.transaction.date.placeholder.min),
           maxPlaceholder: t(($) => $.transaction.date.placeholder.max),
           slot: <CalendarDaysIcon className={styles.icon} />,
         },
       },
+
+      {
+        id: "amount",
+        header: t(($) => $.transaction.amount.label),
+        wrapper: ({ amount }) => (
+          <span className="text-nowrap">{formatCurrency(amount)}</span>
+        ),
+        alignment: "right",
+        headerClassName: "min-w-28",
+        filter: {
+          type: "range",
+          input: "number",
+          wrapperClass: "order-3 basis-40",
+          minPlaceholder: t(($) => $.transaction.amount.placeholder.min),
+          maxPlaceholder: t(($) => $.transaction.amount.placeholder.max),
+          slot: <>€</>,
+        },
+      },
+      {
+        id: "description",
+        header: t(($) => $.transaction.description.label),
+        headerClassName: "w-full",
+        filter: {
+          type: "text",
+          wrapperClass: "basis-72 order-4",
+          placeholder: t(($) => $.transaction.description.placeholder),
+          slot: <MagnifyingGlassIcon className={styles.icon} />,
+        },
+      },
+
       {
         id: "category",
         header: t(($) => $.transaction.category.label),
@@ -73,7 +103,7 @@ export default function DataGrid({
         wrapper: ({ category }) => <CategoryBadge category={category} />,
         filter: {
           type: "combobox",
-          wrapperClass: "min-w-52",
+          wrapperClass: "basis-52 order-2",
           placeholder: t(($) => $.transaction.category.placeholder),
           options: categories,
           displayValue: (value) => t(($) => $.category[value as Category]),
@@ -88,7 +118,7 @@ export default function DataGrid({
         header: t(($) => $.transaction.source.label),
         filter: {
           type: "combobox",
-          wrapperClass: "min-w-44",
+          wrapperClass: "basis-40 order-1",
           placeholder: t(($) => $.transaction.source.placeholder),
           options: sourceOptions,
           displayValue: (value) => value,
@@ -96,36 +126,10 @@ export default function DataGrid({
         },
       },
       {
-        id: "amount",
-        header: t(($) => $.transaction.amount.label),
-        wrapper: ({ amount }) => formatCurrency(amount),
-        alignment: "right",
-        headerClassName: "min-w-28",
-        filter: {
-          type: "range",
-          input: "number",
-          wrapperClass: "min-w-72",
-          minPlaceholder: t(($) => $.transaction.amount.placeholder.min),
-          maxPlaceholder: t(($) => $.transaction.amount.placeholder.max),
-          slot: <CurrencyEuroIcon className={styles.icon} />,
-        },
-      },
-      {
-        id: "description",
-        header: t(($) => $.transaction.description.label),
-        headerClassName: "w-full",
-        filter: {
-          type: "text",
-          wrapperClass: "min-w-72",
-          placeholder: t(($) => $.transaction.description.placeholder),
-          slot: <MagnifyingGlassIcon className={styles.icon} />,
-        },
-      },
-      {
         id: "actions",
         header: "Actions",
         alignment: "center",
-        headerClassName: "min-w-20",
+        headerClassName: "basis-20",
         sortable: false,
         wrapper: (transaction) => (
           <Button

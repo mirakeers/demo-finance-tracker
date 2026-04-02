@@ -65,7 +65,7 @@ export const RangeFilterField = <TFilters extends Record<string, string>>({
 
   if (filter.input === "date") {
     return (
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-4">
         <CheckBoxField
           checked={useCurrentDay}
           label={t(($) => $.transaction.date.useCurrentDay)}
@@ -90,7 +90,7 @@ export const RangeFilterField = <TFilters extends Record<string, string>>({
           }}
         />
 
-        <span className="text-t-light">-</span>
+        <span className="text-t-placeholder">–</span>
 
         <DateFilterField
           value={maxValue}
@@ -114,7 +114,7 @@ export const RangeFilterField = <TFilters extends Record<string, string>>({
   }
 
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-4">
       <TextFilterField
         value={minValue}
         placeholder={filter.minPlaceholder}
@@ -124,7 +124,7 @@ export const RangeFilterField = <TFilters extends Record<string, string>>({
         onCommit={(nextValue) => normalizeRange("min", nextValue)}
       />
 
-      <span className="text-t-light">-</span>
+      <span className="text-t-placeholder">–</span>
 
       <TextFilterField
         value={maxValue}

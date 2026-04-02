@@ -144,7 +144,7 @@ export const TransactionForm = ({
   };
 
   return (
-    <section className="flex flex-col gap-4">
+    <section className="w-full flex flex-col gap-8">
       <h2>
         {mode === "edit"
           ? t(($) => $.transactionForm.heading.edit)

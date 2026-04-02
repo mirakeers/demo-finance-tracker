@@ -12,7 +12,7 @@ export const CheckBoxField = ({
   label,
   onChange,
 }: CheckBoxFieldProps) => (
-  <Field className="flex items-center gap-2">
+  <Field className="shrink-0 flex items-center gap-2">
     <Checkbox
       checked={checked}
       onChange={onChange}
