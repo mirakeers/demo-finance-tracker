@@ -25,6 +25,7 @@ import { Button } from "../ui/Button/Button";
 type DataGridProps = {
   transactions: Transaction[];
   filters: TransactionFilters;
+  isLoading: boolean;
   onFilterChange: <K extends keyof TransactionFilters>(
     key: K,
     value: TransactionFilters[K],
@@ -41,6 +42,7 @@ const sourceOptions = ["imported", "manual", "modified"] as const;
 export default function DataGrid({
   transactions,
   filters,
+  isLoading,
   onFilterChange,
   onUseCurrentDayChange,
   onEditTransaction,
@@ -230,6 +232,7 @@ export default function DataGrid({
         rows={visibleRows}
         onSort={handleTableSort}
         sortState={sort}
+        isLoading={isLoading}
       />
 
       <TablePagination

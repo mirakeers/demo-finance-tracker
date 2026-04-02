@@ -4,6 +4,7 @@ import {
   ChevronUpIcon,
 } from "@heroicons/react/24/outline";
 import type { ReactNode } from "react";
+import { TableSkeleton } from "./TableSkeleton";
 
 type Alignment = "left" | "right" | "center";
 
@@ -59,6 +60,7 @@ type TableProps<
   className?: string;
   onSort: (columnId: ColumnId) => void;
   sortState: TableSortState<ColumnId>;
+  isLoading?: boolean;
 };
 
 const alignmentClassNames: Record<Alignment, string> = {
@@ -78,6 +80,7 @@ export const Table = <
   onSort,
   sortState,
   className = "",
+  isLoading = false,
 }: TableProps<Row, ColumnId>) => (
   <table id={id} className={`min-w-full text-t-light ${className}`}>
     <thead>
@@ -88,18 +91,16 @@ export const Table = <
               key={id}
               onClick={sortable ? () => onSort(id) : undefined}
               className={`
-              px-4 py-2 text-sm font-semibold transition-colors
-              ${sortable ? "cursor-pointer" : ""}
-              ${sortState.column === id ? "text-t-base" : ""}
-              ${headerClassName}
-            `}
+                px-4 py-2 text-sm font-semibold transition-colors
+                ${sortable ? "cursor-pointer" : ""}
+                ${sortState.column === id ? "text-t-base" : ""}
+                ${headerClassName}
+              `}
             >
               <span className="flex items-center justify-between gap-1">
                 {header}
 
-                {!sortable ? (
-                  <></>
-                ) : sortState.column !== id ? (
+                {!sortable ? null : sortState.column !== id ? (
                   <ChevronUpDownIcon className="size-2" />
                 ) : sortState.direction === "asc" ? (
                   <ChevronUpIcon className="size-2" />
@@ -114,7 +115,9 @@ export const Table = <
     </thead>
 
     <tbody>
-      {rows.length === 0 ? (
+      {isLoading ? (
+        <TableSkeleton columns={columns.length} />
+      ) : rows.length === 0 ? (
         <tr>
           <td
             colSpan={columns.length}

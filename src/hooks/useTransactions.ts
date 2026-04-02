@@ -40,7 +40,7 @@ export const useTransactions = () => {
   const [transactionOverrides, setTransactionOverrides] = useState<
     TransactionOverride[]
   >(() => readTransactionOverridesFromCookie());
-  const [loading, setLoading] = useState(true);
+  const [isLoading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -125,7 +125,7 @@ export const useTransactions = () => {
 
   return {
     data,
-    loading,
+    isLoading,
     error,
     addManualTransaction,
     updateTransaction,

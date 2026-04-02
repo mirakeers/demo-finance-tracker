@@ -13,7 +13,8 @@ import type { Transaction } from "./types";
 import { mapTransactionToFormValues } from "./utils/transactionForm";
 
 function App() {
-  const { data, addManualTransaction, updateTransaction } = useTransactions();
+  const { data, isLoading, addManualTransaction, updateTransaction } =
+    useTransactions();
   const [isTransactionFormOpen, setIsTransactionFormOpen] = useState(false);
   const [editingTransaction, setEditingTransaction] =
     useState<Transaction | null>(null);
@@ -87,6 +88,7 @@ function App() {
 
           <DataGrid
             transactions={data}
+            isLoading={isLoading}
             filters={filters}
             onFilterChange={handleFilterChange}
             onUseCurrentDayChange={handleUseCurrentDayChange}
