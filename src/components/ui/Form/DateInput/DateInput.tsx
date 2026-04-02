@@ -9,16 +9,17 @@ import { DATE_FORMAT } from "../../../../constants/date";
 
 type DateInputProps = {
   value: string;
-  onChange: (value: string) => void;
-  onBlur?: () => void;
-  onCommit?: (value: string) => void;
   name?: string;
   placeholder?: string;
   disabled?: boolean;
   required?: boolean;
   className?: string;
   clearable?: boolean;
+  slot?: React.ReactNode;
   onClear?: () => void;
+  onChange: (value: string) => void;
+  onBlur?: () => void;
+  onCommit?: (value: string) => void;
 };
 
 const parseDate = (value: string) => {
@@ -30,16 +31,17 @@ const getDisplayMonth = (value: string) => parseDate(value) ?? new Date();
 
 export const DateInput = ({
   value,
-  onChange,
-  onBlur,
-  onCommit,
   name,
   placeholder = DATE_FORMAT,
   disabled = false,
   required = false,
   className = "",
   clearable = false,
+  slot,
   onClear,
+  onChange,
+  onBlur,
+  onCommit,
 }: DateInputProps) => {
   const rootRef = useRef<HTMLDivElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -133,6 +135,7 @@ export const DateInput = ({
 
   return (
     <div ref={rootRef} className={`${styles.baseInputGroup} ${className}`}>
+      {slot}
       <Input
         type="text"
         className={styles.textInput}

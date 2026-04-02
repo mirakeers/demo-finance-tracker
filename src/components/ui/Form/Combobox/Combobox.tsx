@@ -12,25 +12,27 @@ import { FilterClearButton } from "../../Table/FilterClearButton";
 
 type ComboboxProps<T> = {
   value: T | "";
-  onChange: (value: T) => void;
   options: readonly T[];
+  placeholder?: string;
+  clearable?: boolean;
+  slot?: React.ReactNode;
   displayValue?: (value: T) => string;
   renderOption?: (value: T) => React.ReactNode;
   filter?: (value: T, query: string) => boolean;
-  placeholder?: string;
-  clearable?: boolean;
+  onChange: (value: T) => void;
   onClear?: () => void;
 };
 
 export const Combobox = <T extends string>({
   value,
-  onChange,
   options,
+  placeholder,
+  clearable,
+  slot,
   displayValue = (value) => value,
   renderOption,
   filter,
-  placeholder,
-  clearable,
+  onChange,
   onClear,
 }: ComboboxProps<T>) => {
   const [query, setQuery] = useState("");
@@ -55,6 +57,7 @@ export const Combobox = <T extends string>({
     >
       <div className={styles.combobox}>
         <div className={styles.baseInputGroup}>
+          {slot}
           <ComboboxInput
             className={styles.textInput}
             displayValue={(selected: T | null) =>
@@ -63,7 +66,6 @@ export const Combobox = <T extends string>({
             onChange={(event) => setQuery(event.target.value)}
             placeholder={placeholder}
           />
-
           <ComboboxButton>
             <ChevronDownIcon className={styles.icon} />
           </ComboboxButton>
@@ -80,7 +82,7 @@ export const Combobox = <T extends string>({
             <ComboboxOption
               key={`option-${i}`}
               value={item}
-              className={styles.listboxOption}
+              className={styles.comboboxOption}
             >
               <span className="grow inline-flex">
                 {renderOption ? renderOption(item) : displayValue(item)}

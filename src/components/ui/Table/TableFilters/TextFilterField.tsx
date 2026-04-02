@@ -5,6 +5,7 @@ import { FilterClearButton } from "../FilterClearButton";
 type TextFilterFieldProps = {
   value: string;
   placeholder?: string;
+  slot?: React.ReactNode;
   onChange: (value: string) => void;
   onClear: () => void;
   onCommit?: (value: string) => void;
@@ -13,6 +14,7 @@ type TextFilterFieldProps = {
 export const TextFilterField = ({
   value,
   placeholder,
+  slot,
   onChange,
   onClear,
   onCommit,
@@ -21,6 +23,7 @@ export const TextFilterField = ({
 
   return (
     <div className={styles.baseInputGroup}>
+      {slot}
       <Input
         className={styles.textInput}
         value={value}

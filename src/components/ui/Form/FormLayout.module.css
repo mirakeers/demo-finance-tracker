@@ -21,7 +21,7 @@
 }
 
 .baseInputGroup {
-  @apply relative flex-1 flex items-center h-10 gap-3 px-3 rounded-md bg-b-card text-t-base placeholder:text-t-light;
+  @apply relative flex items-center h-10 gap-3 px-3 rounded-md bg-b-card  text-t-light placeholder:text-t-light;
 }
 
 .combobox {
@@ -29,7 +29,7 @@
 }
 
 .textInput {
-  @apply inline-block grow h-full outline-none;
+  @apply block w-full grow h-full outline-none text-t-base;
 }
 .optionGroup {
   @apply absolute top-full left-0 right-0 z-20 rounded-md bg-b-card shadow-lg overflow-auto max-h-40;
@@ -39,7 +39,7 @@
   @apply grow inline-flex items-center gap-2 cursor-pointer;
 }
 
-.listboxOption {
+.comboboxOption {
   @apply cursor-pointer rounded px-3 py-2 text-sm text-t-base data-[focus]:bg-slate-800;
 }
 
