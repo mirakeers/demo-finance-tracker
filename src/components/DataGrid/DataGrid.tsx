@@ -124,6 +124,7 @@ export default function DataGrid({
         header: "Actions",
         alignment: "center",
         headerClassName: "min-w-20",
+        sortable: false,
         wrapper: (transaction) => (
           <Button
             variant="ghost"

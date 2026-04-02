@@ -40,6 +40,7 @@ export type TableColumn<Row, ColumnId extends string = keyof Row & string> = {
   headerClassName?: string;
   cellClassName?: string;
   filter?: ColumnFilter;
+  sortable?: boolean;
 };
 
 export type TableSortState<ColumnId extends string> = {
@@ -81,29 +82,34 @@ export const Table = <
   <table id={id} className={`min-w-full text-t-light ${className}`}>
     <thead>
       <tr>
-        {columns.map(({ id, header, headerClassName = "" }) => (
-          <th
-            key={id}
-            onClick={() => onSort(id)}
-            className={`
-              cursor-pointer px-4 py-2 text-sm font-semibold transition-colors
+        {columns.map(
+          ({ id, header, headerClassName = "", sortable = true }) => (
+            <th
+              key={id}
+              onClick={sortable ? () => onSort(id) : undefined}
+              className={`
+              px-4 py-2 text-sm font-semibold transition-colors
+              ${sortable ? "cursor-pointer" : ""}
               ${sortState.column === id ? "text-t-base" : ""}
               ${headerClassName}
             `}
-          >
-            <span className="flex items-center justify-between gap-1">
-              {header}
+            >
+              <span className="flex items-center justify-between gap-1">
+                {header}
 
-              {sortState.column !== id ? (
-                <ChevronUpDownIcon className="size-2" />
-              ) : sortState.direction === "asc" ? (
-                <ChevronUpIcon className="size-2" />
-              ) : (
-                <ChevronDownIcon className="size-2" />
-              )}
-            </span>
-          </th>
-        ))}
+                {!sortable ? (
+                  <></>
+                ) : sortState.column !== id ? (
+                  <ChevronUpDownIcon className="size-2" />
+                ) : sortState.direction === "asc" ? (
+                  <ChevronUpIcon className="size-2" />
+                ) : (
+                  <ChevronDownIcon className="size-2" />
+                )}
+              </span>
+            </th>
+          ),
+        )}
       </tr>
     </thead>
 
