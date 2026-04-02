@@ -1,10 +1,25 @@
 {
-  "transactions": {
-    "date": "Date",
-    "amount": "Amount",
-    "description": "Description",
-    "category": "Category",
-    "source": "Source",
+  "transaction": {
+    "date": {
+      "label": "Date",
+      "placeholder": "Select date"
+    },
+    "amount": {
+      "label": "Amount",
+      "placeholder": "Enter amount"
+    },
+    "description": {
+      "label": "Description",
+      "placeholder": "Search description"
+    },
+    "category": {
+      "label": "Category",
+      "placeholder": "Select category"
+    },
+    "source": {
+      "label": "Source",
+      "placeholder": "Select source"
+    },
     "empty": "No transactions found"
   },
   "category": {

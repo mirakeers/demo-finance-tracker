@@ -27,7 +27,6 @@ export const useTablePagination = <Row,>(rows: Row[], initialPageSize = 20) => {
   return {
     page,
     pageSize,
-    pageCount,
     visibleRows,
     handlePreviousPage,
     handleNextPage,

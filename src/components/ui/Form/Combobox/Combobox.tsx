@@ -10,7 +10,7 @@ import { useMemo, useState } from "react";
 import styles from "../FormLayout.module.css";
 
 type ComboboxProps<T> = {
-  value: T;
+  value: T | "";
   onChange: (value: T) => void;
   options: readonly T[];
   displayValue?: (value: T) => string;
@@ -44,7 +44,7 @@ export const Combobox = <T extends string>({
 
   return (
     <HeadlessCombobox
-      value={value}
+      value={value || null}
       onChange={(val) => val && onChange(val)}
       onClose={() => setQuery("")}
     >
@@ -52,7 +52,9 @@ export const Combobox = <T extends string>({
         <div className={styles.baseInputGroup}>
           <ComboboxInput
             className={styles.textInput}
-            displayValue={displayValue}
+            displayValue={(selected: T | null) =>
+              selected ? displayValue(selected) : ""
+            }
             onChange={(event) => setQuery(event.target.value)}
             placeholder={placeholder}
           />

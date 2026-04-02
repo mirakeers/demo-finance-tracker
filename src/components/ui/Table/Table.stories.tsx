@@ -43,29 +43,29 @@ const TableStoryContent = ({ isEmpty = false }: TableStoryContentProps) => {
     () => [
       {
         id: "date",
-        header: t(($) => $.transactions.date),
+        header: t(($) => $.transaction.date.label),
         headerClassName: "min-w-30",
       },
       {
         id: "amount",
-        header: t(($) => $.transactions.amount),
+        header: t(($) => $.transaction.amount.label),
         wrapper: ({ amount }) => formatCurrency(amount),
         alignment: "right",
         cellClassName: "text-t-base",
       },
       {
         id: "description",
-        header: t(($) => $.transactions.description),
+        header: t(($) => $.transaction.description.label),
         headerClassName: "w-full",
       },
       {
         id: "category",
-        header: t(($) => $.transactions.category),
+        header: t(($) => $.transaction.category.label),
         wrapper: ({ category }) => <CategoryBadge category={category} />,
       },
       {
         id: "source",
-        header: t(($) => $.transactions.source),
+        header: t(($) => $.transaction.source.label),
       },
     ],
     [t],

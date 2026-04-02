@@ -24,7 +24,6 @@ import { useTransactions } from "./hooks/useTransactions";
 
 function App() {
   const { data, loading, error } = useTransactions();
-  console.log(data, loading, error);
 
   return (
     <>

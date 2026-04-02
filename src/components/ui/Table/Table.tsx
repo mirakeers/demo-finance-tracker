@@ -7,6 +7,23 @@ import type { ReactNode } from "react";
 
 type Alignment = "left" | "right" | "center";
 
+export type ColumnFilter =
+  | {
+      type: "text" | "search" | "number";
+      placeholder?: string;
+    }
+  | {
+      type: "date";
+      placeholder?: string;
+    }
+  | {
+      type: "combobox";
+      options: readonly string[];
+      displayValue: (value: string) => string;
+      renderOption?: (value: string) => ReactNode;
+      placeholder?: string;
+    };
+
 export type TableColumn<Row> = {
   id: keyof Row & string;
   header: ReactNode;
@@ -14,6 +31,7 @@ export type TableColumn<Row> = {
   alignment?: Alignment;
   headerClassName?: string;
   cellClassName?: string;
+  filter?: ColumnFilter;
 };
 
 type TableProps<Row extends { id: string }> = {
