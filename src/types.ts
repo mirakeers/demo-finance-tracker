@@ -12,3 +12,25 @@ export type Transaction = {
   category: Category;
   source: TransactionSource;
 };
+
+export type TransactionFilters = {
+  useCurrentDay: boolean;
+  dateMin: string;
+  dateMax: string;
+  amountMin: string;
+  amountMax: string;
+  description: string;
+  category: string;
+  source: string;
+};
+
+export const INITIAL_TRANSACTION_FILTERS: TransactionFilters = {
+  useCurrentDay: true,
+  dateMin: "",
+  dateMax: "",
+  amountMin: "",
+  amountMax: "",
+  description: "",
+  category: "",
+  source: "",
+};

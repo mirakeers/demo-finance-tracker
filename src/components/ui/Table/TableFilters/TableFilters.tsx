@@ -1,8 +1,8 @@
-import type { ColumnFilter } from "./Table";
-import { ComboboxFilterField } from "./TableFilters/ComboboxFilterField";
-import { DateFilterField } from "./TableFilters/DateFilterField";
-import { RangeFilterField } from "./TableFilters/RangeFIlterField";
-import { TextFilterField } from "./TableFilters/TextFilterField";
+import type { ColumnFilter } from "../Table";
+import { ComboboxFilterField } from "./ComboboxFilterField";
+import { DateFilterField } from "./DateFilterField";
+import { RangeFilterField } from "./RangeFIlterField";
+import { TextFilterField } from "./TextFilterField";
 
 type TableFiltersProps<Row, TFilters extends Record<string, string>> = {
   columns: {
@@ -15,12 +15,16 @@ type TableFiltersProps<Row, TFilters extends Record<string, string>> = {
     key: K,
     value: TFilters[K],
   ) => void;
+  useCurrentDay?: boolean;
+  onUseCurrentDayChange?: (checked: boolean) => void;
 };
 
 export const TableFilters = <Row, TFilters extends Record<string, string>>({
   columns,
   filters,
   onChange,
+  useCurrentDay,
+  onUseCurrentDayChange,
 }: TableFiltersProps<Row, TFilters>) => {
   const filterColumns = columns.filter(
     (
@@ -33,7 +37,7 @@ export const TableFilters = <Row, TFilters extends Record<string, string>>({
   );
 
   return (
-    <form className="flex flex-wrap gap-y-4 gap-x-8">
+    <form className="flex flex-wrap gap-x-8 gap-y-4">
       {filterColumns.map((column) => {
         const id = column.id as keyof TFilters & string;
         const value = filters[id] ?? "";
@@ -42,13 +46,15 @@ export const TableFilters = <Row, TFilters extends Record<string, string>>({
         const handleClear = () => onChange(id, "" as TFilters[typeof id]);
 
         return (
-          <div key={id} className={`grow ${column.filter.wrapperClass}`}>
+          <div key={id} className={`grow ${column.filter.wrapperClass ?? ""}`}>
             {column.filter.type === "range" ? (
               <RangeFilterField
                 id={id}
                 filter={column.filter}
                 filters={filters}
                 onChange={onChange}
+                useCurrentDay={useCurrentDay}
+                onUseCurrentDayChange={onUseCurrentDayChange}
               />
             ) : column.filter.type === "date" ? (
               <DateFilterField

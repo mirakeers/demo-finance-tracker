@@ -1,39 +1,43 @@
 import { useMemo } from "react";
 import { parse, parseISO } from "date-fns";
 import { useTranslation } from "react-i18next";
+import {
+  CalendarDaysIcon,
+  CircleStackIcon,
+  CurrencyEuroIcon,
+  MagnifyingGlassIcon,
+  TagIcon,
+} from "@heroicons/react/24/outline";
 import { Table, type TableColumn } from "../ui/Table/Table";
-import { TableFilters } from "../ui/Table/TableFilters.tsx";
 import { TablePagination } from "../ui/Table/TablePagination";
-import type { Transaction } from "../../types";
+import type { Transaction, TransactionFilters } from "../../types";
 import { categories, type Category } from "../../data/categories";
 import { formatCurrency } from "../../utils/formatCurrency";
 import { CategoryBadge } from "../CategoryBadge/CategoryBadge";
 import { useTableSort } from "../../hooks/useTableSort";
 import { useTablePagination } from "../../hooks/useTablePagination";
-import { useTableFilters } from "../../hooks/useTableFilters";
+import styles from "../ui/Form/FormLayout.module.css";
 import { DATE_FORMAT } from "../../constants/date";
-import {
-  CalendarDaysIcon,
-  MagnifyingGlassIcon,
-} from "@heroicons/react/24/outline";
+import { TableFilters } from "../ui/Table/TableFilters/TableFilters";
 
 type DataGridProps = {
   transactions: Transaction[];
+  filters: TransactionFilters;
+  onFilterChange: <K extends keyof TransactionFilters>(
+    key: K,
+    value: TransactionFilters[K],
+  ) => void;
+  onUseCurrentDayChange: (checked: boolean) => void;
 };
 
 const sourceOptions = ["imported", "manual", "modified"] as const;
 
-const INITIAL_FILTERS = {
-  dateMin: "",
-  dateMax: "",
-  amountMin: "",
-  amountMax: "",
-  description: "",
-  category: "",
-  source: "",
-};
-
-export default function DataGrid({ transactions }: DataGridProps) {
+export default function DataGrid({
+  transactions,
+  filters,
+  onFilterChange,
+  onUseCurrentDayChange,
+}: DataGridProps) {
   const { t } = useTranslation();
 
   const columns = useMemo<TableColumn<Transaction>[]>(
@@ -45,10 +49,39 @@ export default function DataGrid({ transactions }: DataGridProps) {
         filter: {
           type: "range",
           input: "date",
+          wrapperClass: "min-w-72",
           minPlaceholder: t(($) => $.transaction.date.placeholder.min),
           maxPlaceholder: t(($) => $.transaction.date.placeholder.max),
-          slot: <CalendarDaysIcon className="size-4" />,
-          wrapperClass: "basis-90 grow-0 order-0",
+          slot: <CalendarDaysIcon className={styles.icon} />,
+        },
+      },
+      {
+        id: "category",
+        header: t(($) => $.transaction.category.label),
+        headerClassName: "min-w-44",
+        wrapper: ({ category }) => <CategoryBadge category={category} />,
+        filter: {
+          type: "combobox",
+          wrapperClass: "min-w-52",
+          placeholder: t(($) => $.transaction.category.placeholder),
+          options: categories,
+          displayValue: (value) => t(($) => $.category[value as Category]),
+          renderOption: (value) => (
+            <CategoryBadge category={value as Category} />
+          ),
+          slot: <TagIcon className={styles.icon} />,
+        },
+      },
+      {
+        id: "source",
+        header: t(($) => $.transaction.source.label),
+        filter: {
+          type: "combobox",
+          wrapperClass: "min-w-44",
+          placeholder: t(($) => $.transaction.source.placeholder),
+          options: sourceOptions,
+          displayValue: (value) => value,
+          slot: <CircleStackIcon className={styles.icon} />,
         },
       },
       {
@@ -60,10 +93,10 @@ export default function DataGrid({ transactions }: DataGridProps) {
         filter: {
           type: "range",
           input: "number",
+          wrapperClass: "min-w-72",
           minPlaceholder: t(($) => $.transaction.amount.placeholder.min),
           maxPlaceholder: t(($) => $.transaction.amount.placeholder.max),
-          slot: <>€</>,
-          wrapperClass: "basis-90 grow-0 order-3",
+          slot: <CurrencyEuroIcon className={styles.icon} />,
         },
       },
       {
@@ -72,43 +105,31 @@ export default function DataGrid({ transactions }: DataGridProps) {
         headerClassName: "w-full",
         filter: {
           type: "text",
+          wrapperClass: "min-w-72",
           placeholder: t(($) => $.transaction.description.placeholder),
-          slot: <MagnifyingGlassIcon className="size-4" />,
-          wrapperClass: "order-4",
-        },
-      },
-      {
-        id: "category",
-        header: t(($) => $.transaction.category.label),
-        headerClassName: "min-w-44",
-        wrapper: ({ category }) => <CategoryBadge category={category} />,
-        filter: {
-          type: "combobox",
-          placeholder: t(($) => $.transaction.category.placeholder),
-          options: categories,
-          displayValue: (value) => t(($) => $.category[value as Category]),
-          renderOption: (value) => (
-            <CategoryBadge category={value as Category} />
-          ),
-          wrapperClass: "basis-50 order-2",
-        },
-      },
-      {
-        id: "source",
-        header: t(($) => $.transaction.source.label),
-        filter: {
-          type: "combobox",
-          placeholder: t(($) => $.transaction.source.placeholder),
-          options: sourceOptions,
-          displayValue: (value) => value,
-          wrapperClass: "basis-40 order-1",
+          slot: <MagnifyingGlassIcon className={styles.icon} />,
         },
       },
     ],
     [t],
   );
 
-  const { filters, setFilter } = useTableFilters(INITIAL_FILTERS);
+  const tableFilters = {
+    dateMin: filters.dateMin,
+    dateMax: filters.dateMax,
+    amountMin: filters.amountMin,
+    amountMax: filters.amountMax,
+    description: filters.description,
+    category: filters.category,
+    source: filters.source,
+  };
+
+  const handleTableFilterChange = <K extends keyof typeof tableFilters>(
+    key: K,
+    value: (typeof tableFilters)[K],
+  ) => {
+    onFilterChange(key, value);
+  };
 
   const filteredRows = useMemo(() => {
     const dateMin = filters.dateMin
@@ -128,14 +149,8 @@ export default function DataGrid({ transactions }: DataGridProps) {
 
       if (dateMin && transactionDate < dateMin) return false;
       if (dateMax && transactionDate > dateMax) return false;
-
-      if (amountMin !== null && transaction.amount < amountMin) {
-        return false;
-      }
-
-      if (amountMax !== null && transaction.amount > amountMax) {
-        return false;
-      }
+      if (amountMin !== null && transaction.amount < amountMin) return false;
+      if (amountMax !== null && transaction.amount > amountMax) return false;
 
       if (
         descriptionFilter &&
@@ -172,7 +187,13 @@ export default function DataGrid({ transactions }: DataGridProps) {
 
   return (
     <section className="flex flex-col gap-4">
-      <TableFilters columns={columns} filters={filters} onChange={setFilter} />
+      <TableFilters
+        columns={columns}
+        filters={tableFilters}
+        onChange={handleTableFilterChange}
+        useCurrentDay={filters.useCurrentDay}
+        onUseCurrentDayChange={onUseCurrentDayChange}
+      />
 
       <Table
         id="transactions"

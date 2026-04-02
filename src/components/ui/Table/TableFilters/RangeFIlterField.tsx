@@ -3,6 +3,7 @@ import { DATE_FORMAT } from "../../../../constants/date";
 import type { ColumnFilter } from "../Table";
 import { DateFilterField } from "./DateFilterField";
 import { TextFilterField } from "./TextFilterField";
+import { CheckBoxField } from "./CheckboxField";
 
 type RangeFilterFieldProps<TFilters extends Record<string, string>> = {
   id: keyof TFilters & string;
@@ -12,6 +13,9 @@ type RangeFilterFieldProps<TFilters extends Record<string, string>> = {
     key: K,
     value: TFilters[K],
   ) => void;
+  useCurrentDay?: boolean;
+  onUseCurrentDayChange?: (checked: boolean) => void;
+  useCurrentDayLabel?: string;
 };
 
 export const RangeFilterField = <TFilters extends Record<string, string>>({
@@ -19,6 +23,9 @@ export const RangeFilterField = <TFilters extends Record<string, string>>({
   filter,
   filters,
   onChange,
+  useCurrentDay = false,
+  onUseCurrentDayChange,
+  useCurrentDayLabel = "Use current day",
 }: RangeFilterFieldProps<TFilters>) => {
   const minKey = `${id}Min` as keyof TFilters & string;
   const maxKey = `${id}Max` as keyof TFilters & string;
@@ -50,6 +57,12 @@ export const RangeFilterField = <TFilters extends Record<string, string>>({
   if (filter.input === "date") {
     return (
       <div className="flex items-center gap-2">
+        <CheckBoxField
+          checked={useCurrentDay}
+          label={useCurrentDayLabel}
+          onChange={(checked) => onUseCurrentDayChange?.(checked)}
+        />
+
         <DateFilterField
           value={minValue}
           placeholder={filter.minPlaceholder}

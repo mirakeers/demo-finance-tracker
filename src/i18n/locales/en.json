@@ -8,7 +8,8 @@
       "placeholder": {
         "min": "Add start date",
         "max": "Add end date"
-      }
+      },
+      "useCurrentDay": "Use current day"
     },
     "amount": {
       "label": "Amount",
