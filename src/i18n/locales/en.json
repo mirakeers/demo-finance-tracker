@@ -1,4 +1,7 @@
 {
+  "general": {
+    "clearSelection": "Clear selection"
+  },
   "transaction": {
     "date": {
       "label": "Date",

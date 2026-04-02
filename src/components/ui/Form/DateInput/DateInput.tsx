@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/style.css";
 import styles from "./../FormLayout.module.css";
+import { FilterClearButton } from "../../Table/FilterClearButton";
 
 type DateInputProps = {
   value: string;
@@ -13,6 +14,8 @@ type DateInputProps = {
   disabled?: boolean;
   required?: boolean;
   className?: string;
+  clearable?: boolean;
+  onClear?: () => void;
 };
 
 const DATE_FORMAT = "dd/MM/yyyy";
@@ -29,6 +32,8 @@ export const DateInput = ({
   placeholder = DATE_FORMAT,
   disabled = false,
   required = false,
+  clearable = false,
+  onClear,
 }: DateInputProps) => {
   const rootRef = useRef<HTMLDivElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -97,6 +102,9 @@ export const DateInput = ({
             onSelect={handleDaySelect}
           />
         </div>
+      )}
+      {clearable && value && onClear && (
+        <FilterClearButton onClick={onClear} className={styles.inputAction} />
       )}
     </div>
   );

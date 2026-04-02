@@ -4,6 +4,7 @@ import { Combobox } from "../Form/Combobox/Combobox";
 import { DateInput } from "../Form/DateInput/DateInput";
 import styles from "../Form/FormLayout.module.css";
 import type { ColumnFilter } from "./Table";
+import { FilterClearButton } from "./FilterClearButton";
 
 type TableFiltersProps<Row, TFilters extends Record<string, string>> = {
   columns: {
@@ -58,19 +59,26 @@ const FilterField = <TFilters extends Record<string, string>>({
   value,
   onChange,
 }: FilterFieldProps<TFilters>) => {
-  return (
-    <>
-      {renderInput(filter, value, (nextValue) =>
-        onChange(id, nextValue as TFilters[typeof id]),
-      )}
-    </>
-  );
+  const isActive = value.trim() !== "";
+
+  const handleChange = (nextValue: string) => {
+    onChange(id, nextValue as TFilters[typeof id]);
+  };
+
+  const handleClear = () => {
+    onChange(id, "" as TFilters[typeof id]);
+  };
+
+  return renderInput(filter, id, value, handleChange, isActive, handleClear);
 };
 
 const renderInput = (
   filter: ColumnFilter,
+  id: string,
   value: string,
   onChange: (value: string) => void,
+  isActive: boolean,
+  onClear: () => void,
 ) => {
   switch (filter.type) {
     case "date":
@@ -79,6 +87,8 @@ const renderInput = (
           value={value}
           onChange={onChange}
           placeholder={filter.placeholder}
+          clearable={isActive}
+          onClear={onClear}
         />
       );
 
@@ -89,8 +99,10 @@ const renderInput = (
           <Input
             className={styles.textInput}
             value={value}
+            placeholder={filter.placeholder}
             onChange={(event) => onChange(event.target.value)}
           />
+          {isActive && <FilterClearButton onClick={onClear} />}
         </div>
       );
 
@@ -104,6 +116,7 @@ const renderInput = (
             placeholder={filter.placeholder}
             onChange={(event) => onChange(event.target.value)}
           />
+          {isActive && <FilterClearButton onClick={onClear} />}
         </div>
       );
 
@@ -116,6 +129,8 @@ const renderInput = (
           displayValue={filter.displayValue}
           renderOption={filter.renderOption}
           placeholder={filter.placeholder}
+          clearable={isActive}
+          onClear={onClear}
         />
       );
   }

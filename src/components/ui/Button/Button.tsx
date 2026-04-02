@@ -11,11 +11,11 @@ type ButtonProps = {
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    "bg-interaction text-white enabled:hover:bg-interaction-hover disabled:opacity-40",
+    "px-3 py-2 bg-interaction text-white enabled:hover:bg-interaction-hover disabled:opacity-40",
   secondary:
-    "bg-slate-800 text-slate-200 enabled:hover:bg-slate-700  disabled:opacity-40",
+    "px-3 py-2 bg-slate-800 text-slate-200 enabled:hover:bg-slate-700  disabled:opacity-40",
   ghost:
-    "bg-transparent text-slate-300 enabled:hover:bg-slate-800 disabled:opacity-40",
+    "p-2 -m-2 bg-transparent text-slate-300 enabled:hover:bg-slate-800 disabled:opacity-40",
 };
 
 export const Button = ({
@@ -25,7 +25,7 @@ export const Button = ({
   ...props
 }: ButtonProps) => (
   <HeadlessButton
-    className={`inline-flex items-center justify-center rounded-lg px-3 py-2 text-sm font-medium transition disabled:cursor-not-allowed ${variantClasses[variant]} ${className}`}
+    className={`inline-flex items-center justify-center rounded-lg text-sm font-medium transition cursor-pointer disabled:cursor-not-allowed ${variantClasses[variant]} ${className}`}
     {...props}
   >
     {children}

@@ -8,6 +8,7 @@ import {
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { useMemo, useState } from "react";
 import styles from "../FormLayout.module.css";
+import { FilterClearButton } from "../../Table/FilterClearButton";
 
 type ComboboxProps<T> = {
   value: T | "";
@@ -17,6 +18,8 @@ type ComboboxProps<T> = {
   renderOption?: (value: T) => React.ReactNode;
   filter?: (value: T, query: string) => boolean;
   placeholder?: string;
+  clearable?: boolean;
+  onClear?: () => void;
 };
 
 export const Combobox = <T extends string>({
@@ -27,6 +30,8 @@ export const Combobox = <T extends string>({
   renderOption,
   filter,
   placeholder,
+  clearable,
+  onClear,
 }: ComboboxProps<T>) => {
   const [query, setQuery] = useState("");
 
@@ -62,6 +67,12 @@ export const Combobox = <T extends string>({
           <ComboboxButton>
             <ChevronDownIcon className={styles.icon} />
           </ComboboxButton>
+          {clearable && value && onClear && (
+            <FilterClearButton
+              onClick={onClear}
+              className={styles.inputAction}
+            />
+          )}
         </div>
 
         <ComboboxOptions className={styles.optionGroup}>
