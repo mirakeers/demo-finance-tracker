@@ -20,7 +20,7 @@ const variantClasses: Record<ButtonVariant, string> = {
 
 export const Button = ({
   children,
-  variant = "outline",
+  variant = "primary",
   className = "",
   ...props
 }: ButtonProps) => (

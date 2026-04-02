@@ -32,6 +32,33 @@
     },
     "empty": "No transactions found"
   },
+  "transactionForm": {
+    "heading": {
+      "create": "New transaction",
+      "edit": "Edit transaction"
+    },
+    "date": {
+      "placeholder": "Add date",
+      "invalid": "Please enter a valid date."
+    },
+    "category": {
+      "required": "Please select a category."
+    },
+    "amount": {
+      "placeholder": "Add amount",
+      "invalid": "Please enter a valid amount."
+    },
+    "description": {
+      "placeholder": "Add description",
+      "required": "Description is required."
+    },
+    "actions": {
+      "cancel": "Cancel",
+      "create": "Save",
+      "save": "Save"
+    },
+    "success": "Transaction saved."
+  },
   "category": {
     "groceries": "Groceries",
     "food_drink": "Food & Drink",
