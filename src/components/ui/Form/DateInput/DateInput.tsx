@@ -10,7 +10,8 @@ import { DATE_FORMAT } from "../../../../constants/date";
 type DateInputProps = {
   value: string;
   onChange: (value: string) => void;
-  onBlur?: (value: string) => void;
+  onBlur?: () => void;
+  onCommit?: (value: string) => void;
   name?: string;
   placeholder?: string;
   disabled?: boolean;
@@ -25,29 +26,32 @@ const parseDate = (value: string) => {
   return isValid(parsed) ? parsed : undefined;
 };
 
+const getDisplayMonth = (value: string) => parseDate(value) ?? new Date();
+
 export const DateInput = ({
   value,
   onChange,
   onBlur,
+  onCommit,
   name,
   placeholder = DATE_FORMAT,
   disabled = false,
   required = false,
+  className = "",
   clearable = false,
   onClear,
 }: DateInputProps) => {
   const rootRef = useRef<HTMLDivElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);
+  const [isEditing, setIsEditing] = useState(false);
   const [draftValue, setDraftValue] = useState(value);
-
-  useEffect(() => {
-    setDraftValue(value);
-  }, [value]);
+  const [month, setMonth] = useState(getDisplayMonth(value));
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (!rootRef.current?.contains(event.target as Node)) {
         setIsOpen(false);
+        setIsEditing(false);
       }
     };
 
@@ -55,12 +59,29 @@ export const DateInput = ({
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const selectedDate = useMemo(() => parseDate(draftValue), [draftValue]);
+  const inputValue = isEditing ? draftValue : value;
+  const selectedDate = useMemo(() => parseDate(inputValue), [inputValue]);
 
   const commitValue = (nextValue: string) => {
     setDraftValue(nextValue);
     onChange(nextValue);
-    onBlur?.(nextValue);
+    onCommit?.(nextValue);
+  };
+
+  const handleFocus = () => {
+    setDraftValue(value);
+    setMonth(getDisplayMonth(value));
+    setIsEditing(true);
+    setIsOpen(true);
+  };
+
+  const handleInputChange = (nextValue: string) => {
+    setDraftValue(nextValue);
+
+    const parsed = parseDate(nextValue);
+    if (parsed) {
+      setMonth(parsed);
+    }
   };
 
   const handleInputBlur = () => {
@@ -68,46 +89,60 @@ export const DateInput = ({
 
     if (trimmedValue === "") {
       commitValue("");
+      setIsEditing(false);
+      onBlur?.();
       return;
     }
 
     const parsed = parseDate(trimmedValue);
 
     if (parsed) {
-      commitValue(format(parsed, DATE_FORMAT));
-      return;
+      const formatted = format(parsed, DATE_FORMAT);
+      setMonth(parsed);
+      commitValue(formatted);
+    } else {
+      setDraftValue(value);
+      setMonth(getDisplayMonth(value));
     }
 
-    setDraftValue(value);
-    onBlur?.(value);
+    setIsEditing(false);
+    onBlur?.();
   };
 
   const handleDaySelect = (date?: Date) => {
     if (!date) return;
 
-    commitValue(format(date, DATE_FORMAT));
+    const formatted = format(date, DATE_FORMAT);
+    setMonth(date);
+    commitValue(formatted);
+    setIsEditing(false);
     setIsOpen(false);
+    onBlur?.();
   };
 
   const handleClear = () => {
     setDraftValue("");
-    onClear?.();
-    onBlur?.("");
+    setMonth(new Date());
+    setIsEditing(false);
     setIsOpen(false);
+    onChange("");
+    onClear?.();
+    onCommit?.("");
+    onBlur?.();
   };
 
   return (
-    <div ref={rootRef} className={styles.baseInputGroup}>
+    <div ref={rootRef} className={`${styles.baseInputGroup} ${className}`}>
       <Input
         type="text"
         className={styles.textInput}
         name={name}
-        value={draftValue}
+        value={inputValue}
         disabled={disabled}
         required={required}
         placeholder={placeholder}
-        onFocus={() => setIsOpen(true)}
-        onChange={(event) => setDraftValue(event.target.value)}
+        onFocus={handleFocus}
+        onChange={(event) => handleInputChange(event.target.value)}
         onBlur={handleInputBlur}
       />
 
@@ -119,12 +154,14 @@ export const DateInput = ({
           <DayPicker
             mode="single"
             selected={selectedDate}
+            month={month}
+            onMonthChange={setMonth}
             onSelect={handleDaySelect}
           />
         </div>
       )}
 
-      {clearable && draftValue && (
+      {clearable && inputValue && (
         <FilterClearButton
           onClick={handleClear}
           className={styles.inputAction}

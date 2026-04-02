@@ -1,6 +1,7 @@
 import { Input } from "@headlessui/react";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { isValid, parse } from "date-fns";
+import { DATE_FORMAT } from "../../../constants/date";
 import { Combobox } from "../Form/Combobox/Combobox";
 import { DateInput } from "../Form/DateInput/DateInput";
 import styles from "../Form/FormLayout.module.css";
@@ -43,10 +44,8 @@ type RangeInputProps = {
   placeholder?: string;
   onChange: (value: string) => void;
   onClear: () => void;
-  onBlur: () => void;
+  onCommit: (value: string) => void;
 };
-
-const DATE_FORMAT = "dd/MM/yyyy";
 
 export const TableFilters = <Row, TFilters extends Record<string, string>>({
   columns,
@@ -132,21 +131,16 @@ const RangeFilterField = <TFilters extends Record<string, string>>({
   const setMax = (value: string) =>
     onChange(maxKey, value as TFilters[typeof maxKey]);
 
-  const clearMin = () => setMin("");
-  const clearMax = () => setMax("");
-
-  const syncMinToMax = () => {
-    if (!minValue || !maxValue) return;
-    if (isMinGreaterThanMax(filter.input, minValue, maxValue)) {
-      setMax(minValue);
+  const normalizeRange = (changedSide: "min" | "max", nextValue: string) => {
+    const nextMinValue = changedSide === "min" ? nextValue : minValue;
+    const nextMaxValue = changedSide === "max" ? nextValue : maxValue;
+    if (!nextMinValue || !nextMaxValue) return;
+    if (!isMinGreaterThanMax(filter.input, nextMinValue, nextMaxValue)) return;
+    if (changedSide === "min") {
+      setMax(nextMinValue);
+      return;
     }
-  };
-
-  const syncMaxToMin = () => {
-    if (!minValue || !maxValue) return;
-    if (isMinGreaterThanMax(filter.input, minValue, maxValue)) {
-      setMin(maxValue);
-    }
+    setMin(nextMaxValue);
   };
 
   return (
@@ -156,8 +150,8 @@ const RangeFilterField = <TFilters extends Record<string, string>>({
         value={minValue}
         placeholder={filter.minPlaceholder}
         onChange={setMin}
-        onClear={clearMin}
-        onBlur={syncMinToMax}
+        onClear={() => setMin("")}
+        onCommit={(nextValue) => normalizeRange("min", nextValue)}
       />
 
       <RangeFilterInput
@@ -165,8 +159,8 @@ const RangeFilterField = <TFilters extends Record<string, string>>({
         value={maxValue}
         placeholder={filter.maxPlaceholder}
         onChange={setMax}
-        onClear={clearMax}
-        onBlur={syncMaxToMin}
+        onClear={() => setMax("")}
+        onCommit={(nextValue) => normalizeRange("max", nextValue)}
       />
     </div>
   );
@@ -186,7 +180,7 @@ const SingleFilterInput = ({
         <DateInput
           value={value}
           onChange={onChange}
-          placeholder={filter.placeholder}
+          placeholder={DATE_FORMAT}
           clearable={isActive}
           onClear={onClear}
         />
@@ -242,7 +236,7 @@ const RangeFilterInput = ({
   placeholder,
   onChange,
   onClear,
-  onBlur,
+  onCommit,
 }: RangeInputProps) => {
   const isActive = value.trim() !== "";
 
@@ -251,7 +245,7 @@ const RangeFilterInput = ({
       <DateInput
         value={value}
         onChange={onChange}
-        onBlur={onBlur}
+        onCommit={onCommit}
         placeholder={placeholder}
         clearable={isActive}
         onClear={onClear}
@@ -266,7 +260,7 @@ const RangeFilterInput = ({
         value={value}
         placeholder={placeholder}
         onChange={(event) => onChange(event.target.value)}
-        onBlur={onBlur}
+        onBlur={() => onCommit(value)}
       />
       {isActive && <FilterClearButton onClick={onClear} />}
     </div>
