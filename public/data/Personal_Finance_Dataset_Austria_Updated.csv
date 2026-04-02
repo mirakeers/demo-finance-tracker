@@ -1,0 +1,1501 @@
+Date,Transaction Description,Category,Amount,Type
+2024-02-01,BILLA PLUS Neujahrseinkauf,Food & Drink,42.18,Expense
+2024-02-02,Aida Konditorei,Food & Drink,14.33,Expense
+2024-02-02,SPAR Supermarkt,Food & Drink,20.4,Expense
+2024-02-02,OMV Tankstelle,Travel,84.25,Expense
+2024-02-02,Raiffeisen Sparrate,Investment,109.91,Expense
+2024-02-03,HOFER Einkauf,Food & Drink,16.01,Expense
+2024-02-03,Mietzahlung Wohnung Wien,Rent,1253.94,Expense
+2024-02-04,Zahnarzt Mundhygiene,Health & Fitness,90.68,Expense
+2024-02-05,PlayStation Store,Entertainment,21.65,Expense
+2024-02-05,FITINN Mitgliedschaft,Health & Fitness,30.03,Expense
+2024-02-05,Wien Energie Abschlag,Utilities,115.76,Expense
+2024-02-06,Flatex Einzelkauf ETF,Investment,190.68,Expense
+2024-02-07,BILLA PLUS Einkauf,Food & Drink,27.06,Expense
+2024-02-07,Erste Bank Habenzins,Investment,1.77,Income
+2024-02-07,Erste Bank Habenzins,Investment,2.07,Income
+2024-02-08,Würstelstand,Food & Drink,8.68,Expense
+2024-02-09,Wiener Linien Ticket,Travel,2.4,Expense
+2024-02-09,Lidl Österreich,Food & Drink,18.61,Expense
+2024-02-09,Magenta Telekom Mobil,Utilities,22.42,Expense
+2024-02-10,Anker Jause,Food & Drink,7.29,Expense
+2024-02-10,Aida Konditorei,Food & Drink,17.21,Expense
+2024-02-10,Willhaben Kauf,Shopping,26.46,Expense
+2024-02-10,Zalando Bestellung,Shopping,38.97,Expense
+2024-02-11,A1 Internet Zuhause,Utilities,34.66,Expense
+2024-02-12,Spotify Premium,Entertainment,10.87,Expense
+2024-02-12,Netflix Abo,Entertainment,13.88,Expense
+2024-02-13,Cineplexx Ticket,Entertainment,10.64,Expense
+2024-02-13,Aida Konditorei,Food & Drink,14.59,Expense
+2024-02-13,Schlüsseldienst,Other,77.06,Expense
+2024-02-15,Steam Kauf,Entertainment,13.2,Expense
+2024-02-15,ORF-Beitrag,Utilities,15.3,Expense
+2024-02-15,SPAR Supermarkt,Food & Drink,18.22,Expense
+2024-02-15,Zahnarzt Mundhygiene,Health & Fitness,128.15,Expense
+2024-02-16,Flatex Einzelkauf ETF,Investment,358.77,Expense
+2024-02-17,Café in Wien,Food & Drink,8.32,Expense
+2024-02-17,HOFER Einkauf,Food & Drink,22.42,Expense
+2024-02-18,Wiener Linien Ticket,Travel,2.4,Expense
+2024-02-18,MediaMarkt Österreich,Shopping,141.46,Expense
+2024-02-19,HOFER Einkauf,Food & Drink,25.91,Expense
+2024-02-20,Anker Jause,Food & Drink,4.73,Expense
+2024-02-20,HOFER Einkauf,Food & Drink,17.31,Expense
+2024-02-20,Apotheke Wien,Health & Fitness,21.35,Expense
+2024-02-23,Raiffeisen Sparrate,Investment,84.87,Expense
+2024-02-23,Essenszuschuss Arbeitgeber,Salary,80.08,Income
+2024-02-25,Anker Jause,Food & Drink,10.25,Expense
+2024-02-25,Erste Bank Sparzins,Investment,3.53,Income
+2024-02-26,Anker Jause,Food & Drink,7.46,Expense
+2024-02-26,Flatex ETF Sparplan,Investment,297.47,Expense
+2024-02-26,Gehaltszahlung Arbeitgeber,Salary,2995.66,Income
+2024-02-27,Würstelstand,Food & Drink,6.74,Expense
+2024-02-29,McDonald's Österreich,Food & Drink,4.78,Expense
+2024-02-29,BILLA Einkauf,Food & Drink,34.4,Expense
+2024-02-29,Free Now Fahrt,Travel,14.23,Expense
+2024-03-01,Restaurant Wien,Food & Drink,20.5,Expense
+2024-03-01,Flatex Einzelkauf ETF,Investment,214.71,Expense
+2024-03-02,HOFER Einkauf,Food & Drink,24.68,Expense
+2024-03-02,ÖBB Ticket,Travel,34.32,Expense
+2024-03-02,BILLA PLUS Einkauf,Food & Drink,42.84,Expense
+2024-03-02,Mietzahlung Wohnung Wien,Rent,1242.51,Expense
+2024-03-03,PlayStation Store,Entertainment,11.67,Expense
+2024-03-03,McDonald's Österreich,Food & Drink,19.58,Expense
+2024-03-03,Free Now Fahrt,Travel,24.64,Expense
+2024-03-05,FITINN Mitgliedschaft,Health & Fitness,29.9,Expense
+2024-03-07,BILLA Einkauf,Food & Drink,11.46,Expense
+2024-03-07,Wien Energie Abschlag,Utilities,116.04,Expense
+2024-03-07,Kilometergeld Arbeitgeber,Salary,38.14,Income
+2024-03-08,Lidl Österreich,Food & Drink,19.82,Expense
+2024-03-08,BILLA PLUS Einkauf,Food & Drink,33.42,Expense
+2024-03-09,Ströck Bäckerei,Food & Drink,7.29,Expense
+2024-03-09,Magenta Telekom Mobil,Utilities,23.26,Expense
+2024-03-09,A1 Internet Zuhause,Utilities,34.06,Expense
+2024-03-09,IKEA Vösendorf,Shopping,41.56,Expense
+2024-03-10,Steuerausgleich FinanzOnline,Other,340.52,Income
+2024-03-11,Anker Jause,Food & Drink,7.83,Expense
+2024-03-11,HOFER Einkauf,Food & Drink,14.37,Expense
+2024-03-12,Wien Energie Nachzahlung,Utilities,125.34,Expense
+2024-03-13,Libro Einkauf,Shopping,5.58,Expense
+2024-03-13,Netflix Abo,Entertainment,14.03,Expense
+2024-03-14,Spotify Premium,Entertainment,11.14,Expense
+2024-03-14,Spende Caritas,Other,13.49,Expense
+2024-03-14,MuseumsQuartier Ticket,Entertainment,13.67,Expense
+2024-03-15,ORF-Beitrag,Utilities,15.3,Expense
+2024-03-15,HOFER Einkauf,Food & Drink,34.27,Expense
+2024-03-16,MuseumsQuartier Ticket,Entertainment,13.52,Expense
+2024-03-16,Erste Bank Habenzins,Investment,1.22,Income
+2024-03-17,Aida Konditorei,Food & Drink,6.96,Expense
+2024-03-17,Erste Bank Habenzins,Investment,2.35,Income
+2024-03-20,MuseumsQuartier Ticket,Entertainment,14.35,Expense
+2024-03-21,Ströck Bäckerei,Food & Drink,7.48,Expense
+2024-03-21,Restaurant Wien,Food & Drink,17.56,Expense
+2024-03-21,Restaurant Wien,Food & Drink,31.72,Expense
+2024-03-23,Erste Bank Sparzins,Investment,2.77,Income
+2024-03-24,BILLA PLUS Einkauf,Food & Drink,37.89,Expense
+2024-03-25,Ströck Bäckerei,Food & Drink,12.29,Expense
+2024-03-26,McDonald's Österreich,Food & Drink,12.24,Expense
+2024-03-26,Lidl Österreich,Food & Drink,18.17,Expense
+2024-03-27,Flatex ETF Sparplan,Investment,304.76,Expense
+2024-03-28,Gehaltszahlung Arbeitgeber,Salary,2941.96,Income
+2024-03-29,Ströck Bäckerei,Food & Drink,9.66,Expense
+2024-03-29,Bolt Fahrt,Travel,15.74,Expense
+2024-03-29,Haushaltsversicherung UNIQA,Utilities,41.16,Expense
+2024-04-01,BILLA Einkauf,Food & Drink,10.82,Expense
+2024-04-01,Restaurant Wien,Food & Drink,51.03,Expense
+2024-04-01,Mietzahlung Wohnung Wien,Rent,1256.66,Expense
+2024-04-03,BILLA PLUS Einkauf,Food & Drink,20.95,Expense
+2024-04-03,IKEA Vösendorf,Shopping,35.69,Expense
+2024-04-04,McDonald's Österreich,Food & Drink,11.09,Expense
+2024-04-04,Disney+ Abo,Entertainment,11.79,Expense
+2024-04-04,IKEA Vösendorf,Shopping,420.0,Expense
+2024-04-05,Aida Konditorei,Food & Drink,7.13,Expense
+2024-04-05,Disney+ Abo,Entertainment,8.99,Expense
+2024-04-05,FITINN Mitgliedschaft,Health & Fitness,29.9,Expense
+2024-04-05,Physiotherapie,Health & Fitness,46.76,Expense
+2024-04-06,Restaurant Wien,Food & Drink,21.73,Expense
+2024-04-07,Wien Energie Abschlag,Utilities,106.22,Expense
+2024-04-08,McDonald's Österreich,Food & Drink,10.86,Expense
+2024-04-08,Café in Wien,Food & Drink,18.58,Expense
+2024-04-08,Magenta Telekom Mobil,Utilities,22.99,Expense
+2024-04-09,Café in Wien,Food & Drink,6.4,Expense
+2024-04-09,SPAR Supermarkt,Food & Drink,24.88,Expense
+2024-04-11,Wiener Linien Ticket,Travel,2.4,Expense
+2024-04-11,easybank Kontoführung,Utilities,7.81,Expense
+2024-04-11,A1 Internet Zuhause,Utilities,34.51,Expense
+2024-04-11,Haushaltsreparatur,Other,44.59,Expense
+2024-04-11,IKEA Vösendorf,Shopping,202.88,Expense
+2024-04-11,Flatex Dividende,Investment,11.91,Income
+2024-04-11,Kilometergeld Arbeitgeber,Salary,71.36,Income
+2024-04-12,Ströck Bäckerei,Food & Drink,5.96,Expense
+2024-04-13,MuseumsQuartier Ticket,Entertainment,12.6,Expense
+2024-04-13,Netflix Abo,Entertainment,14.0,Expense
+2024-04-14,Spotify Premium,Entertainment,10.79,Expense
+2024-04-14,McDonald's Österreich,Food & Drink,12.95,Expense
+2024-04-15,ORF-Beitrag,Utilities,15.3,Expense
+2024-04-15,Restaurant Wien,Food & Drink,41.18,Expense
+2024-04-16,Anker Jause,Food & Drink,6.49,Expense
+2024-04-16,HOFER Einkauf,Food & Drink,10.73,Expense
+2024-04-16,Aida Konditorei,Food & Drink,14.26,Expense
+2024-04-16,Willhaben Kauf,Shopping,35.13,Expense
+2024-04-16,IKEA Vösendorf,Shopping,41.4,Expense
+2024-04-17,Wiener Linien Ticket,Travel,2.4,Expense
+2024-04-17,MuseumsQuartier Ticket,Entertainment,12.0,Expense
+2024-04-17,Barabend Wien,Entertainment,16.51,Expense
+2024-04-17,Flatex Dividende,Investment,5.02,Income
+2024-04-18,Müller Drogerie,Shopping,12.56,Expense
+2024-04-18,Restaurant Wien,Food & Drink,85.0,Expense
+2024-04-19,ÖBB Ticket,Travel,14.97,Expense
+2024-04-20,Spende Caritas,Other,21.5,Expense
+2024-04-21,Aida Konditorei,Food & Drink,19.11,Expense
+2024-04-21,Flatex ETF Dividende,Investment,24.22,Income
+2024-04-21,Kilometergeld Arbeitgeber,Salary,63.05,Income
+2024-04-22,Bankomatgebühr Ausland,Other,4.47,Expense
+2024-04-22,Lidl Österreich,Food & Drink,21.96,Expense
+2024-04-23,Cineplexx Ticket,Entertainment,14.42,Expense
+2024-04-23,Bolt Fahrt,Travel,16.3,Expense
+2024-04-23,Steam Kauf,Entertainment,49.14,Expense
+2024-04-23,Willhaben Verkauf,Other,64.72,Income
+2024-04-24,Würstelstand,Food & Drink,10.66,Expense
+2024-04-24,BILLA Einkauf,Food & Drink,18.9,Expense
+2024-04-24,Müller Drogerie,Shopping,29.73,Expense
+2024-04-25,Würstelstand,Food & Drink,5.24,Expense
+2024-04-25,Erste Bank Sparzins,Investment,2.6,Income
+2024-04-26,WESTbahn Ticket,Travel,18.91,Expense
+2024-04-26,Zahnarzt Mundhygiene,Health & Fitness,88.66,Expense
+2024-04-27,Flatex ETF Sparplan,Investment,262.5,Expense
+2024-04-28,Essenszuschuss Arbeitgeber,Salary,89.29,Income
+2024-04-28,Gehaltszahlung Arbeitgeber,Salary,2958.96,Income
+2024-04-30,Würstelstand,Food & Drink,9.5,Expense
+2024-04-30,Anker Jause,Food & Drink,3.12,Expense
+2024-04-30,BIPA Einkauf,Shopping,22.78,Expense
+2024-05-01,SPAR Supermarkt,Food & Drink,26.15,Expense
+2024-05-03,Bolt Fahrt,Travel,16.76,Expense
+2024-05-03,PlayStation Store,Entertainment,19.93,Expense
+2024-05-03,MediaMarkt Österreich,Shopping,67.66,Expense
+2024-05-03,Mietzahlung Wohnung Wien,Rent,1272.41,Expense
+2024-05-03,Erste Bank Habenzins,Investment,1.55,Income
+2024-05-04,Post AT Paket,Other,5.81,Expense
+2024-05-04,Shell Tankstelle,Travel,105.0,Expense
+2024-05-05,MuseumsQuartier Ticket,Entertainment,23.12,Expense
+2024-05-05,A1 Handyrechnung,Utilities,28.55,Expense
+2024-05-05,IKEA Vösendorf,Shopping,29.99,Expense
+2024-05-05,FITINN Mitgliedschaft,Health & Fitness,30.49,Expense
+2024-05-05,Wien Energie Abschlag,Utilities,92.82,Expense
+2024-05-05,MediaMarkt Österreich,Shopping,170.93,Expense
+2024-05-06,Amazon.de Bestellung,Shopping,13.77,Expense
+2024-05-08,Restaurant Wien,Food & Drink,32.25,Expense
+2024-05-09,Anker Jause,Food & Drink,4.7,Expense
+2024-05-09,Magenta Telekom Mobil,Utilities,22.09,Expense
+2024-05-09,HOFER Einkauf,Food & Drink,26.47,Expense
+2024-05-10,Café in Wien,Food & Drink,11.08,Expense
+2024-05-10,Kontaktlinsen,Health & Fitness,18.0,Expense
+2024-05-11,Apotheke Wien,Health & Fitness,13.36,Expense
+2024-05-11,A1 Internet Zuhause,Utilities,34.25,Expense
+2024-05-12,Magenta Zusatzpaket,Utilities,5.73,Expense
+2024-05-12,Steam Kauf,Entertainment,8.65,Expense
+2024-05-12,Spende Caritas,Other,10.65,Expense
+2024-05-12,Spotify Premium,Entertainment,11.02,Expense
+2024-05-12,Libro Einkauf,Shopping,11.79,Expense
+2024-05-12,Netflix Abo,Entertainment,14.08,Expense
+2024-05-12,BILLA PLUS Einkauf,Food & Drink,22.29,Expense
+2024-05-12,H&M Wien,Shopping,79.69,Expense
+2024-05-14,MuseumsQuartier Ticket,Entertainment,12.0,Expense
+2024-05-14,HOFER Einkauf,Food & Drink,18.4,Expense
+2024-05-15,ORF-Beitrag,Utilities,15.3,Expense
+2024-05-15,Lidl Österreich,Food & Drink,19.66,Expense
+2024-05-16,OMV Tankstelle,Travel,91.24,Expense
+2024-05-16,Willhaben Verkauf,Other,63.1,Income
+2024-05-17,HOFER Einkauf,Food & Drink,10.94,Expense
+2024-05-17,SPAR Supermarkt,Food & Drink,22.17,Expense
+2024-05-18,ÖBB Ticket,Travel,12.43,Expense
+2024-05-19,Lidl Österreich,Food & Drink,21.07,Expense
+2024-05-19,Restaurant Wien,Food & Drink,62.1,Expense
+2024-05-20,Café in Wien,Food & Drink,5.12,Expense
+2024-05-20,BILLA Einkauf,Food & Drink,25.64,Expense
+2024-05-21,Kontaktlinsen,Health & Fitness,18.0,Expense
+2024-05-21,BILLA PLUS Einkauf,Food & Drink,30.69,Expense
+2024-05-21,OMV Tankstelle,Travel,110.0,Expense
+2024-05-22,Cineplexx Ticket,Entertainment,10.0,Expense
+2024-05-23,Barmherzige Brüder Selbstbehalt,Health & Fitness,62.44,Expense
+2024-05-24,HOFER Einkauf,Food & Drink,10.35,Expense
+2024-05-24,Café in Wien,Food & Drink,13.7,Expense
+2024-05-24,McDonald's Österreich,Food & Drink,18.91,Expense
+2024-05-25,McDonald's Österreich,Food & Drink,10.98,Expense
+2024-05-25,Amazon.de Bestellung,Shopping,106.59,Expense
+2024-05-25,Erste Bank Sparzins,Investment,2.32,Income
+2024-05-26,BIPA Einkauf,Shopping,24.24,Expense
+2024-05-26,OMV Tankstelle,Travel,69.95,Expense
+2024-05-26,Flatex ETF Sparplan,Investment,267.96,Expense
+2024-05-26,Gehaltszahlung Arbeitgeber,Salary,2941.91,Income
+2024-05-27,Anker Jause,Food & Drink,4.08,Expense
+2024-05-27,BIPA Einkauf,Shopping,31.19,Expense
+2024-05-28,A1 Handyrechnung,Utilities,18.7,Expense
+2024-05-28,Café in Wien,Food & Drink,22.0,Expense
+2024-05-28,Willhaben Kauf,Shopping,35.8,Expense
+2024-05-28,Flatex Dividende,Investment,15.1,Income
+2024-05-29,McDonald's Österreich,Food & Drink,18.98,Expense
+2024-05-30,Lidl Österreich,Food & Drink,20.0,Expense
+2024-06-02,Würstelstand,Food & Drink,4.26,Expense
+2024-06-02,Steam Kauf,Entertainment,11.1,Expense
+2024-06-03,FITINN Mitgliedschaft,Health & Fitness,29.94,Expense
+2024-06-03,Konzertticket Stadthalle,Entertainment,81.43,Expense
+2024-06-03,Mietzahlung Wohnung Wien,Rent,1240.79,Expense
+2024-06-03,Kilometergeld Arbeitgeber,Salary,66.1,Income
+2024-06-04,Würstelstand,Food & Drink,3.69,Expense
+2024-06-04,BILLA PLUS Einkauf,Food & Drink,34.29,Expense
+2024-06-05,Aida Konditorei,Food & Drink,11.89,Expense
+2024-06-05,Flatex Einzelkauf ETF,Investment,188.83,Expense
+2024-06-07,H&M Wien,Shopping,26.74,Expense
+2024-06-07,Wien Energie Abschlag,Utilities,107.69,Expense
+2024-06-09,Würstelstand,Food & Drink,6.4,Expense
+2024-06-09,Würstelstand,Food & Drink,7.02,Expense
+2024-06-09,Magenta Telekom Mobil,Utilities,22.2,Expense
+2024-06-10,Anker Jause,Food & Drink,3.43,Expense
+2024-06-10,Netflix Extra,Entertainment,4.76,Expense
+2024-06-10,A1 Internet Zuhause,Utilities,34.47,Expense
+2024-06-10,Essenszuschuss Arbeitgeber,Salary,84.45,Income
+2024-06-11,Steam Kauf,Entertainment,15.92,Expense
+2024-06-12,ÖBB Ticket,Travel,10.12,Expense
+2024-06-12,McDonald's Österreich,Food & Drink,11.9,Expense
+2024-06-12,ÖBB Ticket,Travel,16.06,Expense
+2024-06-13,Ströck Bäckerei,Food & Drink,6.96,Expense
+2024-06-13,Netflix Abo,Entertainment,13.95,Expense
+2024-06-13,WESTbahn Ticket,Travel,17.93,Expense
+2024-06-14,Spotify Premium,Entertainment,10.84,Expense
+2024-06-14,BILLA PLUS Einkauf,Food & Drink,20.21,Expense
+2024-06-14,MuseumsQuartier Ticket,Entertainment,24.0,Expense
+2024-06-15,ORF-Beitrag,Utilities,15.3,Expense
+2024-06-16,Café in Wien,Food & Drink,16.1,Expense
+2024-06-16,Libro Einkauf,Shopping,18.19,Expense
+2024-06-17,McDonald's Österreich,Food & Drink,14.69,Expense
+2024-06-18,Anker Jause,Food & Drink,6.13,Expense
+2024-06-18,Flatex Einzelkauf ETF,Investment,420.0,Expense
+2024-06-20,HOFER Einkauf,Food & Drink,9.37,Expense
+2024-06-21,BIPA Einkauf,Shopping,16.36,Expense
+2024-06-21,Freunde Rückzahlung,Other,21.61,Income
+2024-06-23,Aida Konditorei,Food & Drink,12.17,Expense
+2024-06-23,FITINN Tageskarte,Health & Fitness,13.55,Expense
+2024-06-23,Zalando Bestellung,Shopping,17.04,Expense
+2024-06-24,Barmherzige Brüder Selbstbehalt,Health & Fitness,31.55,Expense
+2024-06-24,MediaMarkt Österreich,Shopping,92.79,Expense
+2024-06-24,Erste Bank Sparzins,Investment,3.07,Income
+2024-06-25,Netflix Extra,Entertainment,4.42,Expense
+2024-06-25,Cineplexx Ticket,Entertainment,11.04,Expense
+2024-06-25,HOFER Einkauf,Food & Drink,14.05,Expense
+2024-06-27,Flatex ETF Sparplan,Investment,259.14,Expense
+2024-06-28,Restaurant Wien,Food & Drink,30.67,Expense
+2024-06-28,Gehaltszahlung Arbeitgeber,Salary,3076.88,Income
+2024-06-29,Ströck Bäckerei,Food & Drink,7.72,Expense
+2024-06-29,Lidl Österreich,Food & Drink,20.2,Expense
+2024-06-30,BILLA PLUS Einkauf,Food & Drink,12.15,Expense
+2024-06-30,Aida Konditorei,Food & Drink,13.71,Expense
+2024-06-30,HOFER Einkauf,Food & Drink,20.86,Expense
+2024-06-30,BILLA PLUS Einkauf,Food & Drink,22.58,Expense
+2024-06-30,A1 Handyrechnung,Utilities,23.63,Expense
+2024-07-01,Parkgarage Wien,Travel,4.8,Expense
+2024-07-01,Libro Einkauf,Shopping,8.16,Expense
+2024-07-01,Restaurant Wien,Food & Drink,14.1,Expense
+2024-07-01,Zahnarzt Mundhygiene,Health & Fitness,75.0,Expense
+2024-07-02,Café in Wien,Food & Drink,15.24,Expense
+2024-07-02,Restaurant Wien,Food & Drink,38.41,Expense
+2024-07-03,Ströck Bäckerei,Food & Drink,8.64,Expense
+2024-07-03,Mietzahlung Wohnung Wien,Rent,1240.79,Expense
+2024-07-05,Netflix Extra,Entertainment,4.42,Expense
+2024-07-05,Bolt Fahrt,Travel,14.62,Expense
+2024-07-05,FITINN Mitgliedschaft,Health & Fitness,29.9,Expense
+2024-07-06,McDonald's Österreich,Food & Drink,15.36,Expense
+2024-07-07,PlayStation Store,Entertainment,10.86,Expense
+2024-07-07,Magenta Telekom Mobil,Utilities,21.48,Expense
+2024-07-07,SPAR Supermarkt,Food & Drink,25.59,Expense
+2024-07-07,BILLA PLUS Einkauf,Food & Drink,31.22,Expense
+2024-07-07,Wien Energie Abschlag,Utilities,95.65,Expense
+2024-07-08,Aida Konditorei,Food & Drink,16.64,Expense
+2024-07-08,Restaurant Wien,Food & Drink,30.19,Expense
+2024-07-09,Aida Konditorei,Food & Drink,8.08,Expense
+2024-07-09,Anker Jause,Food & Drink,8.11,Expense
+2024-07-10,Café in Wien,Food & Drink,9.09,Expense
+2024-07-10,Steam Kauf,Entertainment,27.29,Expense
+2024-07-10,IKEA Vösendorf,Shopping,155.86,Expense
+2024-07-11,A1 Internet Zuhause,Utilities,34.35,Expense
+2024-07-11,BILLA Einkauf,Food & Drink,36.67,Expense
+2024-07-13,McDonald's Österreich,Food & Drink,9.34,Expense
+2024-07-13,Netflix Abo,Entertainment,13.96,Expense
+2024-07-14,Spotify Premium,Entertainment,10.91,Expense
+2024-07-14,FITINN Tageskarte,Health & Fitness,14.81,Expense
+2024-07-14,ORF-Beitrag,Utilities,15.3,Expense
+2024-07-14,Urlaubsgeld Arbeitgeber,Salary,4323.72,Income
+2024-07-15,dm drogerie markt,Shopping,7.43,Expense
+2024-07-15,Zalando Bestellung,Shopping,57.28,Expense
+2024-07-15,Raiffeisen Sparrate,Investment,102.51,Expense
+2024-07-16,Parkgarage Wien,Travel,7.08,Expense
+2024-07-16,H&M Wien,Shopping,47.29,Expense
+2024-07-16,Flatex Dividende,Investment,12.33,Income
+2024-07-17,Aida Konditorei,Food & Drink,7.63,Expense
+2024-07-17,McDonald's Österreich,Food & Drink,16.7,Expense
+2024-07-17,Bolt Fahrt,Travel,20.21,Expense
+2024-07-18,Würstelstand,Food & Drink,14.37,Expense
+2024-07-19,Libro Einkauf,Shopping,11.43,Expense
+2024-07-19,H&M Wien,Shopping,23.1,Expense
+2024-07-19,Konzertticket Stadthalle,Entertainment,81.12,Expense
+2024-07-20,BILLA Einkauf,Food & Drink,16.39,Expense
+2024-07-20,ÖBB Ticket,Travel,16.85,Expense
+2024-07-20,ÖBB Ticket,Travel,26.84,Expense
+2024-07-20,MediaMarkt Österreich,Shopping,138.86,Expense
+2024-07-21,Würstelstand,Food & Drink,8.07,Expense
+2024-07-21,FITINN Tageskarte,Health & Fitness,11.31,Expense
+2024-07-21,Flatex ETF Dividende,Investment,41.55,Income
+2024-07-22,Café in Wien,Food & Drink,7.83,Expense
+2024-07-22,Lidl Österreich,Food & Drink,9.51,Expense
+2024-07-23,Bolt Fahrt,Travel,7.87,Expense
+2024-07-23,Restaurant Wien,Food & Drink,85.0,Expense
+2024-07-24,OMV Tankstelle,Travel,40.17,Expense
+2024-07-25,Apotheke Wien,Health & Fitness,8.22,Expense
+2024-07-25,McDonald's Österreich,Food & Drink,17.42,Expense
+2024-07-25,HOFER Einkauf,Food & Drink,17.77,Expense
+2024-07-25,Erste Bank Sparzins,Investment,2.65,Income
+2024-07-26,Müller Drogerie,Shopping,16.84,Expense
+2024-07-26,Flatex Dividende,Investment,34.3,Income
+2024-07-27,Flatex ETF Sparplan,Investment,264.14,Expense
+2024-07-28,Bolt Fahrt,Travel,12.67,Expense
+2024-07-28,Amazon.de Bestellung,Shopping,26.83,Expense
+2024-07-28,Gehaltszahlung Arbeitgeber,Salary,2974.26,Income
+2024-07-29,Anker Jause,Food & Drink,6.07,Expense
+2024-07-30,Raiffeisen Sparrate,Investment,73.34,Expense
+2024-07-30,Raiffeisen Sparrate,Investment,209.68,Expense
+2024-08-01,Shell Tankstelle,Travel,105.0,Expense
+2024-08-02,Spende Caritas,Other,9.48,Expense
+2024-08-02,SPAR Supermarkt,Food & Drink,21.57,Expense
+2024-08-02,Haushaltsreparatur,Other,151.03,Expense
+2024-08-03,Mietzahlung Wohnung Wien,Rent,1273.43,Expense
+2024-08-05,Parkgarage Wien,Travel,6.09,Expense
+2024-08-05,FITINN Mitgliedschaft,Health & Fitness,30.65,Expense
+2024-08-05,Wien Energie Abschlag,Utilities,99.75,Expense
+2024-08-06,BILLA PLUS Einkauf,Food & Drink,37.02,Expense
+2024-08-08,MediaMarkt Österreich,Shopping,53.88,Expense
+2024-08-09,Magenta Telekom Mobil,Utilities,23.16,Expense
+2024-08-10,Aida Konditorei,Food & Drink,21.85,Expense
+2024-08-10,Zalando Bestellung,Shopping,26.05,Expense
+2024-08-11,Free Now Fahrt,Travel,27.64,Expense
+2024-08-11,A1 Internet Zuhause,Utilities,34.8,Expense
+2024-08-12,Spotify Premium,Entertainment,10.99,Expense
+2024-08-12,Netflix Abo,Entertainment,13.8,Expense
+2024-08-12,Erste Bank Habenzins,Investment,2.3,Income
+2024-08-14,Anker Jause,Food & Drink,5.8,Expense
+2024-08-14,Ströck Bäckerei,Food & Drink,8.47,Expense
+2024-08-14,McDonald's Österreich,Food & Drink,8.68,Expense
+2024-08-14,BILLA Einkauf,Food & Drink,23.55,Expense
+2024-08-15,HOFER Einkauf,Food & Drink,9.75,Expense
+2024-08-15,Aida Konditorei,Food & Drink,12.42,Expense
+2024-08-15,ORF-Beitrag,Utilities,15.3,Expense
+2024-08-16,Ströck Bäckerei,Food & Drink,8.86,Expense
+2024-08-18,Barabend Wien,Entertainment,21.68,Expense
+2024-08-22,Kilometergeld Arbeitgeber,Salary,87.39,Income
+2024-08-23,Post AT Paket,Other,4.99,Expense
+2024-08-23,SPAR Supermarkt,Food & Drink,53.43,Expense
+2024-08-24,Café in Wien,Food & Drink,9.27,Expense
+2024-08-24,Barmherzige Brüder Selbstbehalt,Health & Fitness,32.61,Expense
+2024-08-25,Zahnarzt Mundhygiene,Health & Fitness,75.0,Expense
+2024-08-25,Erste Bank Sparzins,Investment,2.85,Income
+2024-08-25,Essenszuschuss Arbeitgeber,Salary,77.7,Income
+2024-08-26,Flatex ETF Sparplan,Investment,336.21,Expense
+2024-08-26,Essenszuschuss Arbeitgeber,Salary,70.85,Income
+2024-08-26,Gehaltszahlung Arbeitgeber,Salary,2916.83,Income
+2024-08-27,HOFER Einkauf,Food & Drink,17.03,Expense
+2024-08-27,MuseumsQuartier Ticket,Entertainment,18.54,Expense
+2024-08-27,Willhaben Kauf,Shopping,23.32,Expense
+2024-08-29,OMV Tankstelle,Travel,58.17,Expense
+2024-08-29,Erste Bank Habenzins,Investment,1.5,Income
+2024-08-30,Parkgarage Wien,Travel,4.53,Expense
+2024-08-30,FITINN Tageskarte,Health & Fitness,14.55,Expense
+2024-08-31,Disney+ Abo,Entertainment,10.64,Expense
+2024-08-31,OMV Tankstelle,Travel,100.69,Expense
+2024-09-02,FITINN Tageskarte,Health & Fitness,11.56,Expense
+2024-09-02,Mietzahlung Wohnung Wien,Rent,1258.81,Expense
+2024-09-04,Zahnarzt Mundhygiene,Health & Fitness,95.99,Expense
+2024-09-05,FITINN Mitgliedschaft,Health & Fitness,29.9,Expense
+2024-09-06,Haushaltsreparatur,Other,70.9,Expense
+2024-09-07,Café in Wien,Food & Drink,11.95,Expense
+2024-09-07,Aida Konditorei,Food & Drink,12.77,Expense
+2024-09-07,Wien Energie Abschlag,Utilities,101.02,Expense
+2024-09-08,Wiener Linien Ticket,Travel,2.4,Expense
+2024-09-08,Netflix Extra,Entertainment,3.99,Expense
+2024-09-08,Zalando Bestellung,Shopping,116.28,Expense
+2024-09-09,Magenta Telekom Mobil,Utilities,22.87,Expense
+2024-09-09,A1 Internet Zuhause,Utilities,33.38,Expense
+2024-09-10,SPAR Supermarkt,Food & Drink,37.04,Expense
+2024-09-11,Raiffeisen Sparrate,Investment,78.19,Expense
+2024-09-12,Shell Tankstelle,Travel,21.88,Expense
+2024-09-13,Netflix Abo,Entertainment,14.1,Expense
+2024-09-13,Willhaben Kauf,Shopping,37.96,Expense
+2024-09-13,Shell Tankstelle,Travel,48.21,Expense
+2024-09-14,Spotify Premium,Entertainment,11.07,Expense
+2024-09-15,ORF-Beitrag,Utilities,15.3,Expense
+2024-09-16,Steam Kauf,Entertainment,8.69,Expense
+2024-09-16,BILLA PLUS Einkauf,Food & Drink,16.7,Expense
+2024-09-17,Ströck Bäckerei,Food & Drink,6.29,Expense
+2024-09-18,Café in Wien,Food & Drink,11.82,Expense
+2024-09-19,Wiener Linien Ticket,Travel,2.4,Expense
+2024-09-19,easybank Kontoführung,Utilities,7.92,Expense
+2024-09-20,Barabend Wien,Entertainment,12.57,Expense
+2024-09-20,H&M Wien,Shopping,47.19,Expense
+2024-09-22,BIPA Einkauf,Shopping,9.0,Expense
+2024-09-22,Magenta Zusatzpaket,Utilities,9.97,Expense
+2024-09-23,Parkgarage Wien,Travel,3.55,Expense
+2024-09-23,McDonald's Österreich,Food & Drink,7.26,Expense
+2024-09-23,Parkgarage Wien,Travel,7.33,Expense
+2024-09-23,Zalando Bestellung,Shopping,43.13,Expense
+2024-09-23,Erste Bank Sparzins,Investment,3.51,Income
+2024-09-24,Amazon.de Bestellung,Shopping,18.37,Expense
+2024-09-24,HOFER Einkauf,Food & Drink,23.56,Expense
+2024-09-25,Wiener Linien Ticket,Travel,2.4,Expense
+2024-09-26,Wiener Linien Ticket,Travel,2.4,Expense
+2024-09-26,Flatex Dividende,Investment,26.09,Income
+2024-09-27,Post AT Paket,Other,6.41,Expense
+2024-09-27,Shell Tankstelle,Travel,56.58,Expense
+2024-09-27,Flatex ETF Sparplan,Investment,218.17,Expense
+2024-09-28,Anker Jause,Food & Drink,4.55,Expense
+2024-09-28,Shell Tankstelle,Travel,34.64,Expense
+2024-09-28,Gehaltszahlung Arbeitgeber,Salary,3020.24,Income
+2024-09-30,Anker Jause,Food & Drink,9.1,Expense
+2024-09-30,HOFER Einkauf,Food & Drink,18.64,Expense
+2024-09-30,Anker Jause,Food & Drink,12.8,Expense
+2024-10-02,SPAR Supermarkt,Food & Drink,32.43,Expense
+2024-10-03,Netflix Extra,Entertainment,4.65,Expense
+2024-10-03,SPAR Supermarkt,Food & Drink,16.33,Expense
+2024-10-03,Bolt Fahrt,Travel,20.71,Expense
+2024-10-03,Mietzahlung Wohnung Wien,Rent,1236.55,Expense
+2024-10-04,H&M Wien,Shopping,35.56,Expense
+2024-10-04,HOFER Einkauf,Food & Drink,58.6,Expense
+2024-10-05,Anker Jause,Food & Drink,4.74,Expense
+2024-10-05,Café in Wien,Food & Drink,6.87,Expense
+2024-10-05,PlayStation Store,Entertainment,8.64,Expense
+2024-10-05,FITINN Mitgliedschaft,Health & Fitness,30.46,Expense
+2024-10-06,MediaMarkt Österreich,Shopping,23.43,Expense
+2024-10-06,Restaurant Wien,Food & Drink,27.31,Expense
+2024-10-06,Wien Energie Abschlag,Utilities,83.98,Expense
+2024-10-06,Essenszuschuss Arbeitgeber,Salary,70.0,Income
+2024-10-07,Barabend Wien,Entertainment,11.38,Expense
+2024-10-08,Wien Energie Nachzahlung,Utilities,36.06,Expense
+2024-10-09,Wiener Linien Ticket,Travel,2.4,Expense
+2024-10-09,Magenta Telekom Mobil,Utilities,23.49,Expense
+2024-10-10,Amazon.de Bestellung,Shopping,30.45,Expense
+2024-10-10,Kontaktlinsen,Health & Fitness,39.7,Expense
+2024-10-10,BILLA Einkauf,Food & Drink,44.43,Expense
+2024-10-11,A1 Internet Zuhause,Utilities,37.75,Expense
+2024-10-12,Anker Jause,Food & Drink,10.65,Expense
+2024-10-12,Konzertticket Stadthalle,Entertainment,73.35,Expense
+2024-10-12,Flatex Dividende,Investment,13.66,Income
+2024-10-12,Steuerausgleich FinanzOnline,Other,477.5,Income
+2024-10-13,Spotify Premium,Entertainment,10.93,Expense
+2024-10-13,Netflix Abo,Entertainment,13.89,Expense
+2024-10-13,ORF-Beitrag,Utilities,15.3,Expense
+2024-10-15,Haushaltsversicherung UNIQA,Utilities,22.55,Expense
+2024-10-15,Flatex Dividende,Investment,20.5,Income
+2024-10-17,A1 Handyrechnung,Utilities,16.14,Expense
+2024-10-18,FITINN Tageskarte,Health & Fitness,11.94,Expense
+2024-10-19,Restaurant Wien,Food & Drink,19.19,Expense
+2024-10-19,Kontaktlinsen,Health & Fitness,37.96,Expense
+2024-10-20,Physiotherapie,Health & Fitness,49.42,Expense
+2024-10-20,Flatex ETF Dividende,Investment,38.39,Income
+2024-10-21,McDonald's Österreich,Food & Drink,13.78,Expense
+2024-10-21,Restaurant Wien,Food & Drink,20.22,Expense
+2024-10-24,Bolt Fahrt,Travel,7.86,Expense
+2024-10-24,PlayStation Store,Entertainment,13.71,Expense
+2024-10-24,McDonald's Österreich,Food & Drink,15.59,Expense
+2024-10-25,BILLA Einkauf,Food & Drink,31.74,Expense
+2024-10-25,Erste Bank Sparzins,Investment,2.89,Income
+2024-10-26,H&M Wien,Shopping,48.32,Expense
+2024-10-27,Steam Kauf,Entertainment,13.83,Expense
+2024-10-27,Aida Konditorei,Food & Drink,18.24,Expense
+2024-10-27,SPAR Supermarkt,Food & Drink,34.42,Expense
+2024-10-27,Flatex ETF Sparplan,Investment,232.38,Expense
+2024-10-27,Gehaltszahlung Arbeitgeber,Salary,2907.85,Income
+2024-10-28,Post AT Paket,Other,5.54,Expense
+2024-10-28,McDonald's Österreich,Food & Drink,11.09,Expense
+2024-10-28,McDonald's Österreich,Food & Drink,22.17,Expense
+2024-10-28,Willhaben Kauf,Shopping,52.71,Expense
+2024-10-28,Flatex Einzelkauf ETF,Investment,200.87,Expense
+2024-10-29,Wiener Linien Ticket,Travel,2.4,Expense
+2024-10-30,McDonald's Österreich,Food & Drink,10.39,Expense
+2024-10-30,Apotheke Wien,Health & Fitness,16.64,Expense
+2024-11-01,Lidl Österreich,Food & Drink,18.32,Expense
+2024-11-01,BIPA Einkauf,Shopping,18.65,Expense
+2024-11-01,Zahnarzt Mundhygiene,Health & Fitness,94.36,Expense
+2024-11-03,Anker Jause,Food & Drink,7.61,Expense
+2024-11-03,Mietzahlung Wohnung Wien,Rent,1254.77,Expense
+2024-11-04,FITINN Mitgliedschaft,Health & Fitness,29.9,Expense
+2024-11-04,BILLA PLUS Einkauf,Food & Drink,46.97,Expense
+2024-11-04,Haushaltsreparatur,Other,55.46,Expense
+2024-11-06,Libro Einkauf,Shopping,15.95,Expense
+2024-11-07,BILLA Einkauf,Food & Drink,32.85,Expense
+2024-11-07,Wien Energie Abschlag,Utilities,98.69,Expense
+2024-11-08,Lidl Österreich,Food & Drink,24.39,Expense
+2024-11-08,Lidl Österreich,Food & Drink,28.67,Expense
+2024-11-08,HOFER Einkauf,Food & Drink,55.2,Expense
+2024-11-09,McDonald's Österreich,Food & Drink,5.64,Expense
+2024-11-09,Magenta Telekom Mobil,Utilities,21.84,Expense
+2024-11-10,MuseumsQuartier Ticket,Entertainment,20.05,Expense
+2024-11-10,OMV Tankstelle,Travel,99.04,Expense
+2024-11-10,Steuerausgleich FinanzOnline,Other,317.02,Income
+2024-11-11,Netflix Abo,Entertainment,13.9,Expense
+2024-11-11,SPAR Supermarkt,Food & Drink,25.7,Expense
+2024-11-11,A1 Internet Zuhause,Utilities,35.52,Expense
+2024-11-11,Restaurant Wien,Food & Drink,79.04,Expense
+2024-11-11,Physiotherapie,Health & Fitness,82.98,Expense
+2024-11-11,IKEA Vösendorf,Shopping,110.38,Expense
+2024-11-12,Bankomatgebühr Ausland,Other,4.6,Expense
+2024-11-12,Apotheke Wien,Health & Fitness,9.86,Expense
+2024-11-12,PlayStation Store,Entertainment,10.78,Expense
+2024-11-12,OMV Tankstelle,Travel,110.0,Expense
+2024-11-13,easybank Kontoführung,Utilities,6.32,Expense
+2024-11-14,Spotify Premium,Entertainment,11.14,Expense
+2024-11-15,Parkgarage Wien,Travel,3.65,Expense
+2024-11-15,ORF-Beitrag,Utilities,15.3,Expense
+2024-11-16,Disney+ Abo,Entertainment,8.99,Expense
+2024-11-16,Disney+ Abo,Entertainment,10.19,Expense
+2024-11-16,Zahnarzt Mundhygiene,Health & Fitness,86.46,Expense
+2024-11-17,Spende Caritas,Other,28.63,Expense
+2024-11-18,Müller Drogerie,Shopping,23.5,Expense
+2024-11-19,Bankomatgebühr Ausland,Other,4.28,Expense
+2024-11-19,Disney+ Abo,Entertainment,11.35,Expense
+2024-11-20,Restaurant Wien,Food & Drink,15.5,Expense
+2024-11-21,Parkgarage Wien,Travel,4.16,Expense
+2024-11-21,Libro Einkauf,Shopping,17.43,Expense
+2024-11-21,Steam Kauf,Entertainment,21.49,Expense
+2024-11-23,BILLA Einkauf,Food & Drink,17.84,Expense
+2024-11-23,McDonald's Österreich,Food & Drink,21.57,Expense
+2024-11-23,BILLA Einkauf,Food & Drink,27.63,Expense
+2024-11-23,Pfand Rückgabe,Other,5.8,Income
+2024-11-24,McDonald's Österreich,Food & Drink,14.22,Expense
+2024-11-25,Flatex ETF Sparplan,Investment,238.73,Expense
+2024-11-25,Erste Bank Sparzins,Investment,2.1,Income
+2024-11-26,Lidl Österreich,Food & Drink,8.83,Expense
+2024-11-27,Ströck Bäckerei,Food & Drink,6.87,Expense
+2024-11-28,McDonald's Österreich,Food & Drink,9.67,Expense
+2024-11-28,McDonald's Österreich,Food & Drink,12.26,Expense
+2024-11-28,Lidl Österreich,Food & Drink,52.44,Expense
+2024-11-28,Gehaltszahlung Arbeitgeber,Salary,2986.49,Income
+2024-11-29,Anker Jause,Food & Drink,8.5,Expense
+2024-11-29,Kontaktlinsen,Health & Fitness,29.07,Expense
+2024-11-29,OMV Tankstelle,Travel,46.27,Expense
+2024-11-29,Konzertticket Stadthalle,Entertainment,55.88,Expense
+2024-11-30,Post AT Paket,Other,5.05,Expense
+2024-11-30,Kontaktlinsen,Health & Fitness,23.42,Expense
+2024-12-01,Mietzahlung Wohnung Wien,Rent,1236.66,Expense
+2024-12-02,BIPA Einkauf,Shopping,12.14,Expense
+2024-12-03,McDonald's Österreich,Food & Drink,7.41,Expense
+2024-12-03,Café in Wien,Food & Drink,12.82,Expense
+2024-12-03,Müller Drogerie,Shopping,13.9,Expense
+2024-12-03,Freunde Rückzahlung,Other,27.48,Income
+2024-12-04,Restaurant Wien,Food & Drink,34.09,Expense
+2024-12-04,BILLA PLUS Einkauf,Food & Drink,34.54,Expense
+2024-12-05,Wiener Linien Ticket,Travel,2.4,Expense
+2024-12-05,FITINN Mitgliedschaft,Health & Fitness,30.23,Expense
+2024-12-06,Flatex Dividende,Investment,7.54,Income
+2024-12-07,easybank Kontoführung,Utilities,7.39,Expense
+2024-12-07,MuseumsQuartier Ticket,Entertainment,22.71,Expense
+2024-12-07,Wien Energie Abschlag,Utilities,93.69,Expense
+2024-12-08,PlayStation Store,Entertainment,20.15,Expense
+2024-12-08,Magenta Telekom Mobil,Utilities,23.13,Expense
+2024-12-09,MediaMarkt Österreich,Shopping,95.5,Expense
+2024-12-10,Würstelstand,Food & Drink,10.01,Expense
+2024-12-10,BILLA PLUS Einkauf,Food & Drink,53.0,Expense
+2024-12-10,Shell Tankstelle,Travel,53.26,Expense
+2024-12-11,Café in Wien,Food & Drink,7.46,Expense
+2024-12-11,Barabend Wien,Entertainment,24.05,Expense
+2024-12-11,A1 Internet Zuhause,Utilities,36.6,Expense
+2024-12-13,Parkgarage Wien,Travel,3.88,Expense
+2024-12-13,Netflix Abo,Entertainment,13.83,Expense
+2024-12-13,Raiffeisen Sparrate,Investment,149.18,Expense
+2024-12-14,Aida Konditorei,Food & Drink,8.8,Expense
+2024-12-14,Spotify Premium,Entertainment,11.01,Expense
+2024-12-15,Bolt Fahrt,Travel,7.38,Expense
+2024-12-15,ORF-Beitrag,Utilities,15.3,Expense
+2024-12-15,Weihnachtsgeld Arbeitgeber,Salary,4311.75,Income
+2024-12-16,Lidl Österreich,Food & Drink,20.22,Expense
+2024-12-16,H&M Wien,Shopping,48.5,Expense
+2024-12-17,Ströck Bäckerei,Food & Drink,7.46,Expense
+2024-12-17,Restaurant Wien,Food & Drink,29.4,Expense
+2024-12-18,Barmherzige Brüder Selbstbehalt,Health & Fitness,30.84,Expense
+2024-12-20,Müller Drogerie,Shopping,22.55,Expense
+2024-12-20,Restaurant Wien,Food & Drink,45.18,Expense
+2024-12-21,Zalando Bestellung,Shopping,23.8,Expense
+2024-12-22,Post AT Paket,Other,5.64,Expense
+2024-12-22,Restaurant Wien,Food & Drink,21.21,Expense
+2024-12-24,BILLA Einkauf,Food & Drink,16.76,Expense
+2024-12-25,ÖBB Ticket,Travel,21.03,Expense
+2024-12-25,Erste Bank Sparzins,Investment,3.03,Income
+2024-12-26,HOFER Einkauf,Food & Drink,34.37,Expense
+2024-12-26,Haushaltsreparatur,Other,35.61,Expense
+2024-12-27,Flatex ETF Sparplan,Investment,277.36,Expense
+2024-12-28,Restaurant Wien,Food & Drink,45.77,Expense
+2024-12-28,Gehaltszahlung Arbeitgeber,Salary,2867.22,Income
+2024-12-30,Ströck Bäckerei,Food & Drink,11.29,Expense
+2024-12-30,Steam Kauf,Entertainment,29.88,Expense
+2024-12-30,H&M Wien,Shopping,74.3,Expense
+2025-01-01,Aida Konditorei,Food & Drink,14.23,Expense
+2025-01-01,ÖBB Ticket,Travel,17.43,Expense
+2025-01-01,Haushaltsreparatur,Other,29.39,Expense
+2025-01-01,Schlüsseldienst,Other,143.25,Expense
+2025-01-02,FITINN Tageskarte,Health & Fitness,10.0,Expense
+2025-01-03,MediaMarkt Österreich,Shopping,85.93,Expense
+2025-01-03,Mietzahlung Wohnung Wien,Rent,1236.62,Expense
+2025-01-04,Aida Konditorei,Food & Drink,9.81,Expense
+2025-01-04,BILLA PLUS Einkauf,Food & Drink,14.29,Expense
+2025-01-05,Barabend Wien,Entertainment,17.55,Expense
+2025-01-05,FITINN Mitgliedschaft,Health & Fitness,29.9,Expense
+2025-01-05,Energiebonus Rückzahlung,Other,91.23,Income
+2025-01-06,Wien Energie Abschlag,Utilities,92.8,Expense
+2025-01-07,SPAR Supermarkt,Food & Drink,39.22,Expense
+2025-01-09,Würstelstand,Food & Drink,7.42,Expense
+2025-01-09,Magenta Telekom Mobil,Utilities,23.42,Expense
+2025-01-09,Zahnarzt Mundhygiene,Health & Fitness,75.0,Expense
+2025-01-10,Anker Jause,Food & Drink,3.68,Expense
+2025-01-10,Müller Drogerie,Shopping,9.21,Expense
+2025-01-10,Barabend Wien,Entertainment,29.0,Expense
+2025-01-11,Magenta Zusatzpaket,Utilities,8.7,Expense
+2025-01-11,WESTbahn Ticket,Travel,14.4,Expense
+2025-01-11,A1 Internet Zuhause,Utilities,35.29,Expense
+2025-01-12,Bolt Fahrt,Travel,9.25,Expense
+2025-01-12,Barmherzige Brüder Selbstbehalt,Health & Fitness,65.84,Expense
+2025-01-13,Spotify Premium,Entertainment,11.02,Expense
+2025-01-13,Netflix Abo,Entertainment,14.02,Expense
+2025-01-13,ORF-Beitrag,Utilities,15.3,Expense
+2025-01-13,Erste Bank Habenzins,Investment,2.82,Income
+2025-01-14,Parkgarage Wien,Travel,7.63,Expense
+2025-01-14,BILLA PLUS Einkauf,Food & Drink,49.47,Expense
+2025-01-14,Schlüsseldienst,Other,55.7,Expense
+2025-01-16,Shell Tankstelle,Travel,60.82,Expense
+2025-01-18,Bankomatgebühr Ausland,Other,5.26,Expense
+2025-01-18,Cineplexx Ticket,Entertainment,11.81,Expense
+2025-01-18,Müller Drogerie,Shopping,12.07,Expense
+2025-01-18,Physiotherapie,Health & Fitness,84.17,Expense
+2025-01-19,Café in Wien,Food & Drink,9.26,Expense
+2025-01-19,H&M Wien,Shopping,16.67,Expense
+2025-01-19,Konzertticket Stadthalle,Entertainment,110.51,Expense
+2025-01-19,Kilometergeld Arbeitgeber,Salary,69.15,Income
+2025-01-20,Flatex ETF Dividende,Investment,28.8,Income
+2025-01-22,Aida Konditorei,Food & Drink,9.22,Expense
+2025-01-23,Bankomatgebühr Ausland,Other,4.06,Expense
+2025-01-23,Würstelstand,Food & Drink,6.21,Expense
+2025-01-24,SPAR Supermarkt,Food & Drink,24.69,Expense
+2025-01-24,BILLA PLUS Einkauf,Food & Drink,45.85,Expense
+2025-01-25,Steam Kauf,Entertainment,12.68,Expense
+2025-01-25,ÖBB Ticket,Travel,19.64,Expense
+2025-01-25,HOFER Einkauf,Food & Drink,21.11,Expense
+2025-01-25,Willhaben Kauf,Shopping,141.66,Expense
+2025-01-25,Erste Bank Sparzins,Investment,2.19,Income
+2025-01-27,Flatex ETF Sparplan,Investment,258.13,Expense
+2025-01-27,Gehaltszahlung Arbeitgeber,Salary,2901.95,Income
+2025-01-29,Haushaltsreparatur,Other,126.62,Expense
+2025-01-30,dm drogerie markt,Shopping,5.61,Expense
+2025-01-31,Zahnarzt Mundhygiene,Health & Fitness,135.0,Expense
+2025-02-02,Shell Tankstelle,Travel,39.5,Expense
+2025-02-03,Netflix Extra,Entertainment,7.91,Expense
+2025-02-03,FITINN Mitgliedschaft,Health & Fitness,30.02,Expense
+2025-02-03,Mietzahlung Wohnung Wien,Rent,1274.36,Expense
+2025-02-04,BILLA PLUS Einkauf,Food & Drink,66.06,Expense
+2025-02-05,BIPA Einkauf,Shopping,36.74,Expense
+2025-02-06,Würstelstand,Food & Drink,7.91,Expense
+2025-02-07,Lidl Österreich,Food & Drink,17.68,Expense
+2025-02-07,HOFER Einkauf,Food & Drink,19.1,Expense
+2025-02-07,Amazon.de Bestellung,Shopping,25.49,Expense
+2025-02-07,IKEA Vösendorf,Shopping,60.48,Expense
+2025-02-07,Wien Energie Abschlag,Utilities,98.86,Expense
+2025-02-08,PlayStation Store,Entertainment,6.42,Expense
+2025-02-08,Restaurant Wien,Food & Drink,20.34,Expense
+2025-02-08,Erste Bank Habenzins,Investment,1.25,Income
+2025-02-09,Magenta Telekom Mobil,Utilities,24.77,Expense
+2025-02-09,BILLA Einkauf,Food & Drink,26.59,Expense
+2025-02-09,Shell Tankstelle,Travel,26.76,Expense
+2025-02-10,A1 Internet Zuhause,Utilities,35.52,Expense
+2025-02-10,Restaurant Wien,Food & Drink,50.74,Expense
+2025-02-11,Parkgarage Wien,Travel,4.13,Expense
+2025-02-11,Lidl Österreich,Food & Drink,8.01,Expense
+2025-02-11,Schlüsseldienst,Other,69.59,Expense
+2025-02-11,OMV Tankstelle,Travel,108.71,Expense
+2025-02-11,MediaMarkt Österreich,Shopping,251.64,Expense
+2025-02-12,Müller Drogerie,Shopping,16.86,Expense
+2025-02-13,Netflix Abo,Entertainment,13.87,Expense
+2025-02-13,BILLA Einkauf,Food & Drink,17.95,Expense
+2025-02-14,Spotify Premium,Entertainment,11.06,Expense
+2025-02-14,SPAR Supermarkt,Food & Drink,15.61,Expense
+2025-02-14,McDonald's Österreich,Food & Drink,17.58,Expense
+2025-02-14,BILLA Einkauf,Food & Drink,31.2,Expense
+2025-02-15,ORF-Beitrag,Utilities,15.3,Expense
+2025-02-15,ÖBB Ticket,Travel,34.91,Expense
+2025-02-16,Netflix Extra,Entertainment,5.61,Expense
+2025-02-17,Würstelstand,Food & Drink,8.7,Expense
+2025-02-17,FITINN Tageskarte,Health & Fitness,10.03,Expense
+2025-02-17,BILLA Einkauf,Food & Drink,52.1,Expense
+2025-02-17,Flatex Dividende,Investment,6.63,Income
+2025-02-18,Raiffeisen Sparrate,Investment,107.68,Expense
+2025-02-19,SPAR Supermarkt,Food & Drink,18.72,Expense
+2025-02-19,BIPA Einkauf,Shopping,30.59,Expense
+2025-02-19,Willhaben Kauf,Shopping,77.15,Expense
+2025-02-20,Ströck Bäckerei,Food & Drink,3.29,Expense
+2025-02-20,IKEA Vösendorf,Shopping,70.13,Expense
+2025-02-20,Schlüsseldienst,Other,126.37,Expense
+2025-02-21,IKEA Vösendorf,Shopping,51.54,Expense
+2025-02-22,McDonald's Österreich,Food & Drink,20.05,Expense
+2025-02-22,Lidl Österreich,Food & Drink,27.47,Expense
+2025-02-23,Aida Konditorei,Food & Drink,7.06,Expense
+2025-02-23,Ströck Bäckerei,Food & Drink,8.91,Expense
+2025-02-24,Anker Jause,Food & Drink,4.71,Expense
+2025-02-24,Steam Kauf,Entertainment,46.66,Expense
+2025-02-24,IKEA Vösendorf,Shopping,162.27,Expense
+2025-02-24,Erste Bank Sparzins,Investment,1.92,Income
+2025-02-26,MediaMarkt Österreich,Shopping,39.88,Expense
+2025-02-26,OMV Tankstelle,Travel,57.6,Expense
+2025-02-27,BILLA PLUS Einkauf,Food & Drink,21.46,Expense
+2025-02-27,Flatex ETF Sparplan,Investment,277.55,Expense
+2025-02-28,Erste Bank Habenzins,Investment,1.08,Income
+2025-02-28,Gehaltszahlung Arbeitgeber,Salary,3055.83,Income
+2025-02-28,Ströck Bäckerei,Food & Drink,8.2,Expense
+2025-02-28,Essenszuschuss Arbeitgeber,Salary,84.66,Income
+2025-02-28,Haushaltsversicherung UNIQA,Utilities,25.49,Expense
+2025-02-28,IKEA Vösendorf,Shopping,248.69,Expense
+2025-03-01,Kontaktlinsen,Health & Fitness,22.3,Expense
+2025-03-02,Schlüsseldienst,Other,75.93,Expense
+2025-03-03,Mietzahlung Wohnung Wien,Rent,1235.56,Expense
+2025-03-03,Freunde Rückzahlung,Other,17.43,Income
+2025-03-05,FITINN Mitgliedschaft,Health & Fitness,30.36,Expense
+2025-03-06,Willhaben Kauf,Shopping,30.98,Expense
+2025-03-06,OMV Tankstelle,Travel,55.04,Expense
+2025-03-06,Konzertticket Stadthalle,Entertainment,99.65,Expense
+2025-03-07,Wiener Linien Ticket,Travel,2.4,Expense
+2025-03-07,Magenta Telekom Mobil,Utilities,23.86,Expense
+2025-03-07,Wien Energie Abschlag,Utilities,97.79,Expense
+2025-03-08,Spende Caritas,Other,8.1,Expense
+2025-03-08,A1 Handyrechnung,Utilities,21.25,Expense
+2025-03-09,Haushaltsreparatur,Other,111.41,Expense
+2025-03-10,Post AT Paket,Other,4.63,Expense
+2025-03-10,Shell Tankstelle,Travel,38.15,Expense
+2025-03-10,Flatex Dividende,Investment,13.03,Income
+2025-03-11,Müller Drogerie,Shopping,10.94,Expense
+2025-03-11,Spende Caritas,Other,16.19,Expense
+2025-03-11,Lidl Österreich,Food & Drink,23.0,Expense
+2025-03-11,A1 Internet Zuhause,Utilities,35.44,Expense
+2025-03-12,Anker Jause,Food & Drink,6.83,Expense
+2025-03-12,SPAR Supermarkt,Food & Drink,9.46,Expense
+2025-03-12,BIPA Einkauf,Shopping,18.82,Expense
+2025-03-13,Netflix Abo,Entertainment,14.07,Expense
+2025-03-14,Spotify Premium,Entertainment,11.18,Expense
+2025-03-14,ORF-Beitrag,Utilities,15.3,Expense
+2025-03-14,Steam Kauf,Entertainment,21.31,Expense
+2025-03-14,Willhaben Kauf,Shopping,25.54,Expense
+2025-03-14,BILLA PLUS Einkauf,Food & Drink,48.81,Expense
+2025-03-16,H&M Wien,Shopping,28.41,Expense
+2025-03-18,Barabend Wien,Entertainment,27.21,Expense
+2025-03-19,SPAR Supermarkt,Food & Drink,29.43,Expense
+2025-03-20,Disney+ Abo,Entertainment,8.99,Expense
+2025-03-20,Zalando Bestellung,Shopping,34.54,Expense
+2025-03-20,SPAR Supermarkt,Food & Drink,45.23,Expense
+2025-03-20,Flatex Einzelkauf ETF,Investment,183.85,Expense
+2025-03-21,Aida Konditorei,Food & Drink,7.89,Expense
+2025-03-22,Barabend Wien,Entertainment,48.34,Expense
+2025-03-23,Schlüsseldienst,Other,85.59,Expense
+2025-03-24,dm drogerie markt,Shopping,16.75,Expense
+2025-03-25,Café in Wien,Food & Drink,8.75,Expense
+2025-03-25,A1 Handyrechnung,Utilities,14.55,Expense
+2025-03-25,Free Now Fahrt,Travel,22.67,Expense
+2025-03-25,Erste Bank Sparzins,Investment,2.58,Income
+2025-03-26,Würstelstand,Food & Drink,9.14,Expense
+2025-03-26,Konzertticket Stadthalle,Entertainment,54.58,Expense
+2025-03-27,Aida Konditorei,Food & Drink,8.22,Expense
+2025-03-27,MediaMarkt Österreich,Shopping,180.08,Expense
+2025-03-27,Flatex ETF Sparplan,Investment,223.62,Expense
+2025-03-28,Disney+ Abo,Entertainment,9.27,Expense
+2025-03-28,Gehaltszahlung Arbeitgeber,Salary,3085.62,Income
+2025-04-01,Disney+ Abo,Entertainment,8.99,Expense
+2025-04-01,Ströck Bäckerei,Food & Drink,13.92,Expense
+2025-04-01,Zalando Bestellung,Shopping,63.34,Expense
+2025-04-03,Mietzahlung Wohnung Wien,Rent,1238.95,Expense
+2025-04-04,McDonald's Österreich,Food & Drink,23.02,Expense
+2025-04-05,Wiener Linien Ticket,Travel,2.4,Expense
+2025-04-05,dm drogerie markt,Shopping,15.47,Expense
+2025-04-05,Free Now Fahrt,Travel,20.68,Expense
+2025-04-05,FITINN Mitgliedschaft,Health & Fitness,29.9,Expense
+2025-04-06,Würstelstand,Food & Drink,6.08,Expense
+2025-04-07,BIPA Einkauf,Shopping,21.94,Expense
+2025-04-07,Magenta Telekom Mobil,Utilities,22.82,Expense
+2025-04-07,Wien Energie Abschlag,Utilities,89.84,Expense
+2025-04-09,Würstelstand,Food & Drink,8.35,Expense
+2025-04-09,Disney+ Abo,Entertainment,9.31,Expense
+2025-04-09,Flatex Einzelkauf ETF,Investment,139.67,Expense
+2025-04-11,Würstelstand,Food & Drink,5.28,Expense
+2025-04-11,McDonald's Österreich,Food & Drink,6.53,Expense
+2025-04-11,BILLA PLUS Einkauf,Food & Drink,27.72,Expense
+2025-04-11,A1 Internet Zuhause,Utilities,35.34,Expense
+2025-04-12,easybank Kontoführung,Utilities,6.3,Expense
+2025-04-12,Disney+ Abo,Entertainment,8.99,Expense
+2025-04-12,BILLA PLUS Einkauf,Food & Drink,28.19,Expense
+2025-04-12,Erste Bank Habenzins,Investment,1.01,Income
+2025-04-13,Netflix Abo,Entertainment,14.02,Expense
+2025-04-13,BIPA Einkauf,Shopping,14.18,Expense
+2025-04-14,Spotify Premium,Entertainment,11.07,Expense
+2025-04-14,ORF-Beitrag,Utilities,15.3,Expense
+2025-04-15,Netflix Extra,Entertainment,4.34,Expense
+2025-04-16,SPAR Supermarkt,Food & Drink,43.14,Expense
+2025-04-17,Lidl Österreich,Food & Drink,20.81,Expense
+2025-04-17,Müller Drogerie,Shopping,22.39,Expense
+2025-04-19,Haushaltsversicherung UNIQA,Utilities,21.48,Expense
+2025-04-19,Raiffeisen Sparrate,Investment,88.77,Expense
+2025-04-20,Parkgarage Wien,Travel,4.76,Expense
+2025-04-21,Steam Kauf,Entertainment,24.16,Expense
+2025-04-21,Flatex ETF Dividende,Investment,40.84,Income
+2025-04-22,Free Now Fahrt,Travel,19.24,Expense
+2025-04-22,MediaMarkt Österreich,Shopping,72.82,Expense
+2025-04-24,Magenta Zusatzpaket,Utilities,6.87,Expense
+2025-04-24,Essenszuschuss Arbeitgeber,Salary,82.72,Income
+2025-04-25,McDonald's Österreich,Food & Drink,10.34,Expense
+2025-04-25,BILLA PLUS Einkauf,Food & Drink,35.07,Expense
+2025-04-25,Erste Bank Sparzins,Investment,2.81,Income
+2025-04-25,Steuerausgleich FinanzOnline,Other,485.45,Income
+2025-04-26,Lidl Österreich,Food & Drink,13.66,Expense
+2025-04-26,Aida Konditorei,Food & Drink,17.35,Expense
+2025-04-27,Anker Jause,Food & Drink,4.21,Expense
+2025-04-27,H&M Wien,Shopping,17.34,Expense
+2025-04-27,BILLA Einkauf,Food & Drink,24.64,Expense
+2025-04-27,MediaMarkt Österreich,Shopping,152.34,Expense
+2025-04-27,Flatex ETF Sparplan,Investment,300.87,Expense
+2025-04-28,BILLA PLUS Einkauf,Food & Drink,34.56,Expense
+2025-04-28,Zalando Bestellung,Shopping,49.34,Expense
+2025-04-28,Gehaltszahlung Arbeitgeber,Salary,3054.43,Income
+2025-04-29,Disney+ Abo,Entertainment,8.99,Expense
+2025-04-29,Zahnarzt Mundhygiene,Health & Fitness,80.17,Expense
+2025-04-30,Free Now Fahrt,Travel,15.77,Expense
+2025-04-30,Zalando Bestellung,Shopping,41.78,Expense
+2025-04-30,Lidl Österreich,Food & Drink,12.16,Expense
+2025-04-30,Kilometergeld Arbeitgeber,Salary,59.69,Income
+2025-05-01,Bankomatgebühr Ausland,Other,3.96,Expense
+2025-05-01,Aida Konditorei,Food & Drink,16.18,Expense
+2025-05-02,Anker Jause,Food & Drink,6.64,Expense
+2025-05-02,BILLA PLUS Einkauf,Food & Drink,31.99,Expense
+2025-05-02,Zahnarzt Mundhygiene,Health & Fitness,75.0,Expense
+2025-05-03,Apotheke Wien,Health & Fitness,10.56,Expense
+2025-05-03,Mietzahlung Wohnung Wien,Rent,1259.88,Expense
+2025-05-04,Wiener Linien Ticket,Travel,2.4,Expense
+2025-05-04,Bankomatgebühr Ausland,Other,5.52,Expense
+2025-05-04,FITINN Mitgliedschaft,Health & Fitness,29.9,Expense
+2025-05-05,Bolt Fahrt,Travel,12.65,Expense
+2025-05-05,SPAR Supermarkt,Food & Drink,29.2,Expense
+2025-05-05,SPAR Supermarkt,Food & Drink,40.83,Expense
+2025-05-05,BILLA PLUS Einkauf,Food & Drink,52.42,Expense
+2025-05-05,Haushaltsreparatur,Other,61.65,Expense
+2025-05-05,Freunde Rückzahlung,Other,33.56,Income
+2025-05-07,McDonald's Österreich,Food & Drink,8.61,Expense
+2025-05-07,Lidl Österreich,Food & Drink,9.8,Expense
+2025-05-07,BILLA PLUS Einkauf,Food & Drink,35.47,Expense
+2025-05-07,Wien Energie Abschlag,Utilities,125.2,Expense
+2025-05-09,Ströck Bäckerei,Food & Drink,12.85,Expense
+2025-05-09,McDonald's Österreich,Food & Drink,17.48,Expense
+2025-05-09,Magenta Telekom Mobil,Utilities,23.53,Expense
+2025-05-09,MediaMarkt Österreich,Shopping,116.01,Expense
+2025-05-10,McDonald's Österreich,Food & Drink,4.5,Expense
+2025-05-11,Netflix Abo,Entertainment,13.88,Expense
+2025-05-11,dm drogerie markt,Shopping,29.34,Expense
+2025-05-11,A1 Internet Zuhause,Utilities,33.79,Expense
+2025-05-11,Willhaben Kauf,Shopping,51.88,Expense
+2025-05-12,HOFER Einkauf,Food & Drink,15.22,Expense
+2025-05-13,Würstelstand,Food & Drink,6.48,Expense
+2025-05-13,SPAR Supermarkt,Food & Drink,13.79,Expense
+2025-05-13,Lidl Österreich,Food & Drink,19.21,Expense
+2025-05-13,Shell Tankstelle,Travel,50.5,Expense
+2025-05-14,Wiener Linien Ticket,Travel,2.4,Expense
+2025-05-14,Spotify Premium,Entertainment,11.04,Expense
+2025-05-14,WESTbahn Ticket,Travel,11.63,Expense
+2025-05-14,Flatex Dividende,Investment,19.6,Income
+2025-05-15,ORF-Beitrag,Utilities,15.3,Expense
+2025-05-16,Anker Jause,Food & Drink,8.08,Expense
+2025-05-16,Magenta Zusatzpaket,Utilities,11.16,Expense
+2025-05-17,Lidl Österreich,Food & Drink,5.44,Expense
+2025-05-18,Wiener Linien Ticket,Travel,2.4,Expense
+2025-05-19,Barabend Wien,Entertainment,29.0,Expense
+2025-05-20,Konzertticket Stadthalle,Entertainment,42.58,Expense
+2025-05-21,Konzertticket Stadthalle,Entertainment,31.55,Expense
+2025-05-22,SPAR Supermarkt,Food & Drink,10.32,Expense
+2025-05-23,H&M Wien,Shopping,49.92,Expense
+2025-05-25,Zahnarzt Mundhygiene,Health & Fitness,106.33,Expense
+2025-05-25,Flatex ETF Sparplan,Investment,274.99,Expense
+2025-05-25,Erste Bank Sparzins,Investment,2.6,Income
+2025-05-25,Pfand Rückgabe,Other,5.14,Income
+2025-05-26,Libro Einkauf,Shopping,13.67,Expense
+2025-05-26,Aida Konditorei,Food & Drink,14.37,Expense
+2025-05-27,Café in Wien,Food & Drink,11.89,Expense
+2025-05-27,H&M Wien,Shopping,17.15,Expense
+2025-05-27,Schlüsseldienst,Other,43.97,Expense
+2025-05-28,Steam Kauf,Entertainment,14.6,Expense
+2025-05-28,Café in Wien,Food & Drink,22.0,Expense
+2025-05-28,Gehaltszahlung Arbeitgeber,Salary,3038.64,Income
+2025-05-29,Bankomatgebühr Ausland,Other,4.11,Expense
+2025-05-29,Würstelstand,Food & Drink,6.11,Expense
+2025-05-29,PlayStation Store,Entertainment,9.46,Expense
+2025-05-29,BILLA PLUS Einkauf,Food & Drink,38.54,Expense
+2025-06-01,Magenta Zusatzpaket,Utilities,8.74,Expense
+2025-06-01,ÖBB Ticket,Travel,23.28,Expense
+2025-06-01,Schlüsseldienst,Other,71.89,Expense
+2025-06-02,McDonald's Österreich,Food & Drink,5.59,Expense
+2025-06-02,IKEA Vösendorf,Shopping,175.34,Expense
+2025-06-02,Mietzahlung Wohnung Wien,Rent,1251.77,Expense
+2025-06-03,Müller Drogerie,Shopping,12.91,Expense
+2025-06-03,MuseumsQuartier Ticket,Entertainment,20.59,Expense
+2025-06-04,Restaurant Wien,Food & Drink,30.71,Expense
+2025-06-04,IKEA Vösendorf,Shopping,85.37,Expense
+2025-06-05,Anker Jause,Food & Drink,8.97,Expense
+2025-06-05,FITINN Tageskarte,Health & Fitness,10.15,Expense
+2025-06-05,Lidl Österreich,Food & Drink,16.14,Expense
+2025-06-05,FITINN Mitgliedschaft,Health & Fitness,30.09,Expense
+2025-06-06,Free Now Fahrt,Travel,9.9,Expense
+2025-06-07,Wien Energie Abschlag,Utilities,97.27,Expense
+2025-06-09,Würstelstand,Food & Drink,12.98,Expense
+2025-06-09,Magenta Telekom Mobil,Utilities,22.05,Expense
+2025-06-09,A1 Internet Zuhause,Utilities,32.93,Expense
+2025-06-11,Shell Tankstelle,Travel,65.62,Expense
+2025-06-13,Netflix Abo,Entertainment,13.95,Expense
+2025-06-14,Spotify Premium,Entertainment,11.08,Expense
+2025-06-15,Café in Wien,Food & Drink,7.83,Expense
+2025-06-15,ORF-Beitrag,Utilities,15.3,Expense
+2025-06-16,IKEA Vösendorf,Shopping,90.06,Expense
+2025-06-17,Café in Wien,Food & Drink,13.7,Expense
+2025-06-20,Café in Wien,Food & Drink,6.54,Expense
+2025-06-21,HOFER Einkauf,Food & Drink,6.76,Expense
+2025-06-21,BILLA PLUS Einkauf,Food & Drink,33.36,Expense
+2025-06-22,Ströck Bäckerei,Food & Drink,3.43,Expense
+2025-06-22,McDonald's Österreich,Food & Drink,5.84,Expense
+2025-06-22,Erste Bank Habenzins,Investment,1.71,Income
+2025-06-23,Würstelstand,Food & Drink,5.87,Expense
+2025-06-23,Erste Bank Sparzins,Investment,2.99,Income
+2025-06-24,Post AT Paket,Other,7.58,Expense
+2025-06-24,Steam Kauf,Entertainment,12.38,Expense
+2025-06-24,Libro Einkauf,Shopping,14.02,Expense
+2025-06-24,Ströck Bäckerei,Food & Drink,14.93,Expense
+2025-06-24,Freunde Rückzahlung,Other,23.11,Income
+2025-06-25,Müller Drogerie,Shopping,39.65,Expense
+2025-06-26,Parkgarage Wien,Travel,2.9,Expense
+2025-06-26,ÖBB Ticket,Travel,22.07,Expense
+2025-06-26,Müller Drogerie,Shopping,26.07,Expense
+2025-06-26,Steuerausgleich FinanzOnline,Other,495.91,Income
+2025-06-27,Free Now Fahrt,Travel,14.58,Expense
+2025-06-27,Flatex ETF Sparplan,Investment,206.4,Expense
+2025-06-28,Gehaltszahlung Arbeitgeber,Salary,3028.44,Income
+2025-06-29,Post AT Paket,Other,5.35,Expense
+2025-06-29,Ströck Bäckerei,Food & Drink,5.95,Expense
+2025-06-30,Restaurant Wien,Food & Drink,15.92,Expense
+2025-06-30,Müller Drogerie,Shopping,32.5,Expense
+2025-06-30,Zalando Bestellung,Shopping,56.36,Expense
+2025-07-01,Wiener Linien Ticket,Travel,2.4,Expense
+2025-07-01,Café in Wien,Food & Drink,7.27,Expense
+2025-07-01,Ströck Bäckerei,Food & Drink,7.4,Expense
+2025-07-01,Zalando Bestellung,Shopping,48.22,Expense
+2025-07-02,Anker Jause,Food & Drink,2.85,Expense
+2025-07-03,WESTbahn Ticket,Travel,21.85,Expense
+2025-07-03,Kontaktlinsen,Health & Fitness,28.82,Expense
+2025-07-03,Mietzahlung Wohnung Wien,Rent,1275.66,Expense
+2025-07-04,Steam Kauf,Entertainment,21.78,Expense
+2025-07-05,Ströck Bäckerei,Food & Drink,7.49,Expense
+2025-07-05,Müller Drogerie,Shopping,22.43,Expense
+2025-07-05,FITINN Mitgliedschaft,Health & Fitness,29.97,Expense
+2025-07-06,dm drogerie markt,Shopping,13.2,Expense
+2025-07-06,Wien Energie Abschlag,Utilities,101.85,Expense
+2025-07-07,Amazon.de Bestellung,Shopping,57.39,Expense
+2025-07-07,Haushaltsreparatur,Other,201.73,Expense
+2025-07-08,dm drogerie markt,Shopping,20.8,Expense
+2025-07-09,Free Now Fahrt,Travel,17.99,Expense
+2025-07-09,Magenta Telekom Mobil,Utilities,22.02,Expense
+2025-07-10,Essenszuschuss Arbeitgeber,Salary,89.05,Income
+2025-07-11,Parkgarage Wien,Travel,4.36,Expense
+2025-07-11,Müller Drogerie,Shopping,11.5,Expense
+2025-07-11,Restaurant Wien,Food & Drink,27.09,Expense
+2025-07-11,A1 Internet Zuhause,Utilities,35.1,Expense
+2025-07-13,Spotify Premium,Entertainment,10.88,Expense
+2025-07-13,Netflix Abo,Entertainment,14.0,Expense
+2025-07-13,ORF-Beitrag,Utilities,15.3,Expense
+2025-07-13,Urlaubsgeld Arbeitgeber,Salary,4199.29,Income
+2025-07-14,Müller Drogerie,Shopping,26.56,Expense
+2025-07-15,OMV Tankstelle,Travel,72.7,Expense
+2025-07-15,Willhaben Kauf,Shopping,99.36,Expense
+2025-07-16,dm drogerie markt,Shopping,23.46,Expense
+2025-07-17,Ströck Bäckerei,Food & Drink,10.61,Expense
+2025-07-19,Libro Einkauf,Shopping,12.26,Expense
+2025-07-19,Shell Tankstelle,Travel,46.73,Expense
+2025-07-20,Lidl Österreich,Food & Drink,9.25,Expense
+2025-07-20,McDonald's Österreich,Food & Drink,11.12,Expense
+2025-07-20,WESTbahn Ticket,Travel,12.93,Expense
+2025-07-20,BILLA PLUS Einkauf,Food & Drink,46.38,Expense
+2025-07-20,Flatex Dividende,Investment,30.66,Income
+2025-07-20,Flatex ETF Dividende,Investment,35.38,Income
+2025-07-23,Anker Jause,Food & Drink,7.3,Expense
+2025-07-23,Cineplexx Ticket,Entertainment,13.68,Expense
+2025-07-24,Energiebonus Rückzahlung,Other,131.3,Income
+2025-07-25,Erste Bank Sparzins,Investment,3.12,Income
+2025-07-26,Willhaben Kauf,Shopping,30.1,Expense
+2025-07-27,Bankomatgebühr Ausland,Other,4.05,Expense
+2025-07-27,Flatex ETF Sparplan,Investment,269.63,Expense
+2025-07-27,Gehaltszahlung Arbeitgeber,Salary,2963.68,Income
+2025-07-28,Zalando Bestellung,Shopping,31.4,Expense
+2025-07-29,Shell Tankstelle,Travel,16.99,Expense
+2025-07-29,IKEA Vösendorf,Shopping,71.6,Expense
+2025-08-02,Disney+ Abo,Entertainment,12.99,Expense
+2025-08-02,Zalando Bestellung,Shopping,50.68,Expense
+2025-08-03,SPAR Supermarkt,Food & Drink,19.98,Expense
+2025-08-03,Restaurant Wien,Food & Drink,27.92,Expense
+2025-08-03,MediaMarkt Österreich,Shopping,69.45,Expense
+2025-08-03,Mietzahlung Wohnung Wien,Rent,1253.66,Expense
+2025-08-04,Steam Kauf,Entertainment,25.62,Expense
+2025-08-04,FITINN Mitgliedschaft,Health & Fitness,30.33,Expense
+2025-08-05,McDonald's Österreich,Food & Drink,8.8,Expense
+2025-08-05,PlayStation Store,Entertainment,42.01,Expense
+2025-08-06,Restaurant Wien,Food & Drink,25.17,Expense
+2025-08-07,HOFER Einkauf,Food & Drink,18.01,Expense
+2025-08-07,Wien Energie Abschlag,Utilities,108.54,Expense
+2025-08-08,SPAR Supermarkt,Food & Drink,55.73,Expense
+2025-08-09,Magenta Telekom Mobil,Utilities,21.52,Expense
+2025-08-09,Aida Konditorei,Food & Drink,24.28,Expense
+2025-08-09,Wien Energie Nachzahlung,Utilities,47.42,Expense
+2025-08-10,Wiener Linien Ticket,Travel,2.4,Expense
+2025-08-11,Netflix Abo,Entertainment,14.04,Expense
+2025-08-11,A1 Internet Zuhause,Utilities,33.68,Expense
+2025-08-12,Ströck Bäckerei,Food & Drink,6.64,Expense
+2025-08-12,SPAR Supermarkt,Food & Drink,11.71,Expense
+2025-08-14,Post AT Paket,Other,5.68,Expense
+2025-08-14,Spotify Premium,Entertainment,11.04,Expense
+2025-08-15,Bankomatgebühr Ausland,Other,3.74,Expense
+2025-08-15,Magenta Zusatzpaket,Utilities,5.63,Expense
+2025-08-15,ORF-Beitrag,Utilities,15.3,Expense
+2025-08-16,ÖBB Ticket,Travel,16.57,Expense
+2025-08-16,A1 Handyrechnung,Utilities,17.85,Expense
+2025-08-17,Shell Tankstelle,Travel,60.28,Expense
+2025-08-18,Cineplexx Ticket,Entertainment,10.0,Expense
+2025-08-18,Steam Kauf,Entertainment,72.0,Expense
+2025-08-19,dm drogerie markt,Shopping,4.89,Expense
+2025-08-19,Café in Wien,Food & Drink,12.99,Expense
+2025-08-19,Zalando Bestellung,Shopping,23.89,Expense
+2025-08-20,Ströck Bäckerei,Food & Drink,7.49,Expense
+2025-08-20,HOFER Einkauf,Food & Drink,12.97,Expense
+2025-08-20,Shell Tankstelle,Travel,54.74,Expense
+2025-08-20,Willhaben Verkauf,Other,168.45,Income
+2025-08-21,Ströck Bäckerei,Food & Drink,4.99,Expense
+2025-08-21,BILLA PLUS Einkauf,Food & Drink,23.92,Expense
+2025-08-22,Lidl Österreich,Food & Drink,18.46,Expense
+2025-08-23,Parkgarage Wien,Travel,2.88,Expense
+2025-08-24,Bolt Fahrt,Travel,10.93,Expense
+2025-08-24,MediaMarkt Österreich,Shopping,71.57,Expense
+2025-08-25,FITINN Tageskarte,Health & Fitness,10.0,Expense
+2025-08-25,Haushaltsreparatur,Other,105.42,Expense
+2025-08-25,Flatex ETF Sparplan,Investment,360.0,Expense
+2025-08-25,Erste Bank Sparzins,Investment,3.26,Income
+2025-08-26,Spende Caritas,Other,21.02,Expense
+2025-08-28,Würstelstand,Food & Drink,6.43,Expense
+2025-08-28,Würstelstand,Food & Drink,7.87,Expense
+2025-08-28,Bolt Fahrt,Travel,19.03,Expense
+2025-08-28,Flatex Einzelkauf ETF,Investment,101.17,Expense
+2025-08-28,Gehaltszahlung Arbeitgeber,Salary,3005.41,Income
+2025-08-29,Konzertticket Stadthalle,Entertainment,46.24,Expense
+2025-08-30,Schlüsseldienst,Other,77.04,Expense
+2025-08-30,Raiffeisen Sparrate,Investment,94.66,Expense
+2025-08-31,Kontaktlinsen,Health & Fitness,18.0,Expense
+2025-09-01,Mietzahlung Wohnung Wien,Rent,1244.58,Expense
+2025-09-02,Netflix Extra,Entertainment,4.9,Expense
+2025-09-02,Steam Kauf,Entertainment,10.23,Expense
+2025-09-02,Schlüsseldienst,Other,81.39,Expense
+2025-09-02,Zahnarzt Mundhygiene,Health & Fitness,109.7,Expense
+2025-09-02,Flatex Einzelkauf ETF,Investment,296.38,Expense
+2025-09-03,Bankomatgebühr Ausland,Other,4.52,Expense
+2025-09-03,dm drogerie markt,Shopping,23.72,Expense
+2025-09-03,ÖBB Ticket,Travel,29.82,Expense
+2025-09-03,Erste Bank Habenzins,Investment,1.79,Income
+2025-09-04,Wiener Linien Ticket,Travel,2.4,Expense
+2025-09-04,PlayStation Store,Entertainment,25.92,Expense
+2025-09-05,ÖBB Ticket,Travel,19.42,Expense
+2025-09-05,FITINN Mitgliedschaft,Health & Fitness,30.13,Expense
+2025-09-06,Parkgarage Wien,Travel,4.28,Expense
+2025-09-06,Bolt Fahrt,Travel,33.06,Expense
+2025-09-07,BIPA Einkauf,Shopping,14.56,Expense
+2025-09-07,Spende Caritas,Other,19.53,Expense
+2025-09-07,Wien Energie Abschlag,Utilities,109.36,Expense
+2025-09-08,Wiener Linien Ticket,Travel,2.4,Expense
+2025-09-08,Müller Drogerie,Shopping,17.3,Expense
+2025-09-08,Magenta Telekom Mobil,Utilities,23.85,Expense
+2025-09-09,Müller Drogerie,Shopping,9.53,Expense
+2025-09-09,Schlüsseldienst,Other,91.42,Expense
+2025-09-10,Anker Jause,Food & Drink,4.48,Expense
+2025-09-10,Aida Konditorei,Food & Drink,6.79,Expense
+2025-09-10,Ströck Bäckerei,Food & Drink,8.65,Expense
+2025-09-10,Barabend Wien,Entertainment,28.43,Expense
+2025-09-11,A1 Internet Zuhause,Utilities,35.75,Expense
+2025-09-12,Wiener Linien Ticket,Travel,2.4,Expense
+2025-09-12,Restaurant Wien,Food & Drink,22.26,Expense
+2025-09-12,Haushaltsversicherung UNIQA,Utilities,33.23,Expense
+2025-09-12,Zahnarzt Mundhygiene,Health & Fitness,75.0,Expense
+2025-09-13,Free Now Fahrt,Travel,12.95,Expense
+2025-09-13,Libro Einkauf,Shopping,13.8,Expense
+2025-09-13,Netflix Abo,Entertainment,13.96,Expense
+2025-09-13,HOFER Einkauf,Food & Drink,15.39,Expense
+2025-09-13,BILLA Einkauf,Food & Drink,24.91,Expense
+2025-09-14,Café in Wien,Food & Drink,9.39,Expense
+2025-09-14,Spotify Premium,Entertainment,11.07,Expense
+2025-09-14,SPAR Supermarkt,Food & Drink,13.65,Expense
+2025-09-15,Ströck Bäckerei,Food & Drink,5.91,Expense
+2025-09-15,ORF-Beitrag,Utilities,15.3,Expense
+2025-09-19,Bolt Fahrt,Travel,24.44,Expense
+2025-09-19,ÖBB Ticket,Travel,25.63,Expense
+2025-09-20,Parkgarage Wien,Travel,3.82,Expense
+2025-09-20,McDonald's Österreich,Food & Drink,7.31,Expense
+2025-09-20,Zalando Bestellung,Shopping,48.15,Expense
+2025-09-22,Parkgarage Wien,Travel,6.41,Expense
+2025-09-23,Lidl Österreich,Food & Drink,23.79,Expense
+2025-09-24,Anker Jause,Food & Drink,7.0,Expense
+2025-09-24,Ströck Bäckerei,Food & Drink,8.26,Expense
+2025-09-24,McDonald's Österreich,Food & Drink,10.19,Expense
+2025-09-24,Steam Kauf,Entertainment,18.75,Expense
+2025-09-25,HOFER Einkauf,Food & Drink,10.9,Expense
+2025-09-25,Erste Bank Sparzins,Investment,2.1,Income
+2025-09-27,Flatex ETF Sparplan,Investment,241.71,Expense
+2025-09-28,Bankomatgebühr Ausland,Other,4.41,Expense
+2025-09-28,Café in Wien,Food & Drink,22.0,Expense
+2025-09-28,Flatex Einzelkauf ETF,Investment,168.7,Expense
+2025-09-28,Gehaltszahlung Arbeitgeber,Salary,3019.66,Income
+2025-09-29,Pfand Rückgabe,Other,4.39,Income
+2025-09-30,Restaurant Wien,Food & Drink,61.51,Expense
+2025-10-01,Anker Jause,Food & Drink,5.88,Expense
+2025-10-01,McDonald's Österreich,Food & Drink,10.12,Expense
+2025-10-02,Ströck Bäckerei,Food & Drink,6.02,Expense
+2025-10-02,Ströck Bäckerei,Food & Drink,8.62,Expense
+2025-10-02,Barmherzige Brüder Selbstbehalt,Health & Fitness,26.97,Expense
+2025-10-02,Kilometergeld Arbeitgeber,Salary,54.29,Income
+2025-10-03,Ströck Bäckerei,Food & Drink,4.01,Expense
+2025-10-03,Parkgarage Wien,Travel,8.8,Expense
+2025-10-03,Lidl Österreich,Food & Drink,13.97,Expense
+2025-10-03,Mietzahlung Wohnung Wien,Rent,1296.38,Expense
+2025-10-03,Erste Bank Habenzins,Investment,3.47,Income
+2025-10-05,FITINN Mitgliedschaft,Health & Fitness,29.9,Expense
+2025-10-05,Wien Energie Abschlag,Utilities,98.82,Expense
+2025-10-08,Café in Wien,Food & Drink,7.78,Expense
+2025-10-08,Müller Drogerie,Shopping,8.87,Expense
+2025-10-08,Essenszuschuss Arbeitgeber,Salary,97.59,Income
+2025-10-09,Anker Jause,Food & Drink,7.9,Expense
+2025-10-09,Magenta Telekom Mobil,Utilities,25.21,Expense
+2025-10-09,Erste Bank Habenzins,Investment,1.07,Income
+2025-10-10,BILLA Einkauf,Food & Drink,39.36,Expense
+2025-10-11,A1 Internet Zuhause,Utilities,32.47,Expense
+2025-10-12,Spotify Premium,Entertainment,10.83,Expense
+2025-10-12,Netflix Abo,Entertainment,14.06,Expense
+2025-10-12,MuseumsQuartier Ticket,Entertainment,16.27,Expense
+2025-10-13,Disney+ Abo,Entertainment,8.99,Expense
+2025-10-13,H&M Wien,Shopping,41.46,Expense
+2025-10-15,Post AT Paket,Other,8.52,Expense
+2025-10-15,ORF-Beitrag,Utilities,15.3,Expense
+2025-10-15,Kontaktlinsen,Health & Fitness,25.76,Expense
+2025-10-16,Disney+ Abo,Entertainment,8.99,Expense
+2025-10-16,WESTbahn Ticket,Travel,22.54,Expense
+2025-10-16,Zalando Bestellung,Shopping,27.37,Expense
+2025-10-18,Restaurant Wien,Food & Drink,36.98,Expense
+2025-10-18,Essenszuschuss Arbeitgeber,Salary,91.64,Income
+2025-10-19,Würstelstand,Food & Drink,11.44,Expense
+2025-10-19,Flatex ETF Dividende,Investment,41.36,Income
+2025-10-21,Bolt Fahrt,Travel,19.19,Expense
+2025-10-21,WESTbahn Ticket,Travel,29.81,Expense
+2025-10-22,FITINN Tageskarte,Health & Fitness,10.0,Expense
+2025-10-22,SPAR Supermarkt,Food & Drink,13.19,Expense
+2025-10-22,Bolt Fahrt,Travel,22.54,Expense
+2025-10-22,BILLA PLUS Einkauf,Food & Drink,28.59,Expense
+2025-10-22,H&M Wien,Shopping,32.33,Expense
+2025-10-22,Amazon.de Bestellung,Shopping,37.1,Expense
+2025-10-23,Lidl Österreich,Food & Drink,7.78,Expense
+2025-10-25,Bolt Fahrt,Travel,14.09,Expense
+2025-10-25,Erste Bank Sparzins,Investment,2.38,Income
+2025-10-26,Anker Jause,Food & Drink,4.69,Expense
+2025-10-26,Würstelstand,Food & Drink,17.0,Expense
+2025-10-26,IKEA Vösendorf,Shopping,68.04,Expense
+2025-10-26,Flatex ETF Sparplan,Investment,288.11,Expense
+2025-10-26,Gehaltszahlung Arbeitgeber,Salary,3103.14,Income
+2025-10-28,HOFER Einkauf,Food & Drink,17.82,Expense
+2025-10-29,Anker Jause,Food & Drink,4.32,Expense
+2025-10-30,SPAR Supermarkt,Food & Drink,34.8,Expense
+2025-11-02,Würstelstand,Food & Drink,9.97,Expense
+2025-11-02,dm drogerie markt,Shopping,20.85,Expense
+2025-11-02,OMV Tankstelle,Travel,72.06,Expense
+2025-11-02,OMV Tankstelle,Travel,77.98,Expense
+2025-11-03,Disney+ Abo,Entertainment,9.58,Expense
+2025-11-03,FITINN Mitgliedschaft,Health & Fitness,29.93,Expense
+2025-11-03,Mietzahlung Wohnung Wien,Rent,1265.94,Expense
+2025-11-04,Shell Tankstelle,Travel,41.2,Expense
+2025-11-05,Parkgarage Wien,Travel,6.23,Expense
+2025-11-06,Würstelstand,Food & Drink,5.66,Expense
+2025-11-06,Steam Kauf,Entertainment,27.0,Expense
+2025-11-07,Wien Energie Abschlag,Utilities,87.22,Expense
+2025-11-08,Lidl Österreich,Food & Drink,10.99,Expense
+2025-11-08,HOFER Einkauf,Food & Drink,15.4,Expense
+2025-11-09,Ströck Bäckerei,Food & Drink,8.54,Expense
+2025-11-09,Magenta Telekom Mobil,Utilities,22.18,Expense
+2025-11-10,A1 Internet Zuhause,Utilities,35.78,Expense
+2025-11-11,Kontaktlinsen,Health & Fitness,30.86,Expense
+2025-11-12,Magenta Zusatzpaket,Utilities,10.02,Expense
+2025-11-13,Netflix Abo,Entertainment,13.92,Expense
+2025-11-13,Wien Energie Nachzahlung,Utilities,132.43,Expense
+2025-11-14,Café in Wien,Food & Drink,6.07,Expense
+2025-11-14,Spotify Premium,Entertainment,11.01,Expense
+2025-11-14,Erste Bank Habenzins,Investment,1.57,Income
+2025-11-15,ORF-Beitrag,Utilities,15.3,Expense
+2025-11-15,Lidl Österreich,Food & Drink,26.25,Expense
+2025-11-15,SPAR Supermarkt,Food & Drink,38.66,Expense
+2025-11-15,Schlüsseldienst,Other,39.88,Expense
+2025-11-15,Flatex Dividende,Investment,16.04,Income
+2025-11-16,McDonald's Österreich,Food & Drink,6.7,Expense
+2025-11-16,Essenszuschuss Arbeitgeber,Salary,110.0,Income
+2025-11-17,PlayStation Store,Entertainment,14.32,Expense
+2025-11-19,Aida Konditorei,Food & Drink,11.93,Expense
+2025-11-19,Flatex Dividende,Investment,15.33,Income
+2025-11-20,Spende Caritas,Other,21.59,Expense
+2025-11-20,Konzertticket Stadthalle,Entertainment,126.32,Expense
+2025-11-23,Konzertticket Stadthalle,Entertainment,62.86,Expense
+2025-11-23,Amazon.de Bestellung,Shopping,78.36,Expense
+2025-11-24,Aida Konditorei,Food & Drink,11.89,Expense
+2025-11-24,Erste Bank Sparzins,Investment,2.84,Income
+2025-11-25,Würstelstand,Food & Drink,12.51,Expense
+2025-11-25,HOFER Einkauf,Food & Drink,20.79,Expense
+2025-11-25,Lidl Österreich,Food & Drink,21.83,Expense
+2025-11-25,Haushaltsversicherung UNIQA,Utilities,26.12,Expense
+2025-11-26,McDonald's Österreich,Food & Drink,16.38,Expense
+2025-11-26,Amazon.de Bestellung,Shopping,30.23,Expense
+2025-11-27,Anker Jause,Food & Drink,8.13,Expense
+2025-11-27,Café in Wien,Food & Drink,9.92,Expense
+2025-11-27,Lidl Österreich,Food & Drink,21.86,Expense
+2025-11-27,Flatex ETF Sparplan,Investment,227.19,Expense
+2025-11-28,Barmherzige Brüder Selbstbehalt,Health & Fitness,23.04,Expense
+2025-11-28,Erste Bank Habenzins,Investment,1.23,Income
+2025-11-28,Gehaltszahlung Arbeitgeber,Salary,3063.9,Income
+2025-11-29,BILLA Einkauf,Food & Drink,96.0,Expense
+2025-11-30,MuseumsQuartier Ticket,Entertainment,24.0,Expense
+2025-11-30,Pfand Rückgabe,Other,5.35,Income
+2025-12-02,Netflix Extra,Entertainment,4.91,Expense
+2025-12-02,Aida Konditorei,Food & Drink,12.85,Expense
+2025-12-02,SPAR Supermarkt,Food & Drink,23.72,Expense
+2025-12-03,Mietzahlung Wohnung Wien,Rent,1271.22,Expense
+2025-12-04,Netflix Extra,Entertainment,5.33,Expense
+2025-12-04,dm drogerie markt,Shopping,27.49,Expense
+2025-12-04,Schlüsseldienst,Other,75.49,Expense
+2025-12-05,Café in Wien,Food & Drink,16.41,Expense
+2025-12-05,FITINN Mitgliedschaft,Health & Fitness,30.76,Expense
+2025-12-05,MediaMarkt Österreich,Shopping,154.94,Expense
+2025-12-07,Magenta Telekom Mobil,Utilities,20.87,Expense
+2025-12-07,BILLA PLUS Einkauf,Food & Drink,28.28,Expense
+2025-12-07,MediaMarkt Österreich,Shopping,75.33,Expense
+2025-12-07,Willhaben Kauf,Shopping,80.68,Expense
+2025-12-07,Wien Energie Abschlag,Utilities,112.34,Expense
+2025-12-09,Würstelstand,Food & Drink,7.32,Expense
+2025-12-10,Parkgarage Wien,Travel,5.13,Expense
+2025-12-10,Anker Jause,Food & Drink,8.43,Expense
+2025-12-10,HOFER Einkauf,Food & Drink,48.55,Expense
+2025-12-11,Würstelstand,Food & Drink,4.5,Expense
+2025-12-11,A1 Internet Zuhause,Utilities,35.14,Expense
+2025-12-11,Haushaltsreparatur,Other,81.73,Expense
+2025-12-12,Schlüsseldienst,Other,70.3,Expense
+2025-12-13,Bankomatgebühr Ausland,Other,3.85,Expense
+2025-12-13,Café in Wien,Food & Drink,9.02,Expense
+2025-12-13,Netflix Abo,Entertainment,13.92,Expense
+2025-12-13,Aida Konditorei,Food & Drink,14.2,Expense
+2025-12-14,Magenta Zusatzpaket,Utilities,8.57,Expense
+2025-12-14,Würstelstand,Food & Drink,8.91,Expense
+2025-12-14,Spotify Premium,Entertainment,11.08,Expense
+2025-12-14,ORF-Beitrag,Utilities,15.3,Expense
+2025-12-14,SPAR Supermarkt,Food & Drink,24.37,Expense
+2025-12-14,Weihnachtsgeld Arbeitgeber,Salary,4262.89,Income
+2025-12-15,BILLA Einkauf,Food & Drink,75.21,Expense
+2025-12-17,Anker Jause,Food & Drink,8.29,Expense
+2025-12-17,Würstelstand,Food & Drink,8.34,Expense
+2025-12-17,Raiffeisen Sparrate,Investment,120.59,Expense
+2025-12-19,Ströck Bäckerei,Food & Drink,6.87,Expense
+2025-12-19,Cineplexx Ticket,Entertainment,10.0,Expense
+2025-12-19,BILLA PLUS Einkauf,Food & Drink,14.51,Expense
+2025-12-20,Wiener Linien Ticket,Travel,2.4,Expense
+2025-12-20,ÖBB Ticket,Travel,23.75,Expense
+2025-12-20,H&M Wien,Shopping,23.97,Expense
+2025-12-20,Pfand Rückgabe,Other,4.87,Income
+2025-12-21,Post AT Paket,Other,7.87,Expense
+2025-12-21,PlayStation Store,Entertainment,25.09,Expense
+2025-12-22,Spende Caritas,Other,24.93,Expense
+2025-12-23,Barabend Wien,Entertainment,11.19,Expense
+2025-12-24,Parkgarage Wien,Travel,11.74,Expense
+2025-12-24,HOFER Einkauf,Food & Drink,14.46,Expense
+2025-12-24,Haushaltsreparatur,Other,74.31,Expense
+2025-12-25,Disney+ Abo,Entertainment,10.06,Expense
+2025-12-25,Apotheke Wien,Health & Fitness,12.12,Expense
+2025-12-25,Kontaktlinsen,Health & Fitness,37.97,Expense
+2025-12-25,H&M Wien,Shopping,51.66,Expense
+2025-12-25,Erste Bank Sparzins,Investment,2.09,Income
+2025-12-26,Parkgarage Wien,Travel,4.01,Expense
+2025-12-27,WESTbahn Ticket,Travel,23.67,Expense
+2025-12-27,Amazon.de Bestellung,Shopping,77.94,Expense
+2025-12-27,Flatex ETF Sparplan,Investment,245.98,Expense
+2025-12-28,Spende Caritas,Other,9.35,Expense
+2025-12-28,Shell Tankstelle,Travel,53.13,Expense
+2025-12-28,Wien Energie Nachzahlung,Utilities,66.53,Expense
+2025-12-28,Gehaltszahlung Arbeitgeber,Salary,2948.03,Income
+2025-12-29,Post AT Paket,Other,4.91,Expense
+2026-01-01,ÖBB Ticket,Travel,60.7,Expense
+2026-01-02,Libro Einkauf,Shopping,9.48,Expense
+2026-01-02,BILLA Einkauf,Food & Drink,21.29,Expense
+2026-01-03,Mietzahlung Wohnung Wien,Rent,1244.35,Expense
+2026-01-05,Free Now Fahrt,Travel,17.88,Expense
+2026-01-05,FITINN Mitgliedschaft,Health & Fitness,30.1,Expense
+2026-01-05,Wien Energie Abschlag,Utilities,114.66,Expense
+2026-01-06,McDonald's Österreich,Food & Drink,10.44,Expense
+2026-01-06,Aida Konditorei,Food & Drink,11.32,Expense
+2026-01-06,Shell Tankstelle,Travel,66.47,Expense
+2026-01-06,Konzertticket Stadthalle,Entertainment,69.55,Expense
+2026-01-07,Lidl Österreich,Food & Drink,24.24,Expense
+2026-01-07,Lidl Österreich,Food & Drink,47.9,Expense
+2026-01-08,Libro Einkauf,Shopping,12.26,Expense
+2026-01-08,McDonald's Österreich,Food & Drink,14.26,Expense
+2026-01-08,Würstelstand,Food & Drink,18.0,Expense
+2026-01-09,dm drogerie markt,Shopping,5.85,Expense
+2026-01-09,Magenta Telekom Mobil,Utilities,21.7,Expense
+2026-01-10,Ströck Bäckerei,Food & Drink,9.97,Expense
+2026-01-11,SPAR Supermarkt,Food & Drink,27.79,Expense
+2026-01-11,A1 Internet Zuhause,Utilities,34.47,Expense
+2026-01-12,Bankomatgebühr Ausland,Other,3.88,Expense
+2026-01-12,Spotify Premium,Entertainment,10.92,Expense
+2026-01-12,Netflix Abo,Entertainment,13.94,Expense
+2026-01-13,PlayStation Store,Entertainment,12.58,Expense
+2026-01-14,Würstelstand,Food & Drink,11.02,Expense
+2026-01-14,BIPA Einkauf,Shopping,13.35,Expense
+2026-01-14,Amazon.de Bestellung,Shopping,88.29,Expense
+2026-01-15,ORF-Beitrag,Utilities,15.3,Expense
+2026-01-16,Zalando Bestellung,Shopping,54.66,Expense
+2026-01-19,Spende Caritas,Other,12.65,Expense
+2026-01-19,OMV Tankstelle,Travel,48.66,Expense
+2026-01-19,Flatex ETF Dividende,Investment,47.95,Income
+2026-01-20,Aida Konditorei,Food & Drink,24.92,Expense
+2026-01-21,Willhaben Kauf,Shopping,18.25,Expense
+2026-01-21,Steam Kauf,Entertainment,24.47,Expense
+2026-01-21,Restaurant Wien,Food & Drink,38.47,Expense
+2026-01-22,Würstelstand,Food & Drink,8.91,Expense
+2026-01-22,Spende Caritas,Other,11.92,Expense
+2026-01-23,BILLA PLUS Einkauf,Food & Drink,21.19,Expense
+2026-01-24,Ströck Bäckerei,Food & Drink,5.77,Expense
+2026-01-25,HOFER Einkauf,Food & Drink,40.69,Expense
+2026-01-25,Erste Bank Sparzins,Investment,4.39,Income
+2026-01-26,Lidl Österreich,Food & Drink,42.28,Expense
+2026-01-26,Müller Drogerie,Shopping,53.24,Expense
+2026-01-26,Konzertticket Stadthalle,Entertainment,98.68,Expense
+2026-01-26,Flatex ETF Sparplan,Investment,264.17,Expense
+2026-01-26,Gehaltszahlung Arbeitgeber,Salary,3062.82,Income
+2026-01-28,Haushaltsversicherung UNIQA,Utilities,17.59,Expense
+2026-01-29,Post AT Paket,Other,6.03,Expense
+2026-01-30,Willhaben Verkauf,Other,73.63,Income
+2026-01-31,Würstelstand,Food & Drink,6.0,Expense
+2026-01-31,Aida Konditorei,Food & Drink,13.69,Expense
+2026-02-01,Würstelstand,Food & Drink,7.74,Expense
+2026-02-01,Physiotherapie,Health & Fitness,45.0,Expense
+2026-02-02,MediaMarkt Österreich,Shopping,169.0,Expense
+2026-02-02,Mietzahlung Wohnung Wien,Rent,1285.2,Expense
+2026-02-03,McDonald's Österreich,Food & Drink,9.32,Expense
+2026-02-04,Anker Jause,Food & Drink,4.27,Expense
+2026-02-04,ÖBB Ticket,Travel,75.15,Expense
+2026-02-05,Anker Jause,Food & Drink,4.51,Expense
+2026-02-05,Ströck Bäckerei,Food & Drink,7.69,Expense
+2026-02-05,FITINN Mitgliedschaft,Health & Fitness,29.9,Expense
+2026-02-06,Café in Wien,Food & Drink,12.35,Expense
+2026-02-06,MediaMarkt Österreich,Shopping,298.52,Expense
+2026-02-07,Bankomatgebühr Ausland,Other,4.41,Expense
+2026-02-07,SPAR Supermarkt,Food & Drink,15.3,Expense
+2026-02-07,Spende Caritas,Other,18.44,Expense
+2026-02-07,Wien Energie Abschlag,Utilities,115.18,Expense
+2026-02-08,Aida Konditorei,Food & Drink,9.85,Expense
+2026-02-08,SPAR Supermarkt,Food & Drink,26.63,Expense
+2026-02-08,OMV Tankstelle,Travel,50.1,Expense
+2026-02-08,MediaMarkt Österreich,Shopping,80.93,Expense
+2026-02-09,Lidl Österreich,Food & Drink,17.65,Expense
+2026-02-09,Magenta Telekom Mobil,Utilities,25.02,Expense
+2026-02-09,A1 Internet Zuhause,Utilities,36.24,Expense
+2026-02-10,Disney+ Abo,Entertainment,11.27,Expense
+2026-02-11,PlayStation Store,Entertainment,4.0,Expense
+2026-02-11,Spende Caritas,Other,12.32,Expense
+2026-02-11,Aida Konditorei,Food & Drink,15.64,Expense
+2026-02-13,Netflix Abo,Entertainment,13.84,Expense
+2026-02-14,Ströck Bäckerei,Food & Drink,8.66,Expense
+2026-02-14,Spotify Premium,Entertainment,10.94,Expense
+2026-02-14,MediaMarkt Österreich,Shopping,82.11,Expense
+2026-02-15,ORF-Beitrag,Utilities,15.3,Expense
+2026-02-16,Barabend Wien,Entertainment,21.76,Expense
+2026-02-17,Ströck Bäckerei,Food & Drink,4.78,Expense
+2026-02-17,BIPA Einkauf,Shopping,16.23,Expense
+2026-02-18,Parkgarage Wien,Travel,3.68,Expense
+2026-02-18,Raiffeisen Sparrate,Investment,84.13,Expense
+2026-02-19,Lidl Österreich,Food & Drink,7.61,Expense
+2026-02-19,Raiffeisen Sparrate,Investment,154.33,Expense
+2026-02-20,Haushaltsreparatur,Other,31.68,Expense
+2026-02-20,Amazon.de Bestellung,Shopping,51.08,Expense
+2026-02-20,Schlüsseldienst,Other,90.49,Expense
+2026-02-21,Shell Tankstelle,Travel,66.77,Expense
+2026-02-22,Disney+ Abo,Entertainment,8.99,Expense
+2026-02-22,Lidl Österreich,Food & Drink,14.53,Expense
+2026-02-23,Erste Bank Sparzins,Investment,3.94,Income
+2026-02-24,McDonald's Österreich,Food & Drink,5.04,Expense
+2026-02-25,Cineplexx Ticket,Entertainment,10.37,Expense
+2026-02-25,OMV Tankstelle,Travel,33.04,Expense
+2026-02-27,Anker Jause,Food & Drink,4.02,Expense
+2026-02-27,easybank Kontoführung,Utilities,8.45,Expense
+2026-02-27,Flatex ETF Sparplan,Investment,225.23,Expense
+2026-02-28,dm drogerie markt,Shopping,33.65,Expense
+2026-02-28,HOFER Einkauf,Food & Drink,38.11,Expense
+2026-02-28,Gehaltszahlung Arbeitgeber,Salary,3093.82,Income
+2026-02-28,Aida Konditorei,Food & Drink,10.57,Expense
+2026-02-28,Shell Tankstelle,Travel,38.22,Expense
+2026-02-28,Physiotherapie,Health & Fitness,75.13,Expense
+2026-02-28,MediaMarkt Österreich,Shopping,42.26,Expense
+2026-03-01,MediaMarkt Österreich,Shopping,175.73,Expense
+2026-03-02,Anker Jause,Food & Drink,4.82,Expense
+2026-03-03,Mietzahlung Wohnung Wien,Rent,1297.0,Expense
+2026-03-04,Kilometergeld Arbeitgeber,Salary,65.86,Income
+2026-03-05,FITINN Mitgliedschaft,Health & Fitness,30.08,Expense
+2026-03-06,Wien Energie Abschlag,Utilities,113.75,Expense
+2026-03-08,BILLA Einkauf,Food & Drink,28.46,Expense
+2026-03-09,Magenta Telekom Mobil,Utilities,21.97,Expense
+2026-03-11,Free Now Fahrt,Travel,8.58,Expense
+2026-03-11,A1 Internet Zuhause,Utilities,34.82,Expense
+2026-03-11,Pfand Rückgabe,Other,6.24,Income
+2026-03-12,Spende Caritas,Other,12.53,Expense
+2026-03-12,SPAR Supermarkt,Food & Drink,19.63,Expense
+2026-03-13,Spotify Premium,Entertainment,10.89,Expense
+2026-03-13,Netflix Abo,Entertainment,13.67,Expense
+2026-03-13,ORF-Beitrag,Utilities,15.3,Expense
+2026-03-14,OMV Tankstelle,Travel,76.56,Expense
+2026-03-16,Disney+ Abo,Entertainment,10.87,Expense
+2026-03-16,Haushaltsversicherung UNIQA,Utilities,20.71,Expense
+2026-03-17,Free Now Fahrt,Travel,8.26,Expense
+2026-03-17,PlayStation Store,Entertainment,52.06,Expense
+2026-03-18,BILLA Einkauf,Food & Drink,16.17,Expense
+2026-03-18,A1 Handyrechnung,Utilities,18.78,Expense
+2026-03-19,Anker Jause,Food & Drink,10.86,Expense
+2026-03-19,SPAR Supermarkt,Food & Drink,29.05,Expense
+2026-03-19,Restaurant Wien,Food & Drink,34.09,Expense
+2026-03-20,Café in Wien,Food & Drink,12.13,Expense
+2026-03-20,SPAR Supermarkt,Food & Drink,25.28,Expense
+2026-03-20,BILLA PLUS Einkauf,Food & Drink,53.92,Expense
+2026-03-22,Würstelstand,Food & Drink,9.2,Expense
+2026-03-22,Free Now Fahrt,Travel,9.49,Expense
+2026-03-22,MuseumsQuartier Ticket,Entertainment,18.01,Expense
+2026-03-23,Bolt Fahrt,Travel,22.77,Expense
+2026-03-24,Wiener Linien Ticket,Travel,2.4,Expense
+2026-03-24,MediaMarkt Österreich,Shopping,18.83,Expense
+2026-03-25,Free Now Fahrt,Travel,7.17,Expense
+2026-03-25,Erste Bank Sparzins,Investment,2.57,Income
+2026-03-25,Flatex Dividende,Investment,13.8,Income
+2026-03-26,Würstelstand,Food & Drink,6.54,Expense
+2026-03-26,Restaurant Wien,Food & Drink,22.4,Expense
+2026-03-26,Willhaben Kauf,Shopping,31.59,Expense
+2026-03-27,Flatex ETF Sparplan,Investment,206.33,Expense
+2026-03-27,Gehaltszahlung Arbeitgeber,Salary,3077.77,Income
+2026-03-28,WESTbahn Ticket,Travel,28.32,Expense
+2026-03-28,OMV Tankstelle,Travel,69.59,Expense
+2026-03-28,Erste Bank Habenzins,Investment,3.23,Income
+2026-04-01,Parkgarage Wien,Travel,4.28,Expense
+2026-04-01,Steam Kauf,Entertainment,28.84,Expense
+2026-04-02,Würstelstand,Food & Drink,12.51,Expense
+2026-04-02,Konzertticket Stadthalle,Entertainment,105.61,Expense
+2026-04-03,Mietzahlung Wohnung Wien,Rent,1274.28,Expense
+2026-04-04,SPAR Einkauf,Food & Drink,18.74,Expense
+2026-04-04,MediaMarkt Österreich,Shopping,74.4,Expense
