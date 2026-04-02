@@ -11,7 +11,7 @@ type ButtonProps = {
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    "px-3 py-2 bg-interaction text-white enabled:hover:bg-interaction-hover disabled:opacity-40",
+    "px-3 py-2 bg-interaction text-black enabled:hover:bg-interaction-hover disabled:opacity-40",
   outline:
     "px-3 py-2 bg-slate-800 text-slate-200 enabled:hover:bg-slate-700  disabled:opacity-40",
   ghost:
@@ -25,7 +25,7 @@ export const Button = ({
   ...props
 }: ButtonProps) => (
   <HeadlessButton
-    className={`inline-flex items-center justify-center rounded-lg text-sm font-medium transition cursor-pointer disabled:cursor-not-allowed ${variantClasses[variant]} ${className}`}
+    className={`inline-flex items-center justify-center rounded-lg text-sm font-semibold transition cursor-pointer disabled:cursor-not-allowed ${variantClasses[variant]} ${className}`}
     {...props}
   >
     {children}

@@ -76,7 +76,7 @@ export const Timeline = ({
   const incomeTotal = getTotal(incomeTransactions);
 
   return (
-    <section className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4">
       <header className="flex items-center gap-4">
         <Button
           variant="primary"
@@ -127,6 +127,6 @@ export const Timeline = ({
           emptyText="No income transactions"
         />
       </div>
-    </section>
+    </div>
   );
 };

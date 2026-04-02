@@ -2,7 +2,7 @@
 @font-face {
   font-family: "Open Sans";
   src: url("/fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2");
-  font-weight: 300 500 800;
+  font-weight: 400 600 800;
   font-display: swap;
 }
 

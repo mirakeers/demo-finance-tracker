@@ -186,7 +186,7 @@ export default function DataGrid({
   } = useTablePagination(sortedRows);
 
   return (
-    <section className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4">
       <TableFilters
         columns={columns}
         filters={tableFilters}
@@ -210,6 +210,6 @@ export default function DataGrid({
         onNext={handleNextPage}
         onPageSizeChange={handlePageSizeChange}
       />
-    </section>
+    </div>
   );
 }
