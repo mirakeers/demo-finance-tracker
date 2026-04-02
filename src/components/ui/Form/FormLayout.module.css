@@ -21,18 +21,17 @@
 }
 
 .baseInputGroup {
-  @apply relative grow flex items-center h-10 gap-3 px-3 rounded-md bg-b-card  text-t-light placeholder:text-t-light;
+  @apply relative grow flex items-center h-10 gap-3 px-3 rounded-md bg-b-dark border-2 border-slate-900 text-t-light placeholder:text-t-light;
 }
-
 .combobox {
   @apply relative;
 }
 
 .textInput {
-  @apply block w-full grow h-full outline-none text-t-base;
+  @apply block w-full grow h-full outline-none text-t-base [text-align:inherit];
 }
 .optionGroup {
-  @apply absolute top-full left-0 right-0 z-20 rounded-md bg-b-card shadow-lg overflow-auto max-h-40;
+  @apply popup-down w-full overflow-auto max-h-40;
 }
 
 .optionLabel {
@@ -44,7 +43,7 @@
 }
 
 .daypicker {
-  @apply absolute top-full left-0 z-20 rounded-md bg-b-card p-3 mt-2 shadow-lg;
+  @apply popup-down p-2;
 }
 .daypicker :global(.rdp-root) {
   --rdp-accent-color: var(--color-interaction);

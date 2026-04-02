@@ -13,10 +13,17 @@
     "Courier New", monospace;
   --color-interaction: var(--color-violet-400);
   --color-interaction-hover: var(--color-violet-600);
+  --color-b-dark: var(--color-slate-950);
   --color-b-card: var(--color-slate-900);
   --color-b-page: var(--color-black);
   --color-t-base: var(--color-slate-100);
   --color-t-light: var(--color-slate-400);
+}
+@utility absolute-x-center {
+  @apply absolute left-1/2 -translate-x-1/2;
+}
+@utility popup-down {
+  @apply absolute-x-center shadow-2xl top-full mt-2 z-20 rounded-md bg-b-dark;
 }
 
 h1 {

@@ -1,8 +1,10 @@
-import { addDays, format, parseISO } from "date-fns";
+import { addDays, format, isValid, parse, parseISO } from "date-fns";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import type { Transaction } from "../../types";
 import { Button } from "../ui/Button/Button";
+import { DateInput } from "../ui/Form/DateInput/DateInput";
 import { TimelinePanel, type TimelineCategoryGroup } from "./TimelinePanel";
+import { DATE_FORMAT } from "../../constants/date";
 
 type TimelineProps = {
   transactions: Transaction[];
@@ -52,15 +54,16 @@ const getCategoryGroups = (
   );
 };
 
-const getHeaderLabel = (selectedDate: string) => {
-  const today = format(new Date(), "yyyy-MM-dd");
-  const formattedDate = format(parseISO(selectedDate), "dd.MM.yyyy");
-
-  return selectedDate === today ? `${formattedDate} (today)` : formattedDate;
-};
-
 const getNextDate = (selectedDate: string, diff: number) =>
   format(addDays(parseISO(selectedDate), diff), "yyyy-MM-dd");
+
+const formatTimelineInputDate = (selectedDate: string) =>
+  format(parseISO(selectedDate), DATE_FORMAT);
+
+const parseTimelineInputDate = (value: string) => {
+  const parsed = parse(value, DATE_FORMAT, new Date());
+  return isValid(parsed) ? format(parsed, "yyyy-MM-dd") : null;
+};
 
 export const Timeline = ({
   transactions,
@@ -78,6 +81,14 @@ export const Timeline = ({
   const expenseTotal = getTotal(expenseTransactions);
   const incomeTotal = getTotal(incomeTransactions);
 
+  const handleDateCommit = (nextValue: string) => {
+    const nextDate = parseTimelineInputDate(nextValue);
+
+    if (nextDate) {
+      onDateChange(nextDate);
+    }
+  };
+
   return (
     <section className="flex flex-col gap-4">
       <header className="flex items-center gap-4">
@@ -89,12 +100,18 @@ export const Timeline = ({
           <ChevronLeftIcon className="size-5" />
         </Button>
 
-        <div
-          className="flex-1 bg-b-card px-4 py-2 text-center text-xl font-semibold text-t-base"
+        <form
+          className="flex-1 bg-b-card px-4 py-2"
           aria-live="polite"
+          onSubmit={(event) => event.preventDefault()}
         >
-          {getHeaderLabel(selectedDate)}
-        </div>
+          <DateInput
+            value={formatTimelineInputDate(selectedDate)}
+            onChange={() => {}}
+            onCommit={handleDateCommit}
+            className="justify-center text-center"
+          />
+        </form>
 
         <Button
           variant="primary"
