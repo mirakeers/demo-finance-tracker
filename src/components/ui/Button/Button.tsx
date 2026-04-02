@@ -1,7 +1,7 @@
 import { Button as HeadlessButton } from "@headlessui/react";
 import type { ComponentProps, ReactNode } from "react";
 
-type ButtonVariant = "primary" | "secondary" | "ghost";
+type ButtonVariant = "primary" | "outline" | "ghost";
 
 type ButtonProps = {
   children: ReactNode;
@@ -12,7 +12,7 @@ type ButtonProps = {
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
     "px-3 py-2 bg-interaction text-white enabled:hover:bg-interaction-hover disabled:opacity-40",
-  secondary:
+  outline:
     "px-3 py-2 bg-slate-800 text-slate-200 enabled:hover:bg-slate-700  disabled:opacity-40",
   ghost:
     "p-2 -m-2 bg-transparent text-slate-300 enabled:hover:bg-slate-800 disabled:opacity-40",
@@ -20,7 +20,7 @@ const variantClasses: Record<ButtonVariant, string> = {
 
 export const Button = ({
   children,
-  variant = "secondary",
+  variant = "outline",
   className = "",
   ...props
 }: ButtonProps) => (
