@@ -33,7 +33,7 @@ export const Table = <Row extends { id: string }>({
           ({ id, header, alignment = "left", headerClassName = "" }) => (
             <th
               key={id}
-              className={`px-4 py-2 text-sm font-semibold text-t-base 
+              className={`px-4 py-2 text-sm font-semibol text-t-base 
                 text-${alignment} 
                 ${headerClassName}
                 `}

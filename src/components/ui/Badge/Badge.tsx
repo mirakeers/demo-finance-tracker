@@ -8,7 +8,7 @@ type BadgeProps = ComponentProps<"span"> & {
 export const Badge = ({ color, className, ...props }: BadgeProps) => {
   return (
     <span
-      className={`inline-flex px-3 py-1 rounded-sm ${color ? getBadgeColorClasses(color) : "bg-white/10"} ${className}`}
+      className={`inline-flex px-3 py-1 rounded-sm whitespace-nowrap ${color ? getBadgeColorClasses(color) : "bg-white/10"} ${className}`}
       {...props}
     />
   );

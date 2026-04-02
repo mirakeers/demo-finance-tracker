@@ -1,36 +1,33 @@
 import { Button as HeadlessButton } from "@headlessui/react";
 import type { ComponentProps, ReactNode } from "react";
 
-type ButtonVariant = "primary" | "outline" | "icon";
+type ButtonVariant = "primary" | "secondary" | "ghost";
 
-type ButtonProps = ComponentProps<"button"> & {
+type ButtonProps = {
   children: ReactNode;
   variant?: ButtonVariant;
-};
-
-const baseClasses =
-  "inline-flex items-center justify-center gap-2 rounded-md transition cursor-pointer focus:outline-none disabled:cursor-not-allowed";
+  className?: string;
+} & Omit<ComponentProps<typeof HeadlessButton>, "className">;
 
 const variantClasses: Record<ButtonVariant, string> = {
-  primary: `px-3 h-8 min-h-10 bg-interaction hover:bg-interaction-hover text-black font-semibold`,
-  outline: `px-3 h-8 min-h-10 border-1 border-interaction hover:border-interaction-hover text-interaction hover:text-interaction-hover font-semibold`,
-  icon: "p-2 text-t-light hover:text-interaction hover:bg-white/10",
+  primary:
+    "bg-interaction text-white enabled:hover:bg-interaction-hover disabled:opacity-40",
+  secondary:
+    "bg-slate-800 text-slate-200 enabled:hover:bg-slate-700  disabled:opacity-40",
+  ghost:
+    "bg-transparent text-slate-300 enabled:hover:bg-slate-800 disabled:opacity-40",
 };
 
 export const Button = ({
   children,
+  variant = "secondary",
   className = "",
-  variant = "primary",
-  type = "button",
   ...props
-}: ButtonProps) => {
-  return (
-    <HeadlessButton
-      type={type}
-      className={`${baseClasses} ${variantClasses[variant]} ${className}`}
-      {...props}
-    >
-      {children}
-    </HeadlessButton>
-  );
-};
+}: ButtonProps) => (
+  <HeadlessButton
+    className={`inline-flex items-center justify-center rounded-lg px-3 py-2 text-sm font-medium transition disabled:cursor-not-allowed ${variantClasses[variant]} ${className}`}
+    {...props}
+  >
+    {children}
+  </HeadlessButton>
+);

@@ -13,7 +13,7 @@ type ComboboxProps<T> = {
   value: T;
   onChange: (value: T) => void;
   options: readonly T[];
-  displayValue: (value: T) => string;
+  displayValue?: (value: T) => string;
   renderOption?: (value: T) => React.ReactNode;
   filter?: (value: T, query: string) => boolean;
   placeholder?: string;
@@ -23,7 +23,7 @@ export const Combobox = <T extends string>({
   value,
   onChange,
   options,
-  displayValue,
+  displayValue = (value) => value,
   renderOption,
   filter,
   placeholder,
