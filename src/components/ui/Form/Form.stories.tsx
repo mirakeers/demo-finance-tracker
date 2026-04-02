@@ -8,6 +8,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import "../../../i18n/i18n";
 import { Button } from "../Button/Button";
 import styles from "./FormLayout.module.css";
 import { DateInput } from "./DateInput/DateInput";
@@ -22,8 +23,8 @@ const FormStoryContent = () => {
   const [textSearch, setTextSearch] = useState("");
   const [amountMin, setAmountMin] = useState("");
   const [amountMax, setAmountMax] = useState("");
-  const [dateMin, setDateMin] = useState("02/04/2026");
-  const [dateMax, setDateMax] = useState("12/04/2026");
+  const [dateMin, setDateMin] = useState("2026-04-02");
+  const [dateMax, setDateMax] = useState("2026-04-12");
   const [category, setCategory] = useState<Category | "">("");
 
   return (
@@ -114,7 +115,7 @@ const FormStoryContent = () => {
             onChange={setCategory}
             options={categories}
             placeholder={t(($) => $.transaction.category.placeholder)}
-            displayValue={(value) => t(($) => $.category[value])}
+            displayValue={(value) => (value ? t(($) => $.category[value]) : "")}
             renderOption={(item) => <CategoryBadge category={item} />}
             slot={<TagIcon className={styles.icon} />}
             clearable={category !== ""}

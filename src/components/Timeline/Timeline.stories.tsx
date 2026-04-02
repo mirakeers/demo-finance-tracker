@@ -6,7 +6,7 @@ import { Timeline } from "./Timeline";
 const mockTransactions: Transaction[] = [
   {
     id: "tx-1",
-    date: "2026-04-01",
+    date: new Date("2026-04-01"),
     description: "Lunch",
     category: "food_drink",
     amount: -42.12,
@@ -14,7 +14,7 @@ const mockTransactions: Transaction[] = [
   },
   {
     id: "tx-2",
-    date: "2026-04-01",
+    date: new Date("2026-04-01"),
     description: "Train",
     category: "transport",
     amount: -8,
@@ -22,7 +22,7 @@ const mockTransactions: Transaction[] = [
   },
   {
     id: "tx-3",
-    date: "2026-04-01",
+    date: new Date("2026-04-01"),
     description: "Dinner",
     category: "food_drink",
     amount: -42.12,
@@ -30,7 +30,7 @@ const mockTransactions: Transaction[] = [
   },
   {
     id: "tx-4",
-    date: "2026-04-02",
+    date: new Date("2026-04-02"),
     description: "Salary",
     category: "misc",
     amount: 2400,
@@ -39,7 +39,7 @@ const mockTransactions: Transaction[] = [
 ];
 
 const TimelineStoryContent = () => {
-  const [selectedDate, setSelectedDate] = useState("2026-04-01");
+  const [selectedDate, setSelectedDate] = useState(new Date("2026-04-01"));
 
   return (
     <Timeline

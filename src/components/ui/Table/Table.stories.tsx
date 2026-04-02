@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import "../../../i18n/i18n";
 import type { Transaction } from "../../../types";
 import { formatCurrency } from "../../../utils/formatCurrency";
+import { formatDate } from "../../../utils/formatDate";
 import { Table, type TableColumn } from "./Table";
 import { CategoryBadge } from "../../CategoryBadge/CategoryBadge";
 
@@ -23,7 +24,7 @@ const categories: Transaction["category"][] = [
 const generateMockData = (count: number): Transaction[] =>
   Array.from({ length: count }, (_, i) => ({
     id: `tx-${i + 1}`,
-    date: `2026-03-${String((i % 28) + 1).padStart(2, "0")}`,
+    date: new Date(`2026-03-${String((i % 28) + 1).padStart(2, "0")}`),
     description: `Transaction ${i + 1}`,
     category: categories[i % categories.length],
     amount: Number((Math.random() * 200).toFixed(2)),
@@ -36,8 +37,9 @@ type TableStoryContentProps = {
 
 const TableStoryContent = ({ isEmpty = false }: TableStoryContentProps) => {
   const { t } = useTranslation();
+
   const [sortState, setSortState] = useState<{
-    column: string;
+    column: keyof Transaction & string;
     direction: "asc" | "desc";
   }>({
     column: "date",
@@ -52,6 +54,7 @@ const TableStoryContent = ({ isEmpty = false }: TableStoryContentProps) => {
         id: "date",
         header: t(($) => $.transaction.date.label),
         headerClassName: "min-w-30",
+        wrapper: ({ date }) => <span>{formatDate(date)}</span>,
       },
       {
         id: "amount",
@@ -78,7 +81,7 @@ const TableStoryContent = ({ isEmpty = false }: TableStoryContentProps) => {
     [t],
   );
 
-  const handleSort = (columnId: string) => {
+  const handleSort = (columnId: keyof Transaction & string) => {
     setSortState((current) => ({
       column: columnId,
       direction:
@@ -89,7 +92,7 @@ const TableStoryContent = ({ isEmpty = false }: TableStoryContentProps) => {
   };
 
   return (
-    <Table
+    <Table<Transaction, keyof Transaction & string>
       id="storybook-table"
       columns={columns}
       rows={isEmpty ? [] : rows}
