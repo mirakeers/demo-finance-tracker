@@ -1,23 +1,22 @@
+import { useMemo, useState } from "react";
 import DataGrid from "./components/DataGrid/DataGrid";
 import { Timeline } from "./components/Timeline/Timeline";
 import { TransactionFormDialog } from "./components/TransactionForm/TransactionFormDialog";
-import type { TransactionFormSubmitData } from "./components/TransactionForm/TransactionForm";
+import type {
+  TransactionFormSubmitData,
+  TransactionFormValues,
+} from "./components/TransactionForm/TransactionForm";
 import { Button } from "./components/ui/Button/Button";
 import { useTransactions } from "./hooks/useTransactions";
 import { useTransactionViewState } from "./hooks/useTransactionViewState";
-import { useState } from "react";
 import type { Transaction } from "./types";
-
-const createManualTransaction = (
-  data: TransactionFormSubmitData,
-): Transaction => ({
-  id: crypto.randomUUID(),
-  ...data,
-});
+import { mapTransactionToFormValues } from "./utils/transactionForm";
 
 function App() {
-  const { data, addManualTransaction } = useTransactions();
+  const { data, addManualTransaction, updateTransaction } = useTransactions();
   const [isTransactionFormOpen, setIsTransactionFormOpen] = useState(false);
+  const [editingTransaction, setEditingTransaction] =
+    useState<Transaction | null>(null);
 
   const {
     currentDay,
@@ -27,9 +26,41 @@ function App() {
     handleCurrentDayChange,
   } = useTransactionViewState(new Date());
 
-  const handleAddTransaction = (formData: TransactionFormSubmitData) => {
-    addManualTransaction(createManualTransaction(formData));
+  const transactionFormMode = editingTransaction ? "edit" : "create";
+  const transactionFormInitialValues = useMemo<
+    Partial<TransactionFormValues> | undefined
+  >(
+    () =>
+      editingTransaction
+        ? mapTransactionToFormValues(editingTransaction)
+        : undefined,
+    [editingTransaction],
+  );
+
+  const openCreateTransactionForm = () => {
+    setEditingTransaction(null);
+    setIsTransactionFormOpen(true);
+  };
+
+  const openEditTransactionForm = (transaction: Transaction) => {
+    setEditingTransaction(transaction);
+    setIsTransactionFormOpen(true);
+  };
+
+  const closeTransactionForm = () => {
+    setEditingTransaction(null);
     setIsTransactionFormOpen(false);
+  };
+
+  const handleSubmitTransaction = (formData: TransactionFormSubmitData) => {
+    if (editingTransaction) {
+      updateTransaction(editingTransaction, formData);
+      closeTransactionForm();
+      return;
+    }
+
+    addManualTransaction(formData);
+    closeTransactionForm();
   };
 
   return (
@@ -51,9 +82,7 @@ function App() {
         <section className="flex flex-col gap-6">
           <div className="flex justify-between gap-4">
             <h2>My transactions</h2>
-            <Button onClick={() => setIsTransactionFormOpen(true)}>
-              Add transaction
-            </Button>
+            <Button onClick={openCreateTransactionForm}>Add transaction</Button>
           </div>
 
           <DataGrid
@@ -61,14 +90,17 @@ function App() {
             filters={filters}
             onFilterChange={handleFilterChange}
             onUseCurrentDayChange={handleUseCurrentDayChange}
+            onEditTransaction={openEditTransactionForm}
           />
         </section>
       </main>
 
       <TransactionFormDialog
         open={isTransactionFormOpen}
-        onClose={() => setIsTransactionFormOpen(false)}
-        onSubmit={handleAddTransaction}
+        mode={transactionFormMode}
+        initialValues={transactionFormInitialValues}
+        onClose={closeTransactionForm}
+        onSubmit={handleSubmitTransaction}
       />
     </div>
   );

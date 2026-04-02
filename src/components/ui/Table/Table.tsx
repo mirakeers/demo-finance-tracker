@@ -32,10 +32,7 @@ export type ColumnFilter =
       slot?: React.ReactNode;
     };
 
-export type TableColumn<
-  Row,
-  ColumnId extends keyof Row & string = keyof Row & string,
-> = {
+export type TableColumn<Row, ColumnId extends string = keyof Row & string> = {
   id: ColumnId;
   header: ReactNode;
   wrapper?: (row: Row) => ReactNode;
@@ -45,14 +42,14 @@ export type TableColumn<
   filter?: ColumnFilter;
 };
 
-type TableSortState<ColumnId extends string> = {
+export type TableSortState<ColumnId extends string> = {
   column: ColumnId;
   direction: "asc" | "desc";
 };
 
 type TableProps<
   Row extends { id: string },
-  ColumnId extends keyof Row & string = keyof Row & string,
+  ColumnId extends string = keyof Row & string,
 > = {
   id?: string;
   columns: TableColumn<Row, ColumnId>[];
@@ -71,7 +68,7 @@ const alignmentClassNames: Record<Alignment, string> = {
 
 export const Table = <
   Row extends { id: string },
-  ColumnId extends keyof Row & string = keyof Row & string,
+  ColumnId extends string = keyof Row & string,
 >({
   id,
   columns,
@@ -133,7 +130,9 @@ export const Table = <
                     ${cellClassName}
                   `}
                 >
-                  {wrapper ? wrapper(row) : (row[id] as ReactNode)}
+                  {wrapper
+                    ? wrapper(row)
+                    : ((row as Record<string, ReactNode>)[id] ?? null)}
                 </td>
               ),
             )}

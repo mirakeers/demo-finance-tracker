@@ -6,6 +6,7 @@ import {
   CircleStackIcon,
   CurrencyEuroIcon,
   MagnifyingGlassIcon,
+  PencilIcon,
   TagIcon,
 } from "@heroicons/react/24/outline";
 import { Table, type TableColumn } from "../ui/Table/Table";
@@ -14,11 +15,12 @@ import { TablePagination } from "../ui/Table/TablePagination";
 import type { Transaction, TransactionFilters } from "../../types";
 import { categories, type Category } from "../../data/categories";
 import { formatCurrency } from "../../utils/formatCurrency";
+import { formatDate } from "../../utils/formatDate";
 import { CategoryBadge } from "../CategoryBadge/CategoryBadge";
 import { useTableSort } from "../../hooks/useTableSort";
 import { useTablePagination } from "../../hooks/useTablePagination";
 import styles from "../ui/Form/FormLayout.module.css";
-import { formatDate } from "../../utils/formatDate";
+import { Button } from "../ui/Button/Button";
 
 type DataGridProps = {
   transactions: Transaction[];
@@ -28,7 +30,11 @@ type DataGridProps = {
     value: TransactionFilters[K],
   ) => void;
   onUseCurrentDayChange: (checked: boolean) => void;
+  onEditTransaction: (transaction: Transaction) => void;
 };
+
+type TransactionColumnId = keyof Transaction & string;
+type DataGridColumnId = TransactionColumnId | "actions";
 
 const sourceOptions = ["imported", "manual", "modified"] as const;
 
@@ -37,10 +43,11 @@ export default function DataGrid({
   filters,
   onFilterChange,
   onUseCurrentDayChange,
+  onEditTransaction,
 }: DataGridProps) {
   const { t } = useTranslation();
 
-  const columns = useMemo<TableColumn<Transaction>[]>(
+  const columns = useMemo<TableColumn<Transaction, DataGridColumnId>[]>(
     () => [
       {
         id: "date",
@@ -112,8 +119,23 @@ export default function DataGrid({
           slot: <MagnifyingGlassIcon className={styles.icon} />,
         },
       },
+      {
+        id: "actions",
+        header: "Actions",
+        alignment: "center",
+        headerClassName: "min-w-20",
+        wrapper: (transaction) => (
+          <Button
+            variant="ghost"
+            aria-label={`Edit ${transaction.description}`}
+            onClick={() => onEditTransaction(transaction)}
+          >
+            <PencilIcon className="size-4" />
+          </Button>
+        ),
+      },
     ],
-    [t],
+    [onEditTransaction, t],
   );
 
   const tableFilters = {
@@ -171,11 +193,17 @@ export default function DataGrid({
 
   const { sort, sortedRows, handleSort } = useTableSort<
     Transaction,
-    keyof Transaction & string
+    TransactionColumnId
   >(filteredRows, {
     column: "date",
     direction: "desc",
   });
+
+  const handleTableSort = (columnId: DataGridColumnId) => {
+    if (columnId === "actions") return;
+    handleSort(columnId);
+  };
+
   const {
     page,
     pageSize,
@@ -186,19 +214,20 @@ export default function DataGrid({
   } = useTablePagination(sortedRows);
 
   return (
-    <div className="flex flex-col gap-4">
+    <section className="flex flex-col gap-4">
       <TableFilters
-        columns={columns}
+        columns={columns.filter((column) => column.id !== "actions")}
         filters={tableFilters}
         onChange={handleTableFilterChange}
         useCurrentDay={filters.useCurrentDay}
         onUseCurrentDayChange={onUseCurrentDayChange}
       />
-      <Table<Transaction, keyof Transaction & string>
+
+      <Table<Transaction, DataGridColumnId>
         id="transactions"
         columns={columns}
         rows={visibleRows}
-        onSort={handleSort}
+        onSort={handleTableSort}
         sortState={sort}
       />
 
@@ -210,6 +239,6 @@ export default function DataGrid({
         onNext={handleNextPage}
         onPageSizeChange={handlePageSizeChange}
       />
-    </div>
+    </section>
   );
 }
