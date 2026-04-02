@@ -53,6 +53,7 @@ export const RangeFilterField = <TFilters extends Record<string, string>>({
         <DateFilterField
           value={minValue}
           placeholder={filter.minPlaceholder}
+          slot={filter.slot}
           onChange={setMin}
           onClear={() => setMin("")}
           onCommit={(nextValue) => normalizeRange("min", nextValue)}
@@ -61,6 +62,7 @@ export const RangeFilterField = <TFilters extends Record<string, string>>({
         <DateFilterField
           value={maxValue}
           placeholder={filter.maxPlaceholder}
+          slot={filter.slot}
           onChange={setMax}
           onClear={() => setMax("")}
           onCommit={(nextValue) => normalizeRange("max", nextValue)}
@@ -74,6 +76,7 @@ export const RangeFilterField = <TFilters extends Record<string, string>>({
       <TextFilterField
         value={minValue}
         placeholder={filter.minPlaceholder}
+        slot={filter.slot}
         onChange={setMin}
         onClear={() => setMin("")}
         onCommit={(nextValue) => normalizeRange("min", nextValue)}
@@ -82,6 +85,7 @@ export const RangeFilterField = <TFilters extends Record<string, string>>({
       <TextFilterField
         value={maxValue}
         placeholder={filter.maxPlaceholder}
+        slot={filter.slot}
         onChange={setMax}
         onClear={() => setMax("")}
         onCommit={(nextValue) => normalizeRange("max", nextValue)}

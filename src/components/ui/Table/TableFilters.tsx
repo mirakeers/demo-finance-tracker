@@ -2,7 +2,6 @@ import type { ColumnFilter } from "./Table";
 import { ComboboxFilterField } from "./TableFilters/ComboboxFilterField";
 import { DateFilterField } from "./TableFilters/DateFilterField";
 import { RangeFilterField } from "./TableFilters/RangeFIlterField";
-import { SearchFilterField } from "./TableFilters/SearchFilterField";
 import { TextFilterField } from "./TableFilters/TextFilterField";
 
 type TableFiltersProps<Row, TFilters extends Record<string, string>> = {
@@ -34,76 +33,53 @@ export const TableFilters = <Row, TFilters extends Record<string, string>>({
   );
 
   return (
-    <form className="flex flex-wrap items-end gap-4">
+    <form className="flex flex-wrap gap-y-4 gap-x-8">
       {filterColumns.map((column) => {
         const id = column.id as keyof TFilters & string;
-
-        if (column.filter.type === "range") {
-          return (
-            <RangeFilterField
-              key={id}
-              id={id}
-              filter={column.filter}
-              filters={filters}
-              onChange={onChange}
-            />
-          );
-        }
-
         const value = filters[id] ?? "";
         const handleChange = (nextValue: string) =>
           onChange(id, nextValue as TFilters[typeof id]);
         const handleClear = () => onChange(id, "" as TFilters[typeof id]);
 
-        switch (column.filter.type) {
-          case "date":
-            return (
+        return (
+          <div key={id} className={`grow-1 ${column.filter.wrapperClass}`}>
+            {column.filter.type === "range" ? (
+              <RangeFilterField
+                id={id}
+                filter={column.filter}
+                filters={filters}
+                onChange={onChange}
+              />
+            ) : column.filter.type === "date" ? (
               <DateFilterField
-                key={id}
                 value={value}
                 placeholder={column.filter.placeholder}
+                slot={column.filter.slot}
                 onChange={handleChange}
                 onClear={handleClear}
               />
-            );
-
-          case "search":
-            return (
-              <SearchFilterField
-                key={id}
-                value={value}
-                placeholder={column.filter.placeholder}
-                onChange={handleChange}
-                onClear={handleClear}
-              />
-            );
-
-          case "text":
-          case "number":
-            return (
-              <TextFilterField
-                key={id}
-                value={value}
-                placeholder={column.filter.placeholder}
-                onChange={handleChange}
-                onClear={handleClear}
-              />
-            );
-
-          case "combobox":
-            return (
+            ) : column.filter.type === "combobox" ? (
               <ComboboxFilterField
-                key={id}
                 value={value}
                 placeholder={column.filter.placeholder}
                 options={column.filter.options}
                 displayValue={column.filter.displayValue}
                 renderOption={column.filter.renderOption}
+                slot={column.filter.slot}
                 onChange={handleChange}
                 onClear={handleClear}
               />
-            );
-        }
+            ) : (
+              <TextFilterField
+                value={value}
+                placeholder={column.filter.placeholder}
+                slot={column.filter.slot}
+                onChange={handleChange}
+                onClear={handleClear}
+              />
+            )}
+          </div>
+        );
       })}
     </form>
   );

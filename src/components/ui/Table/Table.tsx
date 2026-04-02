@@ -11,12 +11,16 @@ export type ColumnFilter =
   | {
       type: "date" | "search" | "text" | "number";
       placeholder?: string;
+      wrapperClass?: string;
+      slot?: React.ReactNode;
     }
   | {
       type: "range";
       input: "date" | "number";
       minPlaceholder?: string;
       maxPlaceholder?: string;
+      wrapperClass?: string;
+      slot?: React.ReactNode;
     }
   | {
       type: "combobox";
@@ -24,6 +28,8 @@ export type ColumnFilter =
       displayValue: (value: string) => string;
       renderOption?: (value: string) => React.ReactNode;
       placeholder?: string;
+      wrapperClass?: string;
+      slot?: React.ReactNode;
     };
 
 export type TableColumn<Row> = {

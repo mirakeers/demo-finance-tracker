@@ -12,6 +12,10 @@ import { useTableSort } from "../../hooks/useTableSort";
 import { useTablePagination } from "../../hooks/useTablePagination";
 import { useTableFilters } from "../../hooks/useTableFilters";
 import { DATE_FORMAT } from "../../constants/date";
+import {
+  CalendarDaysIcon,
+  MagnifyingGlassIcon,
+} from "@heroicons/react/24/outline";
 
 type DataGridProps = {
   transactions: Transaction[];
@@ -43,6 +47,8 @@ export default function DataGrid({ transactions }: DataGridProps) {
           input: "date",
           minPlaceholder: t(($) => $.transaction.date.placeholder.min),
           maxPlaceholder: t(($) => $.transaction.date.placeholder.max),
+          slot: <CalendarDaysIcon className="size-4" />,
+          wrapperClass: "basis-90 grow-0 order-0",
         },
       },
       {
@@ -56,6 +62,8 @@ export default function DataGrid({ transactions }: DataGridProps) {
           input: "number",
           minPlaceholder: t(($) => $.transaction.amount.placeholder.min),
           maxPlaceholder: t(($) => $.transaction.amount.placeholder.max),
+          slot: <>€</>,
+          wrapperClass: "order-3",
         },
       },
       {
@@ -63,8 +71,10 @@ export default function DataGrid({ transactions }: DataGridProps) {
         header: t(($) => $.transaction.description.label),
         headerClassName: "w-full",
         filter: {
-          type: "search",
+          type: "text",
           placeholder: t(($) => $.transaction.description.placeholder),
+          slot: <MagnifyingGlassIcon className="size-4" />,
+          wrapperClass: "order-4",
         },
       },
       {
@@ -80,6 +90,7 @@ export default function DataGrid({ transactions }: DataGridProps) {
           renderOption: (value) => (
             <CategoryBadge category={value as Category} />
           ),
+          wrapperClass: "basis-50 order-2",
         },
       },
       {
@@ -90,6 +101,7 @@ export default function DataGrid({ transactions }: DataGridProps) {
           placeholder: t(($) => $.transaction.source.placeholder),
           options: sourceOptions,
           displayValue: (value) => value,
+          wrapperClass: "basis-40 order-1",
         },
       },
     ],

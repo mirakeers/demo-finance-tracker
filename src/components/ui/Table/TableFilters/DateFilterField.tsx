@@ -4,6 +4,7 @@ import { DATE_FORMAT } from "../../../../constants/date";
 type DateFilterFieldProps = {
   value: string;
   placeholder?: string;
+  slot?: React.ReactNode;
   onChange: (value: string) => void;
   onClear: () => void;
   onCommit?: (value: string) => void;
@@ -12,6 +13,7 @@ type DateFilterFieldProps = {
 export const DateFilterField = ({
   value,
   placeholder = DATE_FORMAT,
+  slot,
   onChange,
   onClear,
   onCommit,
@@ -26,6 +28,7 @@ export const DateFilterField = ({
       clearable={isActive}
       onClear={onClear}
       onCommit={onCommit}
+      slot={slot}
     />
   );
 };

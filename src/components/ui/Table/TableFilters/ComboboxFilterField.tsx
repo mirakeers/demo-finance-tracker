@@ -4,6 +4,7 @@ type ComboboxFilterFieldProps = {
   value: string;
   placeholder?: string;
   options: readonly string[];
+  slot?: React.ReactNode;
   displayValue: (value: string) => string;
   renderOption?: (value: string) => React.ReactNode;
   onChange: (value: string) => void;
@@ -14,6 +15,7 @@ export const ComboboxFilterField = ({
   value,
   placeholder,
   options,
+  slot,
   displayValue,
   renderOption,
   onChange,
@@ -31,6 +33,7 @@ export const ComboboxFilterField = ({
       placeholder={placeholder}
       clearable={isActive}
       onClear={onClear}
+      slot={slot}
     />
   );
 };
