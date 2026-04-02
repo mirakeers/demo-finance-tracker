@@ -30,6 +30,7 @@ Run Storybook with component examples
 
 ### DataGrid
 
+- Pagination
 - Client-side sorting and filtering
 - Column-based configuration (label, accessor, visibility)
 - Supports loading and empty states
@@ -63,7 +64,7 @@ The app combines all components into a single page:
 
 ### Data sources
 
-- Imported dataset (mock CSV)
+- Imported dataset (mock CSV), mocked with msw
 - Manual transactions (stored in cookies)
 - Overrides for imported transactions (stored in cookies)
 
@@ -101,10 +102,9 @@ type Transaction = {
 - Data fetching and mutations live in hooks, not components
 - Separation of concerns
 - Components are mostly presentational and reusable
-- String-based date filters, Date-based data
+- String-based date filters, Date-based data:
   - UI uses strings (for inputs and placeholders)
   - Core data uses Date objects
-
 - Cookie persistence (simple approach): Used to persist manual data without introducing a backend
 
 ## Further development
@@ -113,13 +113,12 @@ The following items from the original task or natural extensions were not fully 
 
 ### DataGrid
 
-- Pagination
 - Column hide/show configuration UI
 - Error state UI
-- Mobile table layout improvements
 
 ### Timeline
 
+- Add chart for "at a glance" day breakdown (improves intent of timeline component)
 - Full keyboard navigation (arrow keys)
 - Screen-reader announcements for navigation
 - More advanced grouping options (e.g. week/month)
@@ -130,10 +129,12 @@ The following items from the original task or natural extensions were not fully 
 - Explicit success message region (ARIA live region)
 - More advanced validation feedback patterns
 
-### General UX
+### General UI and UX
 
+- Improve visual design, fix styling bu
+- Add feedback messages on entry load / edit / create
+- Improved mobile responsiveness (especially DataGrid, Modal)
 - Transitional animations (e.g. modal, timeline changes)
-- Improved mobile responsiveness (especially DataGrid)
 - Better empty/error states across components
 
 ### Tooling / Documentation
