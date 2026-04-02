@@ -5,11 +5,17 @@
   "transaction": {
     "date": {
       "label": "Date",
-      "placeholder": "Select date"
+      "placeholder": {
+        "min": "Add start date",
+        "max": "Add end date"
+      }
     },
     "amount": {
       "label": "Amount",
-      "placeholder": "Enter amount"
+      "placeholder": {
+        "min": "Add min",
+        "max": "Add max"
+      }
     },
     "description": {
       "label": "Description",

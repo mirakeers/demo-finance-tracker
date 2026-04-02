@@ -11,6 +11,7 @@ import { CategoryBadge } from "../CategoryBadge/CategoryBadge";
 import { useTableSort } from "../../hooks/useTableSort";
 import { useTablePagination } from "../../hooks/useTablePagination";
 import { useTableFilters } from "../../hooks/useTableFilters";
+import { DATE_FORMAT } from "../../constants/date";
 
 type DataGridProps = {
   transactions: Transaction[];
@@ -19,8 +20,10 @@ type DataGridProps = {
 const sourceOptions = ["imported", "manual", "modified"] as const;
 
 const INITIAL_FILTERS = {
-  date: "",
-  amount: "",
+  dateMin: "",
+  dateMax: "",
+  amountMin: "",
+  amountMax: "",
   description: "",
   category: "",
   source: "",
@@ -36,8 +39,10 @@ export default function DataGrid({ transactions }: DataGridProps) {
         header: t(($) => $.transaction.date.label),
         wrapper: ({ date }) => <span className="text-nowrap">{date}</span>,
         filter: {
-          type: "date",
-          placeholder: t(($) => $.transaction.date.placeholder),
+          type: "range",
+          input: "date",
+          minPlaceholder: t(($) => $.transaction.date.placeholder.min),
+          maxPlaceholder: t(($) => $.transaction.date.placeholder.max),
         },
       },
       {
@@ -47,8 +52,10 @@ export default function DataGrid({ transactions }: DataGridProps) {
         alignment: "right",
         headerClassName: "min-w-28",
         filter: {
-          type: "number",
-          placeholder: t(($) => $.transaction.amount.placeholder),
+          type: "range",
+          input: "number",
+          minPlaceholder: t(($) => $.transaction.amount.placeholder.min),
+          maxPlaceholder: t(($) => $.transaction.amount.placeholder.max),
         },
       },
       {
@@ -92,21 +99,29 @@ export default function DataGrid({ transactions }: DataGridProps) {
   const { filters, setFilter } = useTableFilters(INITIAL_FILTERS);
 
   const filteredRows = useMemo(() => {
-    const dateFilter = filters.date
-      ? parse(filters.date, "dd/MM/yyyy", new Date())
+    const dateMin = filters.dateMin
+      ? parse(filters.dateMin, DATE_FORMAT, new Date())
       : null;
-    const amountFilter = filters.amount ? Number(filters.amount) : null;
+    const dateMax = filters.dateMax
+      ? parse(filters.dateMax, DATE_FORMAT, new Date())
+      : null;
+    const amountMin = filters.amountMin ? Number(filters.amountMin) : null;
+    const amountMax = filters.amountMax ? Number(filters.amountMax) : null;
     const descriptionFilter = filters.description.trim().toLowerCase();
     const categoryFilter = filters.category;
     const sourceFilter = filters.source;
 
     return transactions.filter((transaction) => {
-      if (dateFilter) {
-        const transactionDate = parseISO(transaction.date);
-        if (transactionDate < dateFilter) return false;
+      const transactionDate = parseISO(transaction.date);
+
+      if (dateMin && transactionDate < dateMin) return false;
+      if (dateMax && transactionDate > dateMax) return false;
+
+      if (amountMin !== null && transaction.amount < amountMin) {
+        return false;
       }
 
-      if (amountFilter !== null && transaction.amount < amountFilter) {
+      if (amountMax !== null && transaction.amount > amountMax) {
         return false;
       }
 
@@ -146,6 +161,7 @@ export default function DataGrid({ transactions }: DataGridProps) {
   return (
     <section className="flex flex-col gap-4">
       <TableFilters columns={columns} filters={filters} onChange={setFilter} />
+
       <Table
         id="transactions"
         columns={columns}

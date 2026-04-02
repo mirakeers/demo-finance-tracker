@@ -9,18 +9,20 @@ type Alignment = "left" | "right" | "center";
 
 export type ColumnFilter =
   | {
-      type: "text" | "search" | "number";
+      type: "date" | "search" | "text" | "number";
       placeholder?: string;
     }
   | {
-      type: "date";
-      placeholder?: string;
+      type: "range";
+      input: "date" | "number";
+      minPlaceholder?: string;
+      maxPlaceholder?: string;
     }
   | {
       type: "combobox";
       options: readonly string[];
       displayValue: (value: string) => string;
-      renderOption?: (value: string) => ReactNode;
+      renderOption?: (value: string) => React.ReactNode;
       placeholder?: string;
     };
 

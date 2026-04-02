@@ -5,10 +5,12 @@ import { DayPicker } from "react-day-picker";
 import "react-day-picker/style.css";
 import styles from "./../FormLayout.module.css";
 import { FilterClearButton } from "../../Table/FilterClearButton";
+import { DATE_FORMAT } from "../../../../constants/date";
 
 type DateInputProps = {
   value: string;
   onChange: (value: string) => void;
+  onBlur?: (value: string) => void;
   name?: string;
   placeholder?: string;
   disabled?: boolean;
@@ -18,8 +20,6 @@ type DateInputProps = {
   onClear?: () => void;
 };
 
-const DATE_FORMAT = "dd/MM/yyyy";
-
 const parseDate = (value: string) => {
   const parsed = parse(value, DATE_FORMAT, new Date());
   return isValid(parsed) ? parsed : undefined;
@@ -28,6 +28,7 @@ const parseDate = (value: string) => {
 export const DateInput = ({
   value,
   onChange,
+  onBlur,
   name,
   placeholder = DATE_FORMAT,
   disabled = false,
@@ -37,10 +38,10 @@ export const DateInput = ({
 }: DateInputProps) => {
   const rootRef = useRef<HTMLDivElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);
-  const [inputValue, setInputValue] = useState(value);
+  const [draftValue, setDraftValue] = useState(value);
 
   useEffect(() => {
-    setInputValue(value);
+    setDraftValue(value);
   }, [value]);
 
   useEffect(() => {
@@ -54,48 +55,67 @@ export const DateInput = ({
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const selectedDate = useMemo(() => parseDate(inputValue), [inputValue]);
+  const selectedDate = useMemo(() => parseDate(draftValue), [draftValue]);
+
+  const commitValue = (nextValue: string) => {
+    setDraftValue(nextValue);
+    onChange(nextValue);
+    onBlur?.(nextValue);
+  };
 
   const handleInputBlur = () => {
-    const parsed = parseDate(inputValue);
+    const trimmedValue = draftValue.trim();
 
-    if (parsed) {
-      const formatted = format(parsed, DATE_FORMAT);
-      setInputValue(formatted);
-      onChange(formatted);
+    if (trimmedValue === "") {
+      commitValue("");
       return;
     }
 
-    if (inputValue.trim() === "") {
-      onChange("");
+    const parsed = parseDate(trimmedValue);
+
+    if (parsed) {
+      commitValue(format(parsed, DATE_FORMAT));
+      return;
     }
+
+    setDraftValue(value);
+    onBlur?.(value);
   };
 
   const handleDaySelect = (date?: Date) => {
     if (!date) return;
 
-    const formatted = format(date, DATE_FORMAT);
-    setInputValue(formatted);
-    onChange(formatted);
+    commitValue(format(date, DATE_FORMAT));
     setIsOpen(false);
   };
+
+  const handleClear = () => {
+    setDraftValue("");
+    onClear?.();
+    onBlur?.("");
+    setIsOpen(false);
+  };
+
   return (
     <div ref={rootRef} className={styles.baseInputGroup}>
       <Input
         type="text"
         className={styles.textInput}
         name={name}
-        value={inputValue}
+        value={draftValue}
         disabled={disabled}
         required={required}
         placeholder={placeholder}
         onFocus={() => setIsOpen(true)}
-        onChange={(event) => setInputValue(event.target.value)}
+        onChange={(event) => setDraftValue(event.target.value)}
         onBlur={handleInputBlur}
       />
 
       {isOpen && !disabled && (
-        <div className={styles.daypicker}>
+        <div
+          className={styles.daypicker}
+          onMouseDown={(event) => event.preventDefault()}
+        >
           <DayPicker
             mode="single"
             selected={selectedDate}
@@ -103,8 +123,12 @@ export const DateInput = ({
           />
         </div>
       )}
-      {clearable && value && onClear && (
-        <FilterClearButton onClick={onClear} className={styles.inputAction} />
+
+      {clearable && draftValue && (
+        <FilterClearButton
+          onClick={handleClear}
+          className={styles.inputAction}
+        />
       )}
     </div>
   );
